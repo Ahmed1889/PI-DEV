@@ -1,0 +1,40 @@
+back_homepage:
+    path:     /aa
+    defaults: { _controller: BackBundle:Default:index }
+
+ajoutTypeVehicule:
+    path:     /ajoutType
+    defaults: { _controller: BackBundle:Livraison:AjouterTypeVehicule }
+
+afficherTypeVehicules:
+    path:     /afficherTypes
+    defaults: { _controller: BackBundle:Livraison:AfficherTypeVehicule }
+
+supprimerTypeVehicule:
+    path:     /supprimerType
+    defaults: { _controller: BackBundle:Livraison:SupprimerTypeVehicule }
+
+modifierTypeVehicule:
+    path:     /modifierType
+    defaults: { _controller: BackBundle:Livraison:ModifierTypeVehicule }
+
+ajoutVehicule:
+    path:     /ajoutVehicule
+    defaults: { _controller: BackBundle:Livraison:AjouterVehicule }
+
+
+afficheVehicule:
+    path:     /afficheVehicule
+    defaults: { _controller: BackBundle:Livraison:AfficherVehicule }
+
+supprimerVehicule:
+    path:     /supprimerVehicule
+    defaults: { _controller: BackBundle:Livraison:SupprimerVehicule }
+
+modifierVehicule:
+    path:     /modifierVehicule
+    defaults: { _controller: BackBundle:Livraison:ModifierVehicule }
+
+affichePlannigDay:
+    path:     /affichePlanningDay
+    defaults: { _controller: BackBundle:Livraison:AfficherVPlanningDay }

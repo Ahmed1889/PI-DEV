@@ -1,0 +1,42 @@
+{% extends 'baseBack.html.twig' %}
+
+{% block bodyBack %}
+    <h2> Liste des  Vehicules</h2>
+
+    <table border="1">
+        <tr>
+            <th> Nom </th>
+            <th> Type Vehicule </th>
+            <th> Disponible </th>
+            <th></th>
+            <th></th>
+        </tr>
+
+        {%  for t in vehicules %}
+            <tr>
+                <th> {{ t.nom }}</th>
+
+                <th> {{ t.typeVehicule.libelle }}</th>
+                {%  if t.disponibilite == 0 %}
+                <th> Non disponible </th>
+                {%  else %}
+                    <th>  disponible </th>
+                    {% endif %}
+                <th> <a href="{{ path('modifierVehicule',
+                        {'id':t.id}) }}">
+                        Modifier</a></th>
+                <th> <a class="confirmModal" href="{{ path('supprimerVehicule',
+                        {'id':t.id}) }}"  >
+                        Supprimer</a></th>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <div id="dialog-confirm" title="Confirmation de la suppression" style="display:none;">
+        <p>
+            <span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>
+            Etes-vous sûr de vouloir supprimer ce vehicule ?
+        </p>
+    </div>
+
+{%  endblock %}
