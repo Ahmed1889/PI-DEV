@@ -113,59 +113,64 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 return array (  '_controller' => 'BackBundle\\Controller\\DefaultController::indexAction',  '_route' => 'back_homepage',);
             }
 
-            // ajoutTypeVehicule
-            if ('/ajoutType' === $pathinfo) {
-                return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::AjouterTypeVehiculeAction',  '_route' => 'ajoutTypeVehicule',);
+            // ajout_categorie
+            if ('/ajout_categorie' === $pathinfo) {
+                return array (  '_controller' => 'BackBundle\\Controller\\CategorieController::AjoutAction',  '_route' => 'ajout_categorie',);
             }
 
-            // ajoutVehicule
-            if ('/ajoutVehicule' === $pathinfo) {
-                return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::AjouterVehiculeAction',  '_route' => 'ajoutVehicule',);
+            // ajout_produit
+            if ('/ajout_produit' === $pathinfo) {
+                return array (  '_controller' => 'BackBundle\\Controller\\ProduitController::AjoutAction',  '_route' => 'ajout_produit',);
             }
 
-            if (0 === strpos($pathinfo, '/affiche')) {
-                // afficherTypeVehicules
-                if ('/afficherTypes' === $pathinfo) {
-                    return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::AfficherTypeVehiculeAction',  '_route' => 'afficherTypeVehicules',);
+            // afficher_categorie
+            if ('/afficher_categorie' === $pathinfo) {
+                return array (  '_controller' => 'BackBundle\\Controller\\CategorieController::AfficheAction',  '_route' => 'afficher_categorie',);
+            }
+
+            if (0 === strpos($pathinfo, '/afficher_produit')) {
+                // afficher_produit
+                if ('/afficher_produit' === $pathinfo) {
+                    return array (  '_controller' => 'BackBundle\\Controller\\ProduitController::AfficheAction',  '_route' => 'afficher_produit',);
                 }
 
-                // afficheVehicule
-                if ('/afficheVehicule' === $pathinfo) {
-                    return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::AfficherVehiculeAction',  '_route' => 'afficheVehicule',);
-                }
-
-                // affichePlannigDay
-                if ('/affichePlanningDay' === $pathinfo) {
-                    return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::AfficherVPlanningDayAction',  '_route' => 'affichePlannigDay',);
+                // afficher_produitF
+                if ('/afficher_produitF' === $pathinfo) {
+                    return array (  '_controller' => 'FrontBundle\\Controller\\ProduitController::AfficheFAction',  '_route' => 'afficher_produitF',);
                 }
 
             }
 
         }
 
-        // supprimerTypeVehicule
-        if ('/supprimerType' === $pathinfo) {
-            return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::SupprimerTypeVehiculeAction',  '_route' => 'supprimerTypeVehicule',);
+        // supprimer_categorie
+        if ('/supprimer_categorie' === $pathinfo) {
+            return array (  '_controller' => 'BackBundle\\Controller\\CategorieController::SupprimerAction',  '_route' => 'supprimer_categorie',);
         }
 
-        // supprimerVehicule
-        if ('/supprimerVehicule' === $pathinfo) {
-            return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::SupprimerVehiculeAction',  '_route' => 'supprimerVehicule',);
+        // supprimer_produit
+        if ('/supprimer_produit' === $pathinfo) {
+            return array (  '_controller' => 'BackBundle\\Controller\\ProduitController::SupprimerAction',  '_route' => 'supprimer_produit',);
         }
 
-        // modifierTypeVehicule
-        if ('/modifierType' === $pathinfo) {
-            return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::ModifierTypeVehiculeAction',  '_route' => 'modifierTypeVehicule',);
+        // modifier_categorie
+        if ('/modifier_categorie' === $pathinfo) {
+            return array (  '_controller' => 'BackBundle\\Controller\\CategorieController::ModifierAction',  '_route' => 'modifier_categorie',);
         }
 
-        // modifierVehicule
-        if ('/modifierVehicule' === $pathinfo) {
-            return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::ModifierVehiculeAction',  '_route' => 'modifierVehicule',);
+        // modifier_produit
+        if ('/modifier_produit' === $pathinfo) {
+            return array (  '_controller' => 'BackBundle\\Controller\\ProduitController::ModifierAction',  '_route' => 'modifier_produit',);
         }
 
         // front_homepage
         if ('/cc' === $pathinfo) {
             return array (  '_controller' => 'FrontBundle\\Controller\\DefaultController::indexAction',  '_route' => 'front_homepage',);
+        }
+
+        // details_produitF
+        if ('/details_produitF' === $pathinfo) {
+            return array (  '_controller' => 'FrontBundle\\Controller\\ProduitController::DetailsAction',  '_route' => 'details_produitF',);
         }
 
         // f

@@ -163,7 +163,10 @@ class __TwigTemplate_1b6336740ac29a501201a66da4014d1940fa591fc64da8f49d296305f7b
                                     <a href=\"#\" class=\"pr-20 text-uppercase\">account</a>
                                     <div class=\"header-top-down header-top-hover pl-15 lh-35\">
                                         <ul>
-                                            <li><a href=\"login.html\">Login</a></li>
+                                            <li><a href=\"";
+        // line 102
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_security_login");
+        echo "\">Login</a></li>
                                             <li><a href=\"compare.html\">My bag</a></li>
                                             <li><a href=\"checkout.html\">Checkout</a></li>
                                             <li><a href=\"wishlist.html\">Wishlist</a></li>
@@ -259,7 +262,10 @@ class __TwigTemplate_1b6336740ac29a501201a66da4014d1940fa591fc64da8f49d296305f7b
                                     <ul class=\"main-menu text-center\">
                                         <li><a href=\"index.html\">Home</a></li>
                                         <li><a href=\"about.html\">About</a></li>
-                                        <li><a href=\"shop-full.html\">men</a></li>
+                                        <li><a href=\"";
+        // line 189
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("afficher_produitF");
+        echo "\">Produits</a></li>
                                         <li><a href=\"blog.html\">Blog</a>
                                             <ul class=\"dropdown header-top-hover ptb-10\">
                                                 <li><a href=\"blog.html\">Blog</a></li>
@@ -267,7 +273,10 @@ class __TwigTemplate_1b6336740ac29a501201a66da4014d1940fa591fc64da8f49d296305f7b
                                             </ul>
                                         </li>
                                         <li><a href=\"my-account.html\">my Acoount</a></li>
-                                        <li><a href=\"login.html\">Register</a></li>
+                                        <li><a href=\"";
+        // line 197
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_registration_register");
+        echo "\">Register</a></li>
                                         <li><a href=\"contact.html\">Contact Us</a></li>
                                     </ul>
                                 </nav>
@@ -314,6 +323,8 @@ class __TwigTemplate_1b6336740ac29a501201a66da4014d1940fa591fc64da8f49d296305f7b
         // line 240
         echo "
 
+
+
     <footer id=\"footer\" class=\"footer-area\">
         <div class=\"footer-top-area gray-bg\">
             <div class=\"container\">
@@ -323,7 +334,7 @@ class __TwigTemplate_1b6336740ac29a501201a66da4014d1940fa591fc64da8f49d296305f7b
                             <div class=\"footer-widget-img pb-30\">
                                 <a href=\"#\">
                                     <img src=\"";
-        // line 250
+        // line 252
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "images/logo/logo-2.png\" alt=\"\">
                                 </a>
@@ -398,7 +409,7 @@ class __TwigTemplate_1b6336740ac29a501201a66da4014d1940fa591fc64da8f49d296305f7b
                     <div class=\"col-sm-6\">
                         <div class=\"footer-img\">
                             <img src=\"";
-        // line 322
+        // line 324
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "images/payment.png\" alt=\"\">
                         </div>
@@ -424,7 +435,7 @@ class __TwigTemplate_1b6336740ac29a501201a66da4014d1940fa591fc64da8f49d296305f7b
                                     <div id=\"my-tab-content\" class=\"tab-content mb-20\">
                                         <div class=\"tab-pane b-img active\" id=\"view1\">
                                             <a class=\"venobox\" href=\"";
-        // line 345
+        // line 347
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "images/product/product-details/1.jpg\" data-gall=\"gallery\" title=\"\"><img src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
@@ -432,7 +443,7 @@ class __TwigTemplate_1b6336740ac29a501201a66da4014d1940fa591fc64da8f49d296305f7b
                                         </div>
                                         <div class=\"tab-pane b-img\" id=\"view2\">
                                             <a class=\"venobox\" href=\"";
-        // line 348
+        // line 350
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "images/product/product-details/2.jpg\" data-gall=\"gallery\" title=\"\"><img src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
@@ -440,7 +451,7 @@ class __TwigTemplate_1b6336740ac29a501201a66da4014d1940fa591fc64da8f49d296305f7b
                                         </div>
                                         <div class=\"tab-pane b-img\" id=\"view3\">
                                             <a class=\"venobox\" href=\"";
-        // line 351
+        // line 353
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "images/product/product-details/3.jpg\" data-gall=\"gallery\" title=\"\"><img src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
@@ -448,7 +459,7 @@ class __TwigTemplate_1b6336740ac29a501201a66da4014d1940fa591fc64da8f49d296305f7b
                                         </div>
                                         <div class=\"tab-pane b-img\" id=\"view4\">
                                             <a class=\"venobox\" href=\"";
-        // line 354
+        // line 356
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "images/product/product-details/4.jpg\" data-gall=\"gallery\" title=\"\"><img src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
@@ -457,19 +468,19 @@ class __TwigTemplate_1b6336740ac29a501201a66da4014d1940fa591fc64da8f49d296305f7b
                                     </div>
                                     <div id=\"viewproduct\" class=\"nav nav-tabs product-view bxslider\" data-tabs=\"tabs\">
                                         <div class=\"pro-view b-img active\"><a href=\"#view1\" data-toggle=\"tab\"><img src=\"";
-        // line 358
+        // line 360
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "images/product/product-details/s-1.jpg\" alt=\"\"></a></div>
                                         <div class=\"pro-view b-img\"><a href=\"#view2\" data-toggle=\"tab\"><img src=\"";
-        // line 359
+        // line 361
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "images/product/product-details/s-2.jpg\" alt=\"\"></a></div>
                                         <div class=\"pro-view b-img\"><a href=\"#view3\" data-toggle=\"tab\"><img src=\"";
-        // line 360
+        // line 362
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "images/product/product-details/s-3.jpg\" alt=\"\"></a></div>
                                         <div class=\"pro-view b-img\"><a href=\"#view4\" data-toggle=\"tab\"><img src=\"";
-        // line 361
+        // line 363
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "images/product/product-details/s-4.jpg\" alt=\"\"></a></div>
                                     </div>
@@ -554,34 +565,35 @@ class __TwigTemplate_1b6336740ac29a501201a66da4014d1940fa591fc64da8f49d296305f7b
 
 <!-- jquery latest version -->
 <script src=\"";
-        // line 443
+        // line 445
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "js/vendor/jquery-3.1.1.min.js\"></script>
 <!-- Bootstrap framework js -->
 <script src=\"";
-        // line 445
+        // line 447
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "js/bootstrap.min.js\"></script>
 <!-- Particles js -->
 <script src=\"";
-        // line 447
+        // line 449
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "js/particles.js\"></script>
 <!-- All js plugins included in this file. -->
 <script src=\"";
-        // line 449
+        // line 451
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "js/plugins.js\"></script>
 <!-- Main js file that contents all jQuery plugins activation. -->
 <script src=\"";
-        // line 451
+        // line 453
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "js/main.js\"></script>
 
+
 ";
-        // line 453
+        // line 456
         $this->displayBlock('js', $context, $blocks);
-        // line 455
+        // line 458
         echo "
 </body>
 
@@ -613,7 +625,7 @@ class __TwigTemplate_1b6336740ac29a501201a66da4014d1940fa591fc64da8f49d296305f7b
 
     }
 
-    // line 453
+    // line 456
     public function block_js($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -642,7 +654,7 @@ class __TwigTemplate_1b6336740ac29a501201a66da4014d1940fa591fc64da8f49d296305f7b
 
     public function getDebugInfo()
     {
-        return array (  617 => 453,  607 => 239,  598 => 238,  585 => 455,  583 => 453,  578 => 451,  573 => 449,  568 => 447,  563 => 445,  558 => 443,  473 => 361,  469 => 360,  465 => 359,  461 => 358,  452 => 354,  444 => 351,  436 => 348,  428 => 345,  402 => 322,  327 => 250,  315 => 240,  313 => 238,  219 => 147,  203 => 134,  187 => 121,  154 => 91,  90 => 30,  83 => 26,  78 => 24,  73 => 22,  68 => 20,  63 => 18,  58 => 16,  51 => 12,  38 => 1,);
+        return array (  629 => 456,  619 => 239,  610 => 238,  597 => 458,  595 => 456,  589 => 453,  584 => 451,  579 => 449,  574 => 447,  569 => 445,  484 => 363,  480 => 362,  476 => 361,  472 => 360,  463 => 356,  455 => 353,  447 => 350,  439 => 347,  413 => 324,  338 => 252,  324 => 240,  322 => 238,  278 => 197,  267 => 189,  222 => 147,  206 => 134,  190 => 121,  168 => 102,  154 => 91,  90 => 30,  83 => 26,  78 => 24,  73 => 22,  68 => 20,  63 => 18,  58 => 16,  51 => 12,  38 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -756,7 +768,7 @@ class __TwigTemplate_1b6336740ac29a501201a66da4014d1940fa591fc64da8f49d296305f7b
                                     <a href=\"#\" class=\"pr-20 text-uppercase\">account</a>
                                     <div class=\"header-top-down header-top-hover pl-15 lh-35\">
                                         <ul>
-                                            <li><a href=\"login.html\">Login</a></li>
+                                            <li><a href=\"{{ path('fos_user_security_login') }}\">Login</a></li>
                                             <li><a href=\"compare.html\">My bag</a></li>
                                             <li><a href=\"checkout.html\">Checkout</a></li>
                                             <li><a href=\"wishlist.html\">Wishlist</a></li>
@@ -843,7 +855,7 @@ class __TwigTemplate_1b6336740ac29a501201a66da4014d1940fa591fc64da8f49d296305f7b
                                     <ul class=\"main-menu text-center\">
                                         <li><a href=\"index.html\">Home</a></li>
                                         <li><a href=\"about.html\">About</a></li>
-                                        <li><a href=\"shop-full.html\">men</a></li>
+                                        <li><a href=\"{{ path('afficher_produitF') }}\">Produits</a></li>
                                         <li><a href=\"blog.html\">Blog</a>
                                             <ul class=\"dropdown header-top-hover ptb-10\">
                                                 <li><a href=\"blog.html\">Blog</a></li>
@@ -851,7 +863,7 @@ class __TwigTemplate_1b6336740ac29a501201a66da4014d1940fa591fc64da8f49d296305f7b
                                             </ul>
                                         </li>
                                         <li><a href=\"my-account.html\">my Acoount</a></li>
-                                        <li><a href=\"login.html\">Register</a></li>
+                                        <li><a href=\"{{ path('fos_user_registration_register') }}\">Register</a></li>
                                         <li><a href=\"contact.html\">Contact Us</a></li>
                                     </ul>
                                 </nav>
@@ -894,6 +906,8 @@ class __TwigTemplate_1b6336740ac29a501201a66da4014d1940fa591fc64da8f49d296305f7b
 
     {% block body %}
     {% endblock %}
+
+
 
 
     <footer id=\"footer\" class=\"footer-area\">
@@ -1107,11 +1121,12 @@ class __TwigTemplate_1b6336740ac29a501201a66da4014d1940fa591fc64da8f49d296305f7b
 <!-- Main js file that contents all jQuery plugins activation. -->
 <script src=\"{{ asset('freak/') }}js/main.js\"></script>
 
+
 {% block js %}
 {% endblock %}
 
 </body>
 
-</html>", "base.html.twig", "C:\\wamp64\\www\\PI-DEV\\pi\\app\\Resources\\views\\base.html.twig");
+</html>", "base.html.twig", "C:\\wamp64\\www\\projet\\PI-DEV\\pi\\app\\Resources\\views\\base.html.twig");
     }
 }

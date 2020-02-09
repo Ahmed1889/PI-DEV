@@ -411,6 +411,7 @@ a.button.extra-small span {
 .product-list .single-product {
   padding-top: 30px;
 }
+
 .mb-100 , .mb-90{margin-bottom: 60px;}
 .service-area .single-item i {
   font-size: 20px;
@@ -613,4 +614,5 @@ blockquote {
 .search-box input {
   width: 375px;
 }
+
 }

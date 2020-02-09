@@ -21,8 +21,6 @@ class __TwigTemplate_91493f3fc322414eeed3815126c9f40afe2ffc23af12053e03dbb1ac1f4
         $this->parent = false;
 
         $this->blocks = [
-            'bodyBack' => [$this, 'block_bodyBack'],
-            'js2' => [$this, 'block_js2'],
         ];
     }
 
@@ -286,6 +284,8 @@ class __TwigTemplate_91493f3fc322414eeed3815126c9f40afe2ffc23af12053e03dbb1ac1f4
 
                     <li class=\"sidebar-item\"> <a class=\"sidebar-link has-arrow waves-effect waves-dark\" href=\"javascript:void(0)\" aria-expanded=\"false\"><i class=\"fas fa-box-open\"></i><span class=\"hide-menu\">Gestion produits</span></a>
                         <ul aria-expanded=\"false\" class=\"collapse  first-level\">
+                            <li class=\"sidebar-item\"><a href=\"index2.html\" class=\"sidebar-link\"><i class=\"fas fa-plus\"></i><span class=\"hide-menu\"> Dashboard-2 </span></a></li>
+                            <li class=\"sidebar-item\"><a href=\"pages-gallery.html\" class=\"sidebar-link\"><i class=\"fas fa-list\"></i><span class=\"hide-menu\"> Gallery </span></a></li>
 
                         </ul>
                     </li>
@@ -315,26 +315,8 @@ class __TwigTemplate_91493f3fc322414eeed3815126c9f40afe2ffc23af12053e03dbb1ac1f4
                     </li>
                     <li class=\"sidebar-item\"> <a class=\"sidebar-link has-arrow waves-effect waves-dark\" href=\"javascript:void(0)\" aria-expanded=\"false\"><i class=\"fas fa-shipping-fast\"></i><span class=\"hide-menu\">Gestion livraison </span></a>
                         <ul aria-expanded=\"false\" class=\"collapse  first-level\">
-                            <li class=\"sidebar-item\"><a href=\"";
-        // line 263
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("affichePlannigDay");
-        echo "\" class=\"sidebar-link\"><i class=\"fas fa-plus\"></i><span class=\"hide-menu\"> Planning </span></a></li>
-                            <li class=\"sidebar-item\"><a href=\"";
-        // line 264
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("ajoutTypeVehicule");
-        echo "\" class=\"sidebar-link\"><i class=\"fas fa-plus\"></i><span class=\"hide-menu\"> ajouter type vehicule </span></a></li>
-                            <li class=\"sidebar-item\"><a href=\"";
-        // line 265
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("afficherTypeVehicules");
-        echo "\" class=\"sidebar-link\"><i class=\"fas fa-plus\"></i><span class=\"hide-menu\"> Liste  des types des vehicules </span></a></li>
-                            <li class=\"sidebar-item\"><a href=\"";
-        // line 266
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("afficheVehicule");
-        echo "\" class=\"sidebar-link\"><i class=\"fas fa-plus\"></i><span class=\"hide-menu\"> Liste  des vehicules </span></a></li>
-                            <li class=\"sidebar-item\"><a href=\"";
-        // line 267
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("ajoutVehicule");
-        echo "\" class=\"sidebar-link\"><i class=\"fas fa-plus\"></i><span class=\"hide-menu\"> ajouter des vehicules </span></a></li>
+                            <li class=\"sidebar-item\"><a href=\"index2.html\" class=\"sidebar-link\"><i class=\"fas fa-plus\"></i><span class=\"hide-menu\"> Dashboard-2 </span></a></li>
+                            <li class=\"sidebar-item\"><a href=\"pages-gallery.html\" class=\"sidebar-link\"><i class=\"fas fa-list\"></i><span class=\"hide-menu\"> Gallery </span></a></li>
                         </ul>
                     </li>
                     <li class=\"sidebar-item\"> <a class=\"sidebar-link waves-effect waves-dark sidebar-link\" href=\"charts.html\" aria-expanded=\"false\"><i class=\"mdi mdi-chart-bar\"></i><span class=\"hide-menu\">Statistiques</span></a></li>
@@ -352,30 +334,115 @@ class __TwigTemplate_91493f3fc322414eeed3815126c9f40afe2ffc23af12053e03dbb1ac1f4
     <!-- ============================================================== -->
     <!-- Page wrapper  -->
     <!-- ============================================================== -->
-
     <div class=\"page-wrapper\">
-
+        <!-- ============================================================== -->
+        <!-- Bread crumb and right sidebar toggle -->
+        <!-- ============================================================== -->
+        <div class=\"page-breadcrumb\">
+            <div class=\"row\">
+                <div class=\"col-12 d-flex no-block align-items-center\">
+                    <h4 class=\"page-title\">Dashboard</h4>
+                    <div class=\"ml-auto text-right\">
+                        <nav aria-label=\"breadcrumb\">
+                            <ol class=\"breadcrumb\">
+                                <li class=\"breadcrumb-item\"><a href=\"#\">Home</a></li>
+                                <li class=\"breadcrumb-item active\" aria-current=\"page\">Library</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- ============================================================== -->
         <!-- End Bread crumb and right sidebar toggle -->
         <!-- ============================================================== -->
         <!-- ============================================================== -->
         <!-- Container fluid  -->
         <!-- ============================================================== -->
+        <div class=\"container-fluid\">
+            <!-- ============================================================== -->
+            <!-- Sales Cards  -->
+            <!-- ============================================================== -->
+            <div class=\"row\">
+                <!-- Column -->
+                <div class=\"col-md-6 col-lg-2 col-xlg-3\">
+                    <div class=\"card card-hover\">
+                        <div class=\"box bg-cyan text-center\">
+                            <h1 class=\"font-light text-white\"><i class=\"fas fa-box-open\"></i></h1>
+                            <h6 class=\"text-white\">produits</h6>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Column -->
+                <div class=\"col-md-6 col-lg-2 col-xlg-3\">
+                    <div class=\"card card-hover\">
+                        <div class=\"box bg-warning text-center\">
+                            <h1 class=\"font-light text-white\"><i class=\"fas fa-shopping-cart\"></i></h1>
+                            <h6 class=\"text-white\">panier / commandes </h6>
+                        </div>
+                    </div>
+                </div>
+                <!-- Column -->
+                <div class=\"col-md-6 col-lg-2 col-xlg-3\">
+                    <div class=\"card card-hover\">
+                        <div class=\"box bg-danger text-center\">
+                            <h1 class=\"font-light text-white\"><i class=\"fas fa-child\"></i></h1>
+                            <h6 class=\"text-white\">employés</h6>
+                        </div>
+                    </div>
+                </div>
+                <!-- Column -->
+                <div class=\"col-md-6 col-lg-2 col-xlg-3\">
+                    <div class=\"card card-hover\">
+                        <div class=\"box bg-info text-center\">
+                            <h1 class=\"font-light text-white\"><i class=\"fas fa-warehouse\"></i></h1>
+                            <h6 class=\"text-white\">stock</h6>
+                        </div>
+                    </div>
+                </div>
+                <!-- Column -->
+                <!-- Column -->
+                <div class=\"col-md-6 col-lg-2 col-xlg-3\">
+                    <div class=\"card card-hover\">
+                        <div class=\"box bg-success text-center\">
+                            <h1 class=\"font-light text-white\"><i class=\"fas fa-dolly\"></i></h1>
+                            <h6 class=\"text-white\">fournisseurs</h6>
+                        </div>
+                    </div>
+                </div>
+                <!-- Column -->
+                <div class=\"col-md-6 col-lg-2 col-xlg-3\">
+                    <div class=\"card card-hover\">
+                        <div class=\"box bg-warning text-center\">
+                            <h1 class=\"font-light text-white\"><i class=\"fas fa-shipping-fast\"></i></h1>
+                            <h6 class=\"text-white\">livraison</h6>
+                        </div>
+                    </div>
+                </div>
+                <!-- Column -->
+            </div>
+            <!-- ============================================================== -->
+            <!-- Sales chart -->
+            <!-- ============================================================== -->
+
+            <!-- ============================================================== -->
+            <!-- Sales chart -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Recent comment and chats -->
+            <!-- ============================================================== -->
+
+            <!-- ============================================================== -->
+            <!-- Recent comment and chats -->
+            <!-- ============================================================== -->
+        </div>
         <!-- ============================================================== -->
         <!-- End Container fluid  -->
         <!-- ============================================================== -->
         <!-- ============================================================== -->
         <!-- footer -->
         <!-- ============================================================== -->
-
-        <div class=\"container-fluid\">
-        ";
-        // line 303
-        $this->displayBlock('bodyBack', $context, $blocks);
-        // line 305
-        echo "        </div>
-
         <footer class=\"footer text-center\">
             All Rights Reserved by maxi-entrepot. Designed and Developed by <a href=\"https://wrappixel.com\">Ctrl c/v</a>.
         </footer>
@@ -383,7 +450,6 @@ class __TwigTemplate_91493f3fc322414eeed3815126c9f40afe2ffc23af12053e03dbb1ac1f4
         <!-- End footer -->
         <!-- ============================================================== -->
     </div>
-
     <!-- ============================================================== -->
     <!-- End Page wrapper  -->
     <!-- ============================================================== -->
@@ -395,121 +461,78 @@ class __TwigTemplate_91493f3fc322414eeed3815126c9f40afe2ffc23af12053e03dbb1ac1f4
 <!-- All Jquery -->
 <!-- ============================================================== -->
 <script src=\"";
-        // line 325
+        // line 410
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("back/"), "html", null, true);
         echo "assets/libs/jquery/dist/jquery.min.js\"></script>
 <!-- Bootstrap tether Core JavaScript -->
 <script src=\"";
-        // line 327
+        // line 412
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("back/"), "html", null, true);
         echo "assets/libs/popper.js/dist/umd/popper.min.js\"></script>
 <script src=\"";
-        // line 328
+        // line 413
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("back/"), "html", null, true);
         echo "assets/libs/bootstrap/dist/js/bootstrap.min.js\"></script>
 <script src=\"";
-        // line 329
+        // line 414
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("back/"), "html", null, true);
         echo "assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js\"></script>
 <script src=\"";
-        // line 330
+        // line 415
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("back/"), "html", null, true);
         echo "assets/extra-libs/sparkline/sparkline.js\"></script>
 <!--Wave Effects -->
 <script src=\"";
-        // line 332
+        // line 417
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("back/"), "html", null, true);
         echo "dist/js/waves.js\"></script>
 <!--Menu sidebar -->
 <script src=\"";
-        // line 334
+        // line 419
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("back/"), "html", null, true);
         echo "dist/js/sidebarmenu.js\"></script>
 <!--Custom JavaScript -->
 <script src=\"";
-        // line 336
+        // line 421
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("back/"), "html", null, true);
         echo "dist/js/custom.min.js\"></script>
 <!--This page JavaScript -->
 <!-- <script src=\"../../dist/js/pages/dashboards/dashboard1.js\"></script> -->
 <!-- Charts js Files -->
 <script src=\"";
-        // line 340
+        // line 425
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("back/"), "html", null, true);
         echo "assets/libs/flot/excanvas.js\"></script>
 <script src=\"";
-        // line 341
+        // line 426
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("back/"), "html", null, true);
         echo "assets/libs/flot/jquery.flot.js\"></script>
 <script src=\"";
-        // line 342
+        // line 427
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("back/"), "html", null, true);
         echo "assets/libs/flot/jquery.flot.pie.js\"></script>
 <script src=\"";
-        // line 343
+        // line 428
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("back/"), "html", null, true);
         echo "assets/libs/flot/jquery.flot.time.js\"></script>
 <script src=\"";
-        // line 344
+        // line 429
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("back/"), "html", null, true);
         echo "assets/libs/flot/jquery.flot.stack.js\"></script>
 <script src=\"";
-        // line 345
+        // line 430
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("back/"), "html", null, true);
         echo "assets/libs/flot/jquery.flot.crosshair.js\"></script>
 <script src=\"";
-        // line 346
+        // line 431
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("back/"), "html", null, true);
         echo "assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js\"></script>
 <script src=\"";
-        // line 347
+        // line 432
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("back/"), "html", null, true);
         echo "dist/js/pages/chart/chart-page-init.js\"></script>
 
-<script src=\"https://code.jquery.com/ui/1.12.1/jquery-ui.js\"></script>
-<link rel=\"stylesheet\" href=\"//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css\">
-<script>
-    \$( function() {
-        var theHREF;
-
-        \$( \"#dialog-confirm\" ).dialog({
-            resizable: false,
-            height:160,
-            width:500,
-            autoOpen: false,
-            show: {
-                effect: \"blind\",
-                duration: 1000
-            },
-            hide: {
-                effect: \"explode\",
-                duration: 1000
-            },
-            modal: true,
-            buttons: {
-                \"Oui\": function() {
-                    \$( this ).dialog( \"close\" );
-                    window.location.href = theHREF;
-                },
-                \"Annuler\": function() {
-                    \$( this ).dialog( \"close\" );
-                }
-            }
-        });
-
-        \$(\"a.confirmModal\").click(function(e) {
-            e.preventDefault();
-            theHREF = \$(this).attr(\"href\");
-            \$(\"#dialog-confirm\").dialog(\"open\");
-        });
-    } );
-</script>
-
-";
-        // line 388
-        $this->displayBlock('js2', $context, $blocks);
-        // line 390
-        echo "</body>
+</body>
 
 </html>";
         
@@ -517,42 +540,6 @@ class __TwigTemplate_91493f3fc322414eeed3815126c9f40afe2ffc23af12053e03dbb1ac1f4
 
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
-
-    }
-
-    // line 303
-    public function block_bodyBack($context, array $blocks = [])
-    {
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "bodyBack"));
-
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "bodyBack"));
-
-        // line 304
-        echo "        ";
-        
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
-
-        
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
-
-    }
-
-    // line 388
-    public function block_js2($context, array $blocks = [])
-    {
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "js2"));
-
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "js2"));
-
-        
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
-
-        
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
 
     }
 
@@ -568,7 +555,7 @@ class __TwigTemplate_91493f3fc322414eeed3815126c9f40afe2ffc23af12053e03dbb1ac1f4
 
     public function getDebugInfo()
     {
-        return array (  543 => 388,  533 => 304,  524 => 303,  512 => 390,  510 => 388,  466 => 347,  462 => 346,  458 => 345,  454 => 344,  450 => 343,  446 => 342,  442 => 341,  438 => 340,  431 => 336,  426 => 334,  421 => 332,  416 => 330,  412 => 329,  408 => 328,  404 => 327,  399 => 325,  377 => 305,  375 => 303,  336 => 267,  332 => 266,  328 => 265,  324 => 264,  320 => 263,  253 => 199,  114 => 63,  104 => 56,  62 => 17,  57 => 15,  51 => 12,  38 => 1,);
+        return array (  532 => 432,  528 => 431,  524 => 430,  520 => 429,  516 => 428,  512 => 427,  508 => 426,  504 => 425,  497 => 421,  492 => 419,  487 => 417,  482 => 415,  478 => 414,  474 => 413,  470 => 412,  465 => 410,  251 => 199,  112 => 63,  102 => 56,  60 => 17,  55 => 15,  49 => 12,  36 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -814,6 +801,8 @@ class __TwigTemplate_91493f3fc322414eeed3815126c9f40afe2ffc23af12053e03dbb1ac1f4
 
                     <li class=\"sidebar-item\"> <a class=\"sidebar-link has-arrow waves-effect waves-dark\" href=\"javascript:void(0)\" aria-expanded=\"false\"><i class=\"fas fa-box-open\"></i><span class=\"hide-menu\">Gestion produits</span></a>
                         <ul aria-expanded=\"false\" class=\"collapse  first-level\">
+                            <li class=\"sidebar-item\"><a href=\"index2.html\" class=\"sidebar-link\"><i class=\"fas fa-plus\"></i><span class=\"hide-menu\"> Dashboard-2 </span></a></li>
+                            <li class=\"sidebar-item\"><a href=\"pages-gallery.html\" class=\"sidebar-link\"><i class=\"fas fa-list\"></i><span class=\"hide-menu\"> Gallery </span></a></li>
 
                         </ul>
                     </li>
@@ -843,11 +832,8 @@ class __TwigTemplate_91493f3fc322414eeed3815126c9f40afe2ffc23af12053e03dbb1ac1f4
                     </li>
                     <li class=\"sidebar-item\"> <a class=\"sidebar-link has-arrow waves-effect waves-dark\" href=\"javascript:void(0)\" aria-expanded=\"false\"><i class=\"fas fa-shipping-fast\"></i><span class=\"hide-menu\">Gestion livraison </span></a>
                         <ul aria-expanded=\"false\" class=\"collapse  first-level\">
-                            <li class=\"sidebar-item\"><a href=\"{{ path('affichePlannigDay') }}\" class=\"sidebar-link\"><i class=\"fas fa-plus\"></i><span class=\"hide-menu\"> Planning </span></a></li>
-                            <li class=\"sidebar-item\"><a href=\"{{ path('ajoutTypeVehicule') }}\" class=\"sidebar-link\"><i class=\"fas fa-plus\"></i><span class=\"hide-menu\"> ajouter type vehicule </span></a></li>
-                            <li class=\"sidebar-item\"><a href=\"{{ path('afficherTypeVehicules') }}\" class=\"sidebar-link\"><i class=\"fas fa-plus\"></i><span class=\"hide-menu\"> Liste  des types des vehicules </span></a></li>
-                            <li class=\"sidebar-item\"><a href=\"{{ path('afficheVehicule') }}\" class=\"sidebar-link\"><i class=\"fas fa-plus\"></i><span class=\"hide-menu\"> Liste  des vehicules </span></a></li>
-                            <li class=\"sidebar-item\"><a href=\"{{ path('ajoutVehicule') }}\" class=\"sidebar-link\"><i class=\"fas fa-plus\"></i><span class=\"hide-menu\"> ajouter des vehicules </span></a></li>
+                            <li class=\"sidebar-item\"><a href=\"index2.html\" class=\"sidebar-link\"><i class=\"fas fa-plus\"></i><span class=\"hide-menu\"> Dashboard-2 </span></a></li>
+                            <li class=\"sidebar-item\"><a href=\"pages-gallery.html\" class=\"sidebar-link\"><i class=\"fas fa-list\"></i><span class=\"hide-menu\"> Gallery </span></a></li>
                         </ul>
                     </li>
                     <li class=\"sidebar-item\"> <a class=\"sidebar-link waves-effect waves-dark sidebar-link\" href=\"charts.html\" aria-expanded=\"false\"><i class=\"mdi mdi-chart-bar\"></i><span class=\"hide-menu\">Statistiques</span></a></li>
@@ -865,28 +851,115 @@ class __TwigTemplate_91493f3fc322414eeed3815126c9f40afe2ffc23af12053e03dbb1ac1f4
     <!-- ============================================================== -->
     <!-- Page wrapper  -->
     <!-- ============================================================== -->
-
     <div class=\"page-wrapper\">
-
+        <!-- ============================================================== -->
+        <!-- Bread crumb and right sidebar toggle -->
+        <!-- ============================================================== -->
+        <div class=\"page-breadcrumb\">
+            <div class=\"row\">
+                <div class=\"col-12 d-flex no-block align-items-center\">
+                    <h4 class=\"page-title\">Dashboard</h4>
+                    <div class=\"ml-auto text-right\">
+                        <nav aria-label=\"breadcrumb\">
+                            <ol class=\"breadcrumb\">
+                                <li class=\"breadcrumb-item\"><a href=\"#\">Home</a></li>
+                                <li class=\"breadcrumb-item active\" aria-current=\"page\">Library</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- ============================================================== -->
         <!-- End Bread crumb and right sidebar toggle -->
         <!-- ============================================================== -->
         <!-- ============================================================== -->
         <!-- Container fluid  -->
         <!-- ============================================================== -->
+        <div class=\"container-fluid\">
+            <!-- ============================================================== -->
+            <!-- Sales Cards  -->
+            <!-- ============================================================== -->
+            <div class=\"row\">
+                <!-- Column -->
+                <div class=\"col-md-6 col-lg-2 col-xlg-3\">
+                    <div class=\"card card-hover\">
+                        <div class=\"box bg-cyan text-center\">
+                            <h1 class=\"font-light text-white\"><i class=\"fas fa-box-open\"></i></h1>
+                            <h6 class=\"text-white\">produits</h6>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Column -->
+                <div class=\"col-md-6 col-lg-2 col-xlg-3\">
+                    <div class=\"card card-hover\">
+                        <div class=\"box bg-warning text-center\">
+                            <h1 class=\"font-light text-white\"><i class=\"fas fa-shopping-cart\"></i></h1>
+                            <h6 class=\"text-white\">panier / commandes </h6>
+                        </div>
+                    </div>
+                </div>
+                <!-- Column -->
+                <div class=\"col-md-6 col-lg-2 col-xlg-3\">
+                    <div class=\"card card-hover\">
+                        <div class=\"box bg-danger text-center\">
+                            <h1 class=\"font-light text-white\"><i class=\"fas fa-child\"></i></h1>
+                            <h6 class=\"text-white\">employés</h6>
+                        </div>
+                    </div>
+                </div>
+                <!-- Column -->
+                <div class=\"col-md-6 col-lg-2 col-xlg-3\">
+                    <div class=\"card card-hover\">
+                        <div class=\"box bg-info text-center\">
+                            <h1 class=\"font-light text-white\"><i class=\"fas fa-warehouse\"></i></h1>
+                            <h6 class=\"text-white\">stock</h6>
+                        </div>
+                    </div>
+                </div>
+                <!-- Column -->
+                <!-- Column -->
+                <div class=\"col-md-6 col-lg-2 col-xlg-3\">
+                    <div class=\"card card-hover\">
+                        <div class=\"box bg-success text-center\">
+                            <h1 class=\"font-light text-white\"><i class=\"fas fa-dolly\"></i></h1>
+                            <h6 class=\"text-white\">fournisseurs</h6>
+                        </div>
+                    </div>
+                </div>
+                <!-- Column -->
+                <div class=\"col-md-6 col-lg-2 col-xlg-3\">
+                    <div class=\"card card-hover\">
+                        <div class=\"box bg-warning text-center\">
+                            <h1 class=\"font-light text-white\"><i class=\"fas fa-shipping-fast\"></i></h1>
+                            <h6 class=\"text-white\">livraison</h6>
+                        </div>
+                    </div>
+                </div>
+                <!-- Column -->
+            </div>
+            <!-- ============================================================== -->
+            <!-- Sales chart -->
+            <!-- ============================================================== -->
+
+            <!-- ============================================================== -->
+            <!-- Sales chart -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Recent comment and chats -->
+            <!-- ============================================================== -->
+
+            <!-- ============================================================== -->
+            <!-- Recent comment and chats -->
+            <!-- ============================================================== -->
+        </div>
         <!-- ============================================================== -->
         <!-- End Container fluid  -->
         <!-- ============================================================== -->
         <!-- ============================================================== -->
         <!-- footer -->
         <!-- ============================================================== -->
-
-        <div class=\"container-fluid\">
-        {% block bodyBack %}
-        {% endblock %}
-        </div>
-
         <footer class=\"footer text-center\">
             All Rights Reserved by maxi-entrepot. Designed and Developed by <a href=\"https://wrappixel.com\">Ctrl c/v</a>.
         </footer>
@@ -894,7 +967,6 @@ class __TwigTemplate_91493f3fc322414eeed3815126c9f40afe2ffc23af12053e03dbb1ac1f4
         <!-- End footer -->
         <!-- ============================================================== -->
     </div>
-
     <!-- ============================================================== -->
     <!-- End Page wrapper  -->
     <!-- ============================================================== -->
@@ -929,47 +1001,6 @@ class __TwigTemplate_91493f3fc322414eeed3815126c9f40afe2ffc23af12053e03dbb1ac1f4
 <script src=\"{{ asset('back/') }}assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js\"></script>
 <script src=\"{{ asset('back/') }}dist/js/pages/chart/chart-page-init.js\"></script>
 
-<script src=\"https://code.jquery.com/ui/1.12.1/jquery-ui.js\"></script>
-<link rel=\"stylesheet\" href=\"//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css\">
-<script>
-    \$( function() {
-        var theHREF;
-
-        \$( \"#dialog-confirm\" ).dialog({
-            resizable: false,
-            height:160,
-            width:500,
-            autoOpen: false,
-            show: {
-                effect: \"blind\",
-                duration: 1000
-            },
-            hide: {
-                effect: \"explode\",
-                duration: 1000
-            },
-            modal: true,
-            buttons: {
-                \"Oui\": function() {
-                    \$( this ).dialog( \"close\" );
-                    window.location.href = theHREF;
-                },
-                \"Annuler\": function() {
-                    \$( this ).dialog( \"close\" );
-                }
-            }
-        });
-
-        \$(\"a.confirmModal\").click(function(e) {
-            e.preventDefault();
-            theHREF = \$(this).attr(\"href\");
-            \$(\"#dialog-confirm\").dialog(\"open\");
-        });
-    } );
-</script>
-
-{% block js2 %}
-{% endblock %}
 </body>
 
 </html>", "baseBack.html.twig", "C:\\wamp64\\www\\PI-DEV\\pi\\app\\Resources\\views\\baseBack.html.twig");

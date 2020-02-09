@@ -1,3 +1,9 @@
 front_homepage:
     path:     /cc
     defaults: { _controller: FrontBundle:Default:index }
+afficher_produitF:
+    path:     /afficher_produitF
+    defaults: { _controller: FrontBundle:Produit:AfficheF }
+details_produitF:
+    path:     /details_produitF
+    defaults: { _controller: FrontBundle:Produit:Details }

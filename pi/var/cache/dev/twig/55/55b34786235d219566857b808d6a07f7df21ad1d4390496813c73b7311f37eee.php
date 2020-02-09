@@ -25,7 +25,7 @@ class __TwigTemplate_863acc2646bc2d9050b6ab22325b3f1152b6922e19bfc5a1fa83f793c72
 
     protected function doGetParent(array $context)
     {
-        // line 1
+        // line 4
         return "@FOSUser/layout.html.twig";
     }
 
@@ -37,7 +37,7 @@ class __TwigTemplate_863acc2646bc2d9050b6ab22325b3f1152b6922e19bfc5a1fa83f793c72
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@FOSUser/Registration/register.html.twig"));
 
-        $this->parent = $this->loadTemplate("@FOSUser/layout.html.twig", "@FOSUser/Registration/register.html.twig", 1);
+        $this->parent = $this->loadTemplate("@FOSUser/layout.html.twig", "@FOSUser/Registration/register.html.twig", 4);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -47,7 +47,7 @@ class __TwigTemplate_863acc2646bc2d9050b6ab22325b3f1152b6922e19bfc5a1fa83f793c72
 
     }
 
-    // line 3
+    // line 6
     public function block_fos_user_content($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -56,8 +56,8 @@ class __TwigTemplate_863acc2646bc2d9050b6ab22325b3f1152b6922e19bfc5a1fa83f793c72
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "fos_user_content"));
 
-        // line 4
-        $this->loadTemplate("@FOSUser/Registration/register_content.html.twig", "@FOSUser/Registration/register.html.twig", 4)->display($context);
+        // line 7
+        $this->loadTemplate("@FOSUser/Registration/register_content.html.twig", "@FOSUser/Registration/register.html.twig", 7)->display($context);
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -78,7 +78,7 @@ class __TwigTemplate_863acc2646bc2d9050b6ab22325b3f1152b6922e19bfc5a1fa83f793c72
 
     public function getDebugInfo()
     {
-        return array (  60 => 4,  51 => 3,  29 => 1,);
+        return array (  60 => 7,  51 => 6,  29 => 4,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -91,11 +91,15 @@ class __TwigTemplate_863acc2646bc2d9050b6ab22325b3f1152b6922e19bfc5a1fa83f793c72
 
     public function getSourceContext()
     {
-        return new Source("{% extends \"@FOSUser/layout.html.twig\" %}
+        return new Source("
+
+
+{% extends \"@FOSUser/layout.html.twig\" %}
 
 {% block fos_user_content %}
 {% include \"@FOSUser/Registration/register_content.html.twig\" %}
 {% endblock fos_user_content %}
-", "@FOSUser/Registration/register.html.twig", "C:\\wamp64\\www\\pi\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Registration\\register.html.twig");
+
+", "@FOSUser/Registration/register.html.twig", "C:\\wamp64\\www\\projet\\PI-DEV\\pi\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Registration\\register.html.twig");
     }
 }
