@@ -27,27 +27,7 @@ class Categorie
      * @ORM\Column(name="libelle_c", type="string", length=255)
      */
     private $libelleC;
-    /**
-     * @var
-     * @ORM\OneToMany(targetEntity="Produit",mappedBy="categorie")
-     */
-    private $produit;
 
-    /**
-     * @return mixed
-     */
-    public function getProduit()
-    {
-        return $this->produit;
-    }
-
-    /**
-     * @param mixed $produit
-     */
-    public function setProduit($produit)
-    {
-        $this->produit = $produit;
-    }
 
     /**
      * Get id

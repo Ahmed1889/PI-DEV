@@ -262,10 +262,7 @@ class __TwigTemplate_1b6336740ac29a501201a66da4014d1940fa591fc64da8f49d296305f7b
                                     <ul class=\"main-menu text-center\">
                                         <li><a href=\"index.html\">Home</a></li>
                                         <li><a href=\"about.html\">About</a></li>
-                                        <li><a href=\"";
-        // line 189
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("afficher_produitF");
-        echo "\">Produits</a></li>
+                                        <li><a href=\"shop-full.html\">men</a></li>
                                         <li><a href=\"blog.html\">Blog</a>
                                             <ul class=\"dropdown header-top-hover ptb-10\">
                                                 <li><a href=\"blog.html\">Blog</a></li>
@@ -323,8 +320,6 @@ class __TwigTemplate_1b6336740ac29a501201a66da4014d1940fa591fc64da8f49d296305f7b
         // line 240
         echo "
 
-
-
     <footer id=\"footer\" class=\"footer-area\">
         <div class=\"footer-top-area gray-bg\">
             <div class=\"container\">
@@ -334,7 +329,7 @@ class __TwigTemplate_1b6336740ac29a501201a66da4014d1940fa591fc64da8f49d296305f7b
                             <div class=\"footer-widget-img pb-30\">
                                 <a href=\"#\">
                                     <img src=\"";
-        // line 252
+        // line 250
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "images/logo/logo-2.png\" alt=\"\">
                                 </a>
@@ -409,7 +404,7 @@ class __TwigTemplate_1b6336740ac29a501201a66da4014d1940fa591fc64da8f49d296305f7b
                     <div class=\"col-sm-6\">
                         <div class=\"footer-img\">
                             <img src=\"";
-        // line 324
+        // line 322
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "images/payment.png\" alt=\"\">
                         </div>
@@ -435,7 +430,7 @@ class __TwigTemplate_1b6336740ac29a501201a66da4014d1940fa591fc64da8f49d296305f7b
                                     <div id=\"my-tab-content\" class=\"tab-content mb-20\">
                                         <div class=\"tab-pane b-img active\" id=\"view1\">
                                             <a class=\"venobox\" href=\"";
-        // line 347
+        // line 345
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "images/product/product-details/1.jpg\" data-gall=\"gallery\" title=\"\"><img src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
@@ -443,7 +438,7 @@ class __TwigTemplate_1b6336740ac29a501201a66da4014d1940fa591fc64da8f49d296305f7b
                                         </div>
                                         <div class=\"tab-pane b-img\" id=\"view2\">
                                             <a class=\"venobox\" href=\"";
-        // line 350
+        // line 348
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "images/product/product-details/2.jpg\" data-gall=\"gallery\" title=\"\"><img src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
@@ -451,7 +446,7 @@ class __TwigTemplate_1b6336740ac29a501201a66da4014d1940fa591fc64da8f49d296305f7b
                                         </div>
                                         <div class=\"tab-pane b-img\" id=\"view3\">
                                             <a class=\"venobox\" href=\"";
-        // line 353
+        // line 351
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "images/product/product-details/3.jpg\" data-gall=\"gallery\" title=\"\"><img src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
@@ -459,7 +454,7 @@ class __TwigTemplate_1b6336740ac29a501201a66da4014d1940fa591fc64da8f49d296305f7b
                                         </div>
                                         <div class=\"tab-pane b-img\" id=\"view4\">
                                             <a class=\"venobox\" href=\"";
-        // line 356
+        // line 354
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "images/product/product-details/4.jpg\" data-gall=\"gallery\" title=\"\"><img src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
@@ -468,19 +463,19 @@ class __TwigTemplate_1b6336740ac29a501201a66da4014d1940fa591fc64da8f49d296305f7b
                                     </div>
                                     <div id=\"viewproduct\" class=\"nav nav-tabs product-view bxslider\" data-tabs=\"tabs\">
                                         <div class=\"pro-view b-img active\"><a href=\"#view1\" data-toggle=\"tab\"><img src=\"";
-        // line 360
+        // line 358
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "images/product/product-details/s-1.jpg\" alt=\"\"></a></div>
                                         <div class=\"pro-view b-img\"><a href=\"#view2\" data-toggle=\"tab\"><img src=\"";
-        // line 361
+        // line 359
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "images/product/product-details/s-2.jpg\" alt=\"\"></a></div>
                                         <div class=\"pro-view b-img\"><a href=\"#view3\" data-toggle=\"tab\"><img src=\"";
-        // line 362
+        // line 360
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "images/product/product-details/s-3.jpg\" alt=\"\"></a></div>
                                         <div class=\"pro-view b-img\"><a href=\"#view4\" data-toggle=\"tab\"><img src=\"";
-        // line 363
+        // line 361
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "images/product/product-details/s-4.jpg\" alt=\"\"></a></div>
                                     </div>
@@ -565,35 +560,34 @@ class __TwigTemplate_1b6336740ac29a501201a66da4014d1940fa591fc64da8f49d296305f7b
 
 <!-- jquery latest version -->
 <script src=\"";
-        // line 445
+        // line 443
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "js/vendor/jquery-3.1.1.min.js\"></script>
 <!-- Bootstrap framework js -->
 <script src=\"";
-        // line 447
+        // line 445
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "js/bootstrap.min.js\"></script>
 <!-- Particles js -->
 <script src=\"";
-        // line 449
+        // line 447
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "js/particles.js\"></script>
 <!-- All js plugins included in this file. -->
 <script src=\"";
-        // line 451
+        // line 449
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "js/plugins.js\"></script>
 <!-- Main js file that contents all jQuery plugins activation. -->
 <script src=\"";
-        // line 453
+        // line 451
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "js/main.js\"></script>
 
-
 ";
-        // line 456
+        // line 453
         $this->displayBlock('js', $context, $blocks);
-        // line 458
+        // line 455
         echo "
 </body>
 
@@ -625,7 +619,7 @@ class __TwigTemplate_1b6336740ac29a501201a66da4014d1940fa591fc64da8f49d296305f7b
 
     }
 
-    // line 456
+    // line 453
     public function block_js($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -654,7 +648,7 @@ class __TwigTemplate_1b6336740ac29a501201a66da4014d1940fa591fc64da8f49d296305f7b
 
     public function getDebugInfo()
     {
-        return array (  629 => 456,  619 => 239,  610 => 238,  597 => 458,  595 => 456,  589 => 453,  584 => 451,  579 => 449,  574 => 447,  569 => 445,  484 => 363,  480 => 362,  476 => 361,  472 => 360,  463 => 356,  455 => 353,  447 => 350,  439 => 347,  413 => 324,  338 => 252,  324 => 240,  322 => 238,  278 => 197,  267 => 189,  222 => 147,  206 => 134,  190 => 121,  168 => 102,  154 => 91,  90 => 30,  83 => 26,  78 => 24,  73 => 22,  68 => 20,  63 => 18,  58 => 16,  51 => 12,  38 => 1,);
+        return array (  623 => 453,  613 => 239,  604 => 238,  591 => 455,  589 => 453,  584 => 451,  579 => 449,  574 => 447,  569 => 445,  564 => 443,  479 => 361,  475 => 360,  471 => 359,  467 => 358,  458 => 354,  450 => 351,  442 => 348,  434 => 345,  408 => 322,  333 => 250,  321 => 240,  319 => 238,  275 => 197,  222 => 147,  206 => 134,  190 => 121,  168 => 102,  154 => 91,  90 => 30,  83 => 26,  78 => 24,  73 => 22,  68 => 20,  63 => 18,  58 => 16,  51 => 12,  38 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -855,7 +849,7 @@ class __TwigTemplate_1b6336740ac29a501201a66da4014d1940fa591fc64da8f49d296305f7b
                                     <ul class=\"main-menu text-center\">
                                         <li><a href=\"index.html\">Home</a></li>
                                         <li><a href=\"about.html\">About</a></li>
-                                        <li><a href=\"{{ path('afficher_produitF') }}\">Produits</a></li>
+                                        <li><a href=\"shop-full.html\">men</a></li>
                                         <li><a href=\"blog.html\">Blog</a>
                                             <ul class=\"dropdown header-top-hover ptb-10\">
                                                 <li><a href=\"blog.html\">Blog</a></li>
@@ -906,8 +900,6 @@ class __TwigTemplate_1b6336740ac29a501201a66da4014d1940fa591fc64da8f49d296305f7b
 
     {% block body %}
     {% endblock %}
-
-
 
 
     <footer id=\"footer\" class=\"footer-area\">
@@ -1121,12 +1113,11 @@ class __TwigTemplate_1b6336740ac29a501201a66da4014d1940fa591fc64da8f49d296305f7b
 <!-- Main js file that contents all jQuery plugins activation. -->
 <script src=\"{{ asset('freak/') }}js/main.js\"></script>
 
-
 {% block js %}
 {% endblock %}
 
 </body>
 
-</html>", "base.html.twig", "C:\\wamp64\\www\\projet\\PI-DEV\\pi\\app\\Resources\\views\\base.html.twig");
+</html>", "base.html.twig", "E:\\PI\\PI-DEV\\pi\\app\\Resources\\views\\base.html.twig");
     }
 }

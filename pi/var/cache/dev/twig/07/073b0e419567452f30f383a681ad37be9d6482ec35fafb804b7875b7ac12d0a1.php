@@ -204,73 +204,930 @@ class __TwigTemplate_ef8407b648f587850bae6c6df72151481b49e9f791b1b2b3d66377c105f
                     </div>
                 </div>
                 <div class=\"row\">
-                    ";
-        // line 133
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_slice($this->env, twig_sort_filter(($context["produit"] ?? $this->getContext($context, "produit")), function ($__a__, $__b__) use ($context) { $context["a"] = $__a__; $context["b"] = $__b__; return ($this->getAttribute(($context["a"] ?? $this->getContext($context, "a")), "dateCreation", []) > $this->getAttribute(($context["b"] ?? $this->getContext($context, "b")), "dateCreation", [])); }), 0, 4));
-        foreach ($context['_seq'] as $context["_key"] => $context["p"]) {
-            // line 134
-            echo "                        <div class=\"product-list tab-content\">
-                            <div role=\"tabpanel\" class=\"tab-pane fade in active\" id=\"home\">
-                                <div class=\"col-md-3 col-sm-4 col-xs-12\">
-                                    <div class=\"single-product mb-40\">
-                                        <div class=\"product-img-content mb-20\">
-                                            <div class=\"product-img\">
-                                                <a href=\"";
-            // line 140
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("details_produitF", ["id" => $this->getAttribute($context["p"], "id", [])]), "html", null, true);
-            echo "\">
-                                                    <img class=\"imageproduit2\" src=\"";
-            // line 141
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("photos/"), "html", null, true);
-            echo twig_escape_filter($this->env, $this->getAttribute($context["p"], "image", []), "html", null, true);
-            echo "\" alt=\"";
-            echo twig_escape_filter($this->env, $this->getAttribute($context["p"], "libelleP", []), "html", null, true);
-            echo "\">
-                                                </a>
-                                            </div>
-                                            <div class=\"product-action text-center\">
-                                                <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
-                                                    <i class=\"zmdi zmdi-eye\"></i>
-                                                </a>
-                                                <a href=\"#\" title=\"Add to cart\">
-                                                    <i class=\"zmdi zmdi-shopping-cart\"></i>
-                                                </a>
-                                                <a href=\"#\" title=\"Add to Wishlist\">
-                                                    <i class=\"zmdi zmdi-favorite\"></i>
-                                                </a>
-                                            </div>
+                    <div class=\"product-list tab-content\">
+                        <div role=\"tabpanel\" class=\"tab-pane fade in active\" id=\"arrival\">
+                            <div class=\"col-md-3 col-sm-4\">
+                                <div class=\"single-product mb-40\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"";
+        // line 140
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
+        echo "images/product/1.jpg\" alt=\"\">
+                                            </a>
                                         </div>
-                                        <div class=\"product-content text-center text-uppercase\">
-                                            <a href=\"product-details.html\" >";
-            // line 157
-            echo twig_escape_filter($this->env, $this->getAttribute($context["p"], "libelleP", []), "html", null, true);
-            echo "</a>
-                                            <div class=\"rating-icon\">
-                                                <i class=\"zmdi zmdi-star\"></i>
-                                                <i class=\"zmdi zmdi-star\"></i>
-                                                <i class=\"zmdi zmdi-star\"></i>
-                                                <i class=\"zmdi zmdi-star-half\"></i>
-                                                <i class=\"zmdi zmdi-star-half\"></i>
-                                            </div>
-                                            <div class=\"product-price\">
-                                                <span class=\"new-price\">";
-            // line 166
-            echo twig_escape_filter($this->env, $this->getAttribute($context["p"], "prixVente", []), "html", null, true);
-            echo " DT</span>
-                                            </div>
+                                        <span class=\"new-label text-uppercase\">-30%</span>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Ripcurl Furry Fleece\">Ripcurl Furry Fleece</a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 185.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=\"single-product\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"";
+        // line 174
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
+        echo "images/product/5.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Twill Oversized \">Twill Oversized </a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 150.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=\"col-md-3 col-sm-4\">
+                                <div class=\"single-product mb-40\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"";
+        // line 209
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
+        echo "images/product/2.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <span class=\"new-label red-color text-uppercase\">sale</span>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Slim Shirt With Stretch\">Slim Shirt With Stretch</a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 177.00</span>
+                                            <span class=\"old-price\">£ 200.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=\"single-product\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"";
+        // line 244
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
+        echo "images/product/6.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Tomas Box Logo T-Shirt\">Tomas Box Logo T-Shirt</a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 21.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=\"col-md-3 col-sm-4\">
+                                <div class=\"single-product mb-40\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"";
+        // line 279
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
+        echo "images/product/3.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <span class=\"new-label text-uppercase\">New</span>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Ripcurl Furry Fleece\">Ripcurl Furry Fleece</a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 38.00</span>
+                                            <span class=\"old-price\">£ 45.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=\"single-product\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"";
+        // line 314
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
+        echo "images/product/7.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <span class=\"new-label red-color text-uppercase\">sale</span>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Shirt in Bee Print\">Shirt in Bee Print</a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 21.65</span>
+                                            <span class=\"old-price\">£ 24.60</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=\"col-md-3 hidden-sm\">
+                                <div class=\"single-product mb-40\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"";
+        // line 351
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
+        echo "images/product/4.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Skinny In Charcoal\">Skinny In Charcoal</a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 38.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=\"single-product\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"";
+        // line 384
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
+        echo "images/product/8.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <span class=\"new-label text-uppercase\">New</span>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Shirt in Bee Print\">Shirt in Bee Print</a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 21.65</span>
+                                            <span class=\"old-price\">£ 24.60</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    ";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['p'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 174
-        echo "                </div>
+                        <div role=\"tabpanel\" class=\"tab-pane fade\" id=\"sale\">
+                            <div class=\"col-md-3 col-sm-4\">
+                                <div class=\"single-product mb-40\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"";
+        // line 423
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
+        echo "images/product/2.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <span class=\"new-label red-color text-uppercase\">sale</span>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Slim Shirt With Stretch\">Slim Shirt With Stretch</a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 177.00</span>
+                                            <span class=\"old-price\">£ 200.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=\"single-product\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"";
+        // line 458
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
+        echo "images/product/6.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Tomas Box Logo T-Shirt\">Tomas Box Logo T-Shirt</a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 21.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=\"col-md-3 col-sm-4\">
+                                <div class=\"single-product mb-40\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"";
+        // line 493
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
+        echo "images/product/3.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <span class=\"new-label text-uppercase\">New</span>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Ripcurl Furry Fleece\">Ripcurl Furry Fleece</a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 38.00</span>
+                                            <span class=\"old-price\">£ 45.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=\"single-product\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"";
+        // line 528
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
+        echo "images/product/7.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <span class=\"new-label red-color text-uppercase\">sale</span>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Shirt in Bee Print\">Shirt in Bee Print</a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 21.65</span>
+                                            <span class=\"old-price\">£ 24.60</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=\"col-md-3 col-sm-4\">
+                                <div class=\"single-product mb-40\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"";
+        // line 565
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
+        echo "images/product/4.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Skinny In Charcoal\">Skinny In Charcoal</a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 38.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=\"single-product\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"";
+        // line 598
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
+        echo "images/product/8.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <span class=\"new-label text-uppercase\">New</span>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Shirt in Bee Print\">Shirt in Bee Print</a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 21.65</span>
+                                            <span class=\"old-price\">£ 24.60</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=\"col-md-3 hidden-sm\">
+                                <div class=\"single-product mb-40\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"";
+        // line 635
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
+        echo "images/product/1.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <span class=\"new-label text-uppercase\">-30%</span>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Ripcurl Furry Fleece\">Ripcurl Furry Fleece</a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 185.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=\"single-product\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"";
+        // line 669
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
+        echo "images/product/5.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Twill Oversized \">Twill Oversized </a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 150.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role=\"tabpanel\" class=\"tab-pane fade\" id=\"featured\">
+                            <div class=\"col-md-3 col-sm-4\">
+                                <div class=\"single-product mb-40\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"";
+        // line 706
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
+        echo "images/product/4.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Skinny In Charcoal\">Skinny In Charcoal</a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 38.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=\"single-product\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"";
+        // line 739
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
+        echo "images/product/8.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <span class=\"new-label text-uppercase\">New</span>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Shirt in Bee Print\">Shirt in Bee Print</a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 21.65</span>
+                                            <span class=\"old-price\">£ 24.60</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=\"col-md-3 col-sm-4\">
+                                <div class=\"single-product mb-40\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"";
+        // line 776
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
+        echo "images/product/1.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <span class=\"new-label text-uppercase\">-30%</span>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Ripcurl Furry Fleece\">Ripcurl Furry Fleece</a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 185.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=\"single-product\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"";
+        // line 810
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
+        echo "images/product/5.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Twill Oversized \">Twill Oversized </a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 150.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=\"col-md-3 col-sm-4\">
+                                <div class=\"single-product mb-40\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"";
+        // line 845
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
+        echo "images/product/2.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <span class=\"new-label red-color text-uppercase\">sale</span>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Slim Shirt With Stretch\">Slim Shirt With Stretch</a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 177.00</span>
+                                            <span class=\"old-price\">£ 200.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=\"single-product\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"";
+        // line 880
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
+        echo "images/product/6.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Tomas Box Logo T-Shirt\">Tomas Box Logo T-Shirt</a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 21.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=\"col-md-3 hidden-sm\">
+                                <div class=\"single-product mb-40\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"";
+        // line 915
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
+        echo "images/product/3.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <span class=\"new-label text-uppercase\">New</span>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Ripcurl Furry Fleece\">Ripcurl Furry Fleece</a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 38.00</span>
+                                            <span class=\"old-price\">£ 45.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=\"single-product\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"";
+        // line 950
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
+        echo "images/product/7.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <span class=\"new-label red-color text-uppercase\">sale</span>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Shirt in Bee Print\">Shirt in Bee Print</a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 21.65</span>
+                                            <span class=\"old-price\">£ 24.60</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- End of Product List -->
@@ -318,7 +1175,7 @@ class __TwigTemplate_ef8407b648f587850bae6c6df72151481b49e9f791b1b2b3d66377c105f
                                         <div class=\"sale-img\">
                                             <a href=\"product-details.html\" title=\"Men’s White Short Item\">
                                                 <img src=\"";
-        // line 221
+        // line 1031
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "images/sale/1.jpg\" alt=\"\">
                                             </a>
@@ -353,7 +1210,7 @@ class __TwigTemplate_ef8407b648f587850bae6c6df72151481b49e9f791b1b2b3d66377c105f
                                         <div class=\"sale-img\">
                                             <a href=\"product-details.html\" title=\"Men’s White Short Item\">
                                                 <img src=\"";
-        // line 253
+        // line 1063
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "images/sale/2.jpg\" alt=\"\">
                                             </a>
@@ -388,7 +1245,7 @@ class __TwigTemplate_ef8407b648f587850bae6c6df72151481b49e9f791b1b2b3d66377c105f
                                         <div class=\"sale-img\">
                                             <a href=\"product-details.html\" title=\"Men’s White Short Item\">
                                                 <img src=\"";
-        // line 285
+        // line 1095
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "images/sale/3.jpg\" alt=\"\">
                                             </a>
@@ -430,7 +1287,7 @@ class __TwigTemplate_ef8407b648f587850bae6c6df72151481b49e9f791b1b2b3d66377c105f
                                         <div class=\"sale-img\">
                                             <a href=\"product-details.html\" title=\"Men’s White Short Item\">
                                                 <img src=\"";
-        // line 324
+        // line 1134
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "images/sale/4.jpg\" alt=\"\">
                                             </a>
@@ -464,7 +1321,7 @@ class __TwigTemplate_ef8407b648f587850bae6c6df72151481b49e9f791b1b2b3d66377c105f
                                         <div class=\"sale-img\">
                                             <a href=\"product-details.html\" title=\"Men’s White Short Item\">
                                                 <img src=\"";
-        // line 355
+        // line 1165
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "images/sale/5.jpg\" alt=\"\">
                                             </a>
@@ -499,7 +1356,7 @@ class __TwigTemplate_ef8407b648f587850bae6c6df72151481b49e9f791b1b2b3d66377c105f
                                         <div class=\"sale-img\">
                                             <a href=\"product-details.html\" title=\"Men’s White Short Item\">
                                                 <img src=\"";
-        // line 387
+        // line 1197
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "images/sale/6.jpg\" alt=\"\">
                                             </a>
@@ -533,7 +1390,7 @@ class __TwigTemplate_ef8407b648f587850bae6c6df72151481b49e9f791b1b2b3d66377c105f
                         <div class=\"offer-banner\">
                             <a href=\"#\">
                                 <img src=\"";
-        // line 418
+        // line 1228
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "images/sale/offer.jpg\" alt=\"\">
                             </a>
@@ -565,7 +1422,7 @@ class __TwigTemplate_ef8407b648f587850bae6c6df72151481b49e9f791b1b2b3d66377c105f
                             <div class=\"testimonial-list\">
                                 <div class=\"single-testimonial text-center\">
                                     <img alt=\"\" src=\"";
-        // line 447
+        // line 1257
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "images/testimonial/1.jpg\">
                                     <div class=\"testimonial-info white-bg clearfix\">
@@ -579,7 +1436,7 @@ class __TwigTemplate_ef8407b648f587850bae6c6df72151481b49e9f791b1b2b3d66377c105f
                                 </div>
                                 <div class=\"single-testimonial text-center\">
                                     <img alt=\"\" src=\"";
-        // line 458
+        // line 1268
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "images/testimonial/2.jpg\">
                                     <div class=\"testimonial-info white-bg clearfix\">
@@ -615,7 +1472,7 @@ class __TwigTemplate_ef8407b648f587850bae6c6df72151481b49e9f791b1b2b3d66377c105f
                                 <div class=\"blog-image\">
                                     <a href=\"#\">
                                         <img alt=\"\" src=\"";
-        // line 491
+        // line 1301
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "images/blog/1.jpg\">
                                     </a>
@@ -669,7 +1526,7 @@ class __TwigTemplate_ef8407b648f587850bae6c6df72151481b49e9f791b1b2b3d66377c105f
                                 <div class=\"blog-image\">
                                     <a href=\"#\">
                                         <img alt=\"\" src=\"";
-        // line 542
+        // line 1352
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "images/blog/2.jpg\">
                                     </a>
@@ -723,7 +1580,7 @@ class __TwigTemplate_ef8407b648f587850bae6c6df72151481b49e9f791b1b2b3d66377c105f
                                 <div class=\"blog-image\">
                                     <a href=\"#\">
                                         <img alt=\"\" src=\"";
-        // line 593
+        // line 1403
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "images/blog/1.jpg\">
                                     </a>
@@ -786,7 +1643,7 @@ class __TwigTemplate_ef8407b648f587850bae6c6df72151481b49e9f791b1b2b3d66377c105f
                             <div class=\"single-brand text-center\">
                                 <a href=\"#\">
                                     <img src=\"";
-        // line 653
+        // line 1463
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "images/brand/1.png\" alt=\"\">
                                 </a>
@@ -796,7 +1653,7 @@ class __TwigTemplate_ef8407b648f587850bae6c6df72151481b49e9f791b1b2b3d66377c105f
                             <div class=\"single-brand text-center\">
                                 <a href=\"#\">
                                     <img src=\"";
-        // line 660
+        // line 1470
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "images/brand/2.png\" alt=\"\">
                                 </a>
@@ -806,7 +1663,7 @@ class __TwigTemplate_ef8407b648f587850bae6c6df72151481b49e9f791b1b2b3d66377c105f
                             <div class=\"single-brand text-center\">
                                 <a href=\"#\">
                                     <img src=\"";
-        // line 667
+        // line 1477
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "images/brand/3.png\" alt=\"\">
                                 </a>
@@ -816,7 +1673,7 @@ class __TwigTemplate_ef8407b648f587850bae6c6df72151481b49e9f791b1b2b3d66377c105f
                             <div class=\"single-brand text-center\">
                                 <a href=\"#\">
                                     <img src=\"";
-        // line 674
+        // line 1484
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "images/brand/4.png\" alt=\"\">
                                 </a>
@@ -826,7 +1683,7 @@ class __TwigTemplate_ef8407b648f587850bae6c6df72151481b49e9f791b1b2b3d66377c105f
                             <div class=\"single-brand text-center\">
                                 <a href=\"#\">
                                     <img src=\"";
-        // line 681
+        // line 1491
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "images/brand/5.png\" alt=\"\">
                                 </a>
@@ -836,7 +1693,7 @@ class __TwigTemplate_ef8407b648f587850bae6c6df72151481b49e9f791b1b2b3d66377c105f
                             <div class=\"single-brand text-center\">
                                 <a href=\"#\">
                                     <img src=\"";
-        // line 688
+        // line 1498
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "images/brand/6.png\" alt=\"\">
                                 </a>
@@ -846,7 +1703,7 @@ class __TwigTemplate_ef8407b648f587850bae6c6df72151481b49e9f791b1b2b3d66377c105f
                             <div class=\"single-brand text-center\">
                                 <a href=\"#\">
                                     <img src=\"";
-        // line 695
+        // line 1505
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "images/brand/1.png\" alt=\"\">
                                 </a>
@@ -856,7 +1713,7 @@ class __TwigTemplate_ef8407b648f587850bae6c6df72151481b49e9f791b1b2b3d66377c105f
                             <div class=\"single-brand text-center\">
                                 <a href=\"#\">
                                     <img src=\"";
-        // line 702
+        // line 1512
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "images/brand/2.png\" alt=\"\">
                                 </a>
@@ -866,7 +1723,7 @@ class __TwigTemplate_ef8407b648f587850bae6c6df72151481b49e9f791b1b2b3d66377c105f
                             <div class=\"single-brand text-center\">
                                 <a href=\"#\">
                                     <img src=\"";
-        // line 709
+        // line 1519
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "images/brand/3.png\" alt=\"\">
                                 </a>
@@ -922,7 +1779,7 @@ class __TwigTemplate_ef8407b648f587850bae6c6df72151481b49e9f791b1b2b3d66377c105f
 
     public function getDebugInfo()
     {
-        return array (  870 => 709,  860 => 702,  850 => 695,  840 => 688,  830 => 681,  820 => 674,  810 => 667,  800 => 660,  790 => 653,  727 => 593,  673 => 542,  619 => 491,  583 => 458,  569 => 447,  537 => 418,  503 => 387,  468 => 355,  434 => 324,  392 => 285,  357 => 253,  322 => 221,  273 => 174,  259 => 166,  247 => 157,  225 => 141,  221 => 140,  213 => 134,  209 => 133,  173 => 100,  160 => 90,  147 => 80,  134 => 70,  68 => 7,  64 => 6,  60 => 4,  51 => 3,  29 => 1,);
+        return array (  1727 => 1519,  1717 => 1512,  1707 => 1505,  1697 => 1498,  1687 => 1491,  1677 => 1484,  1667 => 1477,  1657 => 1470,  1647 => 1463,  1584 => 1403,  1530 => 1352,  1476 => 1301,  1440 => 1268,  1426 => 1257,  1394 => 1228,  1360 => 1197,  1325 => 1165,  1291 => 1134,  1249 => 1095,  1214 => 1063,  1179 => 1031,  1095 => 950,  1057 => 915,  1019 => 880,  981 => 845,  943 => 810,  906 => 776,  866 => 739,  830 => 706,  790 => 669,  753 => 635,  713 => 598,  677 => 565,  637 => 528,  599 => 493,  561 => 458,  523 => 423,  481 => 384,  445 => 351,  405 => 314,  367 => 279,  329 => 244,  291 => 209,  253 => 174,  216 => 140,  173 => 100,  160 => 90,  147 => 80,  134 => 70,  68 => 7,  64 => 6,  60 => 4,  51 => 3,  29 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -1067,47 +1924,857 @@ class __TwigTemplate_ef8407b648f587850bae6c6df72151481b49e9f791b1b2b3d66377c105f
                     </div>
                 </div>
                 <div class=\"row\">
-                    {% for p in produit | sort((a, b) => a.dateCreation > b.dateCreation) | slice(0,4)%}
-                        <div class=\"product-list tab-content\">
-                            <div role=\"tabpanel\" class=\"tab-pane fade in active\" id=\"home\">
-                                <div class=\"col-md-3 col-sm-4 col-xs-12\">
-                                    <div class=\"single-product mb-40\">
-                                        <div class=\"product-img-content mb-20\">
-                                            <div class=\"product-img\">
-                                                <a href=\"{{ path('details_produitF',{'id':p.id}) }}\">
-                                                    <img class=\"imageproduit2\" src=\"{{ asset( 'photos/') }}{{ p.image }}\" alt=\"{{ p.libelleP }}\">
-                                                </a>
-                                            </div>
-                                            <div class=\"product-action text-center\">
-                                                <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
-                                                    <i class=\"zmdi zmdi-eye\"></i>
-                                                </a>
-                                                <a href=\"#\" title=\"Add to cart\">
-                                                    <i class=\"zmdi zmdi-shopping-cart\"></i>
-                                                </a>
-                                                <a href=\"#\" title=\"Add to Wishlist\">
-                                                    <i class=\"zmdi zmdi-favorite\"></i>
-                                                </a>
-                                            </div>
+                    <div class=\"product-list tab-content\">
+                        <div role=\"tabpanel\" class=\"tab-pane fade in active\" id=\"arrival\">
+                            <div class=\"col-md-3 col-sm-4\">
+                                <div class=\"single-product mb-40\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"{{ asset('freak/') }}images/product/1.jpg\" alt=\"\">
+                                            </a>
                                         </div>
-                                        <div class=\"product-content text-center text-uppercase\">
-                                            <a href=\"product-details.html\" >{{ p.libelleP }}</a>
-                                            <div class=\"rating-icon\">
-                                                <i class=\"zmdi zmdi-star\"></i>
-                                                <i class=\"zmdi zmdi-star\"></i>
-                                                <i class=\"zmdi zmdi-star\"></i>
-                                                <i class=\"zmdi zmdi-star-half\"></i>
-                                                <i class=\"zmdi zmdi-star-half\"></i>
-                                            </div>
-                                            <div class=\"product-price\">
-                                                <span class=\"new-price\">{{ p.prixVente }} DT</span>
-                                            </div>
+                                        <span class=\"new-label text-uppercase\">-30%</span>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Ripcurl Furry Fleece\">Ripcurl Furry Fleece</a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 185.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=\"single-product\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"{{ asset('freak/') }}images/product/5.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Twill Oversized \">Twill Oversized </a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 150.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=\"col-md-3 col-sm-4\">
+                                <div class=\"single-product mb-40\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"{{ asset('freak/') }}images/product/2.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <span class=\"new-label red-color text-uppercase\">sale</span>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Slim Shirt With Stretch\">Slim Shirt With Stretch</a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 177.00</span>
+                                            <span class=\"old-price\">£ 200.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=\"single-product\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"{{ asset('freak/') }}images/product/6.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Tomas Box Logo T-Shirt\">Tomas Box Logo T-Shirt</a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 21.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=\"col-md-3 col-sm-4\">
+                                <div class=\"single-product mb-40\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"{{ asset('freak/') }}images/product/3.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <span class=\"new-label text-uppercase\">New</span>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Ripcurl Furry Fleece\">Ripcurl Furry Fleece</a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 38.00</span>
+                                            <span class=\"old-price\">£ 45.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=\"single-product\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"{{ asset('freak/') }}images/product/7.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <span class=\"new-label red-color text-uppercase\">sale</span>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Shirt in Bee Print\">Shirt in Bee Print</a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 21.65</span>
+                                            <span class=\"old-price\">£ 24.60</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=\"col-md-3 hidden-sm\">
+                                <div class=\"single-product mb-40\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"{{ asset('freak/') }}images/product/4.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Skinny In Charcoal\">Skinny In Charcoal</a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 38.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=\"single-product\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"{{ asset('freak/') }}images/product/8.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <span class=\"new-label text-uppercase\">New</span>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Shirt in Bee Print\">Shirt in Bee Print</a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 21.65</span>
+                                            <span class=\"old-price\">£ 24.60</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    {% endfor %}
+                        <div role=\"tabpanel\" class=\"tab-pane fade\" id=\"sale\">
+                            <div class=\"col-md-3 col-sm-4\">
+                                <div class=\"single-product mb-40\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"{{ asset('freak/') }}images/product/2.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <span class=\"new-label red-color text-uppercase\">sale</span>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Slim Shirt With Stretch\">Slim Shirt With Stretch</a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 177.00</span>
+                                            <span class=\"old-price\">£ 200.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=\"single-product\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"{{ asset('freak/') }}images/product/6.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Tomas Box Logo T-Shirt\">Tomas Box Logo T-Shirt</a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 21.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=\"col-md-3 col-sm-4\">
+                                <div class=\"single-product mb-40\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"{{ asset('freak/') }}images/product/3.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <span class=\"new-label text-uppercase\">New</span>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Ripcurl Furry Fleece\">Ripcurl Furry Fleece</a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 38.00</span>
+                                            <span class=\"old-price\">£ 45.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=\"single-product\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"{{ asset('freak/') }}images/product/7.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <span class=\"new-label red-color text-uppercase\">sale</span>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Shirt in Bee Print\">Shirt in Bee Print</a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 21.65</span>
+                                            <span class=\"old-price\">£ 24.60</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=\"col-md-3 col-sm-4\">
+                                <div class=\"single-product mb-40\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"{{ asset('freak/') }}images/product/4.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Skinny In Charcoal\">Skinny In Charcoal</a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 38.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=\"single-product\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"{{ asset('freak/') }}images/product/8.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <span class=\"new-label text-uppercase\">New</span>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Shirt in Bee Print\">Shirt in Bee Print</a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 21.65</span>
+                                            <span class=\"old-price\">£ 24.60</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=\"col-md-3 hidden-sm\">
+                                <div class=\"single-product mb-40\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"{{ asset('freak/') }}images/product/1.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <span class=\"new-label text-uppercase\">-30%</span>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Ripcurl Furry Fleece\">Ripcurl Furry Fleece</a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 185.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=\"single-product\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"{{ asset('freak/') }}images/product/5.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Twill Oversized \">Twill Oversized </a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 150.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role=\"tabpanel\" class=\"tab-pane fade\" id=\"featured\">
+                            <div class=\"col-md-3 col-sm-4\">
+                                <div class=\"single-product mb-40\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"{{ asset('freak/') }}images/product/4.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Skinny In Charcoal\">Skinny In Charcoal</a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 38.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=\"single-product\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"{{ asset('freak/') }}images/product/8.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <span class=\"new-label text-uppercase\">New</span>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Shirt in Bee Print\">Shirt in Bee Print</a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 21.65</span>
+                                            <span class=\"old-price\">£ 24.60</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=\"col-md-3 col-sm-4\">
+                                <div class=\"single-product mb-40\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"{{ asset('freak/') }}images/product/1.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <span class=\"new-label text-uppercase\">-30%</span>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Ripcurl Furry Fleece\">Ripcurl Furry Fleece</a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 185.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=\"single-product\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"{{ asset('freak/') }}images/product/5.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Twill Oversized \">Twill Oversized </a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 150.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=\"col-md-3 col-sm-4\">
+                                <div class=\"single-product mb-40\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"{{ asset('freak/') }}images/product/2.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <span class=\"new-label red-color text-uppercase\">sale</span>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Slim Shirt With Stretch\">Slim Shirt With Stretch</a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 177.00</span>
+                                            <span class=\"old-price\">£ 200.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=\"single-product\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"{{ asset('freak/') }}images/product/6.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Tomas Box Logo T-Shirt\">Tomas Box Logo T-Shirt</a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 21.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=\"col-md-3 hidden-sm\">
+                                <div class=\"single-product mb-40\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"{{ asset('freak/') }}images/product/3.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <span class=\"new-label text-uppercase\">New</span>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Ripcurl Furry Fleece\">Ripcurl Furry Fleece</a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 38.00</span>
+                                            <span class=\"old-price\">£ 45.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=\"single-product\">
+                                    <div class=\"product-img-content mb-20\">
+                                        <div class=\"product-img\">
+                                            <a href=\"product-details.html\">
+                                                <img src=\"{{ asset('freak/') }}images/product/7.jpg\" alt=\"\">
+                                            </a>
+                                        </div>
+                                        <span class=\"new-label red-color text-uppercase\">sale</span>
+                                        <div class=\"product-action text-center\">
+                                            <a href=\"#\" title=\"Quick view\" data-toggle=\"modal\" data-target=\"#productModal\">
+                                                <i class=\"zmdi zmdi-eye\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to cart\">
+                                                <i class=\"zmdi zmdi-shopping-cart\"></i>
+                                            </a>
+                                            <a href=\"#\" title=\"Add to Wishlist\">
+                                                <i class=\"zmdi zmdi-favorite\"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class=\"product-content text-center text-uppercase\">
+                                        <a href=\"product-details.html\" title=\"Shirt in Bee Print\">Shirt in Bee Print</a>
+                                        <div class=\"rating-icon\">
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                            <i class=\"zmdi zmdi-star-half\"></i>
+                                        </div>
+                                        <div class=\"product-price\">
+                                            <span class=\"new-price\">£ 21.65</span>
+                                            <span class=\"old-price\">£ 24.60</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1677,6 +3344,6 @@ class __TwigTemplate_ef8407b648f587850bae6c6df72151481b49e9f791b1b2b3d66377c105f
         <!-- End Of Newsletter Area -->
     </section>
 {% endblock %}
-", "default/index.html.twig", "C:\\wamp64\\www\\projet\\PI-DEV\\pi\\app\\Resources\\views\\default\\index.html.twig");
+", "default/index.html.twig", "E:\\PI\\PI-DEV\\pi\\app\\Resources\\views\\default\\index.html.twig");
     }
 }

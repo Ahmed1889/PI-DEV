@@ -100,6 +100,6 @@ class __TwigTemplate_863acc2646bc2d9050b6ab22325b3f1152b6922e19bfc5a1fa83f793c72
 {% include \"@FOSUser/Registration/register_content.html.twig\" %}
 {% endblock fos_user_content %}
 
-", "@FOSUser/Registration/register.html.twig", "C:\\wamp64\\www\\projet\\PI-DEV\\pi\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Registration\\register.html.twig");
+", "@FOSUser/Registration/register.html.twig", "E:\\PI\\PI-DEV\\pi\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Registration\\register.html.twig");
     }
 }

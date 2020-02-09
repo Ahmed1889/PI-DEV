@@ -1,27 +1,40 @@
 back_homepage:
     path:     /aa
     defaults: { _controller: BackBundle:Default:index }
-ajout_categorie:
-    path:     /ajout_categorie
-    defaults: { _controller: BackBundle:Categorie:Ajout }
-afficher_categorie:
-    path:     /afficher_categorie
-    defaults: { _controller: BackBundle:Categorie:Affiche }
-supprimer_categorie:
-    path:     /supprimer_categorie
-    defaults: { _controller: BackBundle:Categorie:Supprimer}
-modifier_categorie:
-    path:     /modifier_categorie
-    defaults: { _controller: BackBundle:Categorie:Modifier}
-ajout_produit:
-    path:     /ajout_produit
-    defaults: { _controller: BackBundle:Produit:Ajout }
-afficher_produit:
-    path:     /afficher_produit
-    defaults: { _controller: BackBundle:Produit:Affiche }
-supprimer_produit:
-    path:     /supprimer_produit
-    defaults: { _controller: BackBundle:Produit:Supprimer}
-modifier_produit:
-    path:     /modifier_produit
-    defaults: { _controller: BackBundle:Produit:Modifier}
+
+ajoutTypeVehicule:
+    path:     /ajoutType
+    defaults: { _controller: BackBundle:Livraison:AjouterTypeVehicule }
+
+afficherTypeVehicules:
+    path:     /afficherTypes
+    defaults: { _controller: BackBundle:Livraison:AfficherTypeVehicule }
+
+supprimerTypeVehicule:
+    path:     /supprimerType
+    defaults: { _controller: BackBundle:Livraison:SupprimerTypeVehicule }
+
+modifierTypeVehicule:
+    path:     /modifierType
+    defaults: { _controller: BackBundle:Livraison:ModifierTypeVehicule }
+
+ajoutVehicule:
+    path:     /ajoutVehicule
+    defaults: { _controller: BackBundle:Livraison:AjouterVehicule }
+
+
+afficheVehicule:
+    path:     /afficheVehicule
+    defaults: { _controller: BackBundle:Livraison:AfficherVehicule }
+
+supprimerVehicule:
+    path:     /supprimerVehicule
+    defaults: { _controller: BackBundle:Livraison:SupprimerVehicule }
+
+modifierVehicule:
+    path:     /modifierVehicule
+    defaults: { _controller: BackBundle:Livraison:ModifierVehicule }
+
+affichePlannigDay:
+    path:     /affichePlanningDay
+    defaults: { _controller: BackBundle:Livraison:AfficherVPlanningDay }

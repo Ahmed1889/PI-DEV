@@ -3,7 +3,6 @@
 namespace BackBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Produit
@@ -46,8 +45,7 @@ class Produit
     /**
      * @var string
      *
-     * @ORM\Column(name="image", type="string", length=500)
-     * @Assert\File(maxSize="500k", mimeTypes={"image/jpeg", "image/jpg", "image/png", "image/GIF"})
+     * @ORM\Column(name="image", type="string", length=255)
      */
     private $image;
 
@@ -57,62 +55,6 @@ class Produit
      * @ORM\Column(name="description", type="string", length=255)
      */
     private $description;
-    /**
-     * @var
-     * @ORM\ManyToOne(targetEntity="BackBundle\Entity\Categorie")
-     * @ORM\JoinColumn(name="id_categorie",referencedColumnName="id", onDelete="CASCADE")
-     */
-    private $categorie;
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="date_creation", type="datetime" , nullable=true)
-     */
-    private $dateCreation;
-
-    /**
-     * Produit constructor.
-     */
-    public function __construct()
-    {
-        $dateCreation= new Assert\DateTime();
-    }
-
-    /**
-     * @return \DateTime
-     */
-    public function getDateCreation()
-    {
-        return $this->dateCreation;
-    }
-
-    /**
-     * @param \DateTime $dateCreation
-     */
-    public function setDateCreation($dateCreation)
-    {
-        $this->dateCreation = $dateCreation;
-    }
-
-
-
-    /**
-     * @return mixed
-     */
-    public function getCategorie()
-    {
-        return $this->categorie;
-    }
-
-    /**
-     * @param mixed $etudiant
-     */
-    public function setCategorie($categorie)
-    {
-        $this->categorie = $categorie;
-    }
-
-
 
 
     /**
