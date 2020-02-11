@@ -20,7 +20,6 @@
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-
     <![endif]-->
 </head>
 
@@ -232,12 +231,16 @@
 
                     <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-box-open"></i><span class="hide-menu">Gestion produits</span></a>
                         <ul aria-expanded="false" class="collapse  first-level">
+<<<<<<< HEAD
                             <li class="sidebar-item"><a href="{{ path('ajout_categorie') }}" class="sidebar-link"><i class="fas fa-plus"></i><span class="hide-menu"> ajouter categorie </span></a></li>
                             <li class="sidebar-item"><a href="{{ path('afficher_categorie') }}" class="sidebar-link"><i class="fas fa-list"></i><span class="hide-menu"> lister categories </span></a></li>
                             <li class="sidebar-item"><a href="{{ path('ajout_produit') }}" class="sidebar-link"><i class="fas fa-plus"></i><span class="hide-menu"> ajouter produit </span></a></li>
                             <li class="sidebar-item"><a href="{{ path('afficher_produit') }}" class="sidebar-link"><i class="fas fa-list"></i><span class="hide-menu"> lister produits </span></a></li>
                             <li class="sidebar-item"><a href="{{ path('ajout_stock') }}" class="sidebar-link"><i class="fas fa-plus"></i><span class="hide-menu"> ajouter stock </span></a></li>
                             <li class="sidebar-item"><a href="{{ path('afficher_stock') }}" class="sidebar-link"><i class="fas fa-list"></i><span class="hide-menu"> lister stocks </span></a></li>
+=======
+
+>>>>>>> a43438cf8b2ecdc1fbc9f667445e24fe10f77218
                         </ul>
                     </li>
                     <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-shopping-cart"></i><span class="hide-menu">Gestion panier/commandes </span></a>
@@ -266,8 +269,11 @@
                     </li>
                     <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-shipping-fast"></i><span class="hide-menu">Gestion livraison </span></a>
                         <ul aria-expanded="false" class="collapse  first-level">
-                            <li class="sidebar-item"><a href="index2.html" class="sidebar-link"><i class="fas fa-plus"></i><span class="hide-menu"> Dashboard-2 </span></a></li>
-                            <li class="sidebar-item"><a href="pages-gallery.html" class="sidebar-link"><i class="fas fa-list"></i><span class="hide-menu"> Gallery </span></a></li>
+                            <li class="sidebar-item"><a href="{{ path('affichePlannigDay') }}" class="sidebar-link"><i class="fas fa-plus"></i><span class="hide-menu"> Planning </span></a></li>
+                            <li class="sidebar-item"><a href="{{ path('ajoutTypeVehicule') }}" class="sidebar-link"><i class="fas fa-plus"></i><span class="hide-menu"> ajouter type vehicule </span></a></li>
+                            <li class="sidebar-item"><a href="{{ path('afficherTypeVehicules') }}" class="sidebar-link"><i class="fas fa-plus"></i><span class="hide-menu"> Liste  des types des vehicules </span></a></li>
+                            <li class="sidebar-item"><a href="{{ path('afficheVehicule') }}" class="sidebar-link"><i class="fas fa-plus"></i><span class="hide-menu"> Liste  des vehicules </span></a></li>
+                            <li class="sidebar-item"><a href="{{ path('ajoutVehicule') }}" class="sidebar-link"><i class="fas fa-plus"></i><span class="hide-menu"> ajouter des vehicules </span></a></li>
                         </ul>
                     </li>
                     <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="charts.html" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span class="hide-menu">Statistiques</span></a></li>
@@ -301,10 +307,12 @@
         <!-- ============================================================== -->
         <!-- footer -->
         <!-- ============================================================== -->
+
         <div class="container-fluid">
         {% block bodyBack %}
         {% endblock %}
         </div>
+
         <footer class="footer text-center">
             All Rights Reserved by maxi-entrepot. Designed and Developed by <a href="https://wrappixel.com">Ctrl c/v</a>.
         </footer>
@@ -346,6 +354,7 @@
 <script src="{{ asset('back/') }}assets/libs/flot/jquery.flot.crosshair.js"></script>
 <script src="{{ asset('back/') }}assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
 <script src="{{ asset('back/') }}dist/js/pages/chart/chart-page-init.js"></script>
+
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <script>
@@ -377,6 +386,7 @@
             }
         });
 
+
         $("a.confirmModal").click(function(e) {
             e.preventDefault();
             theHREF = $(this).attr("href");
@@ -384,6 +394,7 @@
         });
     } );
 </script>
+
 {% block js2 %}
 {% endblock %}
 </body>

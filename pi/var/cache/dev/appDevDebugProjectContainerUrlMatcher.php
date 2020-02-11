@@ -113,6 +113,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 return array (  '_controller' => 'BackBundle\\Controller\\DefaultController::indexAction',  '_route' => 'back_homepage',);
             }
 
+<<<<<<< HEAD
             if (0 === strpos($pathinfo, '/ajout_')) {
                 // ajout_categorie
                 if ('/ajout_categorie' === $pathinfo) {
@@ -153,12 +154,39 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 // afficher_stock
                 if ('/afficher_stock' === $pathinfo) {
                     return array (  '_controller' => 'BackBundle\\Controller\\StockController::AfficheAction',  '_route' => 'afficher_stock',);
+=======
+            // ajoutTypeVehicule
+            if ('/ajoutType' === $pathinfo) {
+                return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::AjouterTypeVehiculeAction',  '_route' => 'ajoutTypeVehicule',);
+            }
+
+            // ajoutVehicule
+            if ('/ajoutVehicule' === $pathinfo) {
+                return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::AjouterVehiculeAction',  '_route' => 'ajoutVehicule',);
+            }
+
+            if (0 === strpos($pathinfo, '/affiche')) {
+                // afficherTypeVehicules
+                if ('/afficherTypes' === $pathinfo) {
+                    return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::AfficherTypeVehiculeAction',  '_route' => 'afficherTypeVehicules',);
+                }
+
+                // afficheVehicule
+                if ('/afficheVehicule' === $pathinfo) {
+                    return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::AfficherVehiculeAction',  '_route' => 'afficheVehicule',);
+                }
+
+                // affichePlannigDay
+                if ('/affichePlanningDay' === $pathinfo) {
+                    return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::AfficherVPlanningDayAction',  '_route' => 'affichePlannigDay',);
+>>>>>>> a43438cf8b2ecdc1fbc9f667445e24fe10f77218
                 }
 
             }
 
         }
 
+<<<<<<< HEAD
         elseif (0 === strpos($pathinfo, '/supprimer_')) {
             // supprimer_categorie
             if ('/supprimer_categorie' === $pathinfo) {
@@ -193,16 +221,31 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 return array (  '_controller' => 'BackBundle\\Controller\\StockController::ModifierAction',  '_route' => 'modifier_stock',);
             }
 
+=======
+        // supprimerTypeVehicule
+        if ('/supprimerType' === $pathinfo) {
+            return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::SupprimerTypeVehiculeAction',  '_route' => 'supprimerTypeVehicule',);
+        }
+
+        // supprimerVehicule
+        if ('/supprimerVehicule' === $pathinfo) {
+            return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::SupprimerVehiculeAction',  '_route' => 'supprimerVehicule',);
+        }
+
+        // modifierTypeVehicule
+        if ('/modifierType' === $pathinfo) {
+            return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::ModifierTypeVehiculeAction',  '_route' => 'modifierTypeVehicule',);
+        }
+
+        // modifierVehicule
+        if ('/modifierVehicule' === $pathinfo) {
+            return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::ModifierVehiculeAction',  '_route' => 'modifierVehicule',);
+>>>>>>> a43438cf8b2ecdc1fbc9f667445e24fe10f77218
         }
 
         // front_homepage
         if ('/cc' === $pathinfo) {
             return array (  '_controller' => 'FrontBundle\\Controller\\DefaultController::indexAction',  '_route' => 'front_homepage',);
-        }
-
-        // details_produitF
-        if ('/details_produitF' === $pathinfo) {
-            return array (  '_controller' => 'FrontBundle\\Controller\\ProduitController::DetailsAction',  '_route' => 'details_produitF',);
         }
 
         // f

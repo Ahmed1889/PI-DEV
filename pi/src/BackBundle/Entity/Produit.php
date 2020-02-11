@@ -3,7 +3,6 @@
 namespace BackBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Produit
@@ -46,8 +45,7 @@ class Produit
     /**
      * @var string
      *
-     * @ORM\Column(name="image", type="string", length=500)
-     * @Assert\File(maxSize="500k", mimeTypes={"image/jpeg", "image/jpg", "image/png", "image/GIF"})
+     * @ORM\Column(name="image", type="string", length=255)
      */
     private $image;
 
@@ -57,6 +55,7 @@ class Produit
      * @ORM\Column(name="description", type="string", length=255)
      */
     private $description;
+<<<<<<< HEAD
     /**
      * @var
      * @ORM\ManyToOne(targetEntity="BackBundle\Entity\Categorie")
@@ -160,6 +159,8 @@ class Produit
     }
 
 
+=======
+>>>>>>> a43438cf8b2ecdc1fbc9f667445e24fe10f77218
 
 
     /**

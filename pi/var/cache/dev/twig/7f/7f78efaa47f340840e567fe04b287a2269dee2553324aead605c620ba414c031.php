@@ -232,6 +232,6 @@ class __TwigTemplate_4bf2e2b21cd3e50c9f4d91d5682e1991769d2069e227972cd9440455ddb
     </body>
 </html>
 {%  endblock %}
-", "@FOSUser/layout.html.twig", "C:\\wamp64\\www\\projet\\PI-DEV\\pi\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\layout.html.twig");
+", "@FOSUser/layout.html.twig", "E:\\PI\\PI-DEV\\pi\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\layout.html.twig");
     }
 }
