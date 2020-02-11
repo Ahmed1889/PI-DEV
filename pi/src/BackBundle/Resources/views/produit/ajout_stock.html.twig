@@ -1,0 +1,30 @@
+{% extends 'baseBack.html.twig' %}
+{% block bodyBack %}
+    <br>
+    <h2><strong>Ajouter un stock :</strong></h2>
+    <br>
+    <table class="table table-striped">
+        {{ form_start(form) }}
+        <tr>
+            <td>{{ form_label(form.produit)  }}</td>
+            <td>{{ form_widget(form.produit,{ 'attr': {'class': 'form-control '}})  }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.quantite)  }}</td>
+            <td>{{ form_widget(form.quantite,{ 'attr': {'class': 'form-control '}})  }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.seuil)  }}</td>
+            <td>{{ form_widget(form.seuil,{ 'attr': {'class': 'form-control '}})  }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.depot)  }}</td>
+            <td>{{ form_widget(form.depot,{ 'attr': {'class': 'form-control '}})  }}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>{{ form_widget(form.Submit,{ 'attr': {'class': 'btn btn-success '}})  }}</td>
+        </tr>
+        {{ form_end(form)  }}
+    </table>
+{% endblock %}

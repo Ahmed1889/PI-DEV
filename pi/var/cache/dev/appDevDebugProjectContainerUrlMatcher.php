@@ -113,54 +113,86 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 return array (  '_controller' => 'BackBundle\\Controller\\DefaultController::indexAction',  '_route' => 'back_homepage',);
             }
 
-            // ajout_categorie
-            if ('/ajout_categorie' === $pathinfo) {
-                return array (  '_controller' => 'BackBundle\\Controller\\CategorieController::AjoutAction',  '_route' => 'ajout_categorie',);
-            }
-
-            // ajout_produit
-            if ('/ajout_produit' === $pathinfo) {
-                return array (  '_controller' => 'BackBundle\\Controller\\ProduitController::AjoutAction',  '_route' => 'ajout_produit',);
-            }
-
-            // afficher_categorie
-            if ('/afficher_categorie' === $pathinfo) {
-                return array (  '_controller' => 'BackBundle\\Controller\\CategorieController::AfficheAction',  '_route' => 'afficher_categorie',);
-            }
-
-            if (0 === strpos($pathinfo, '/afficher_produit')) {
-                // afficher_produit
-                if ('/afficher_produit' === $pathinfo) {
-                    return array (  '_controller' => 'BackBundle\\Controller\\ProduitController::AfficheAction',  '_route' => 'afficher_produit',);
+            if (0 === strpos($pathinfo, '/ajout_')) {
+                // ajout_categorie
+                if ('/ajout_categorie' === $pathinfo) {
+                    return array (  '_controller' => 'BackBundle\\Controller\\CategorieController::AjoutAction',  '_route' => 'ajout_categorie',);
                 }
 
-                // afficher_produitF
-                if ('/afficher_produitF' === $pathinfo) {
-                    return array (  '_controller' => 'FrontBundle\\Controller\\ProduitController::AfficheFAction',  '_route' => 'afficher_produitF',);
+                // ajout_produit
+                if ('/ajout_produit' === $pathinfo) {
+                    return array (  '_controller' => 'BackBundle\\Controller\\ProduitController::AjoutAction',  '_route' => 'ajout_produit',);
+                }
+
+                // ajout_stock
+                if ('/ajout_stock' === $pathinfo) {
+                    return array (  '_controller' => 'BackBundle\\Controller\\StockController::AjoutAction',  '_route' => 'ajout_stock',);
                 }
 
             }
 
+            elseif (0 === strpos($pathinfo, '/afficher_')) {
+                // afficher_categorie
+                if ('/afficher_categorie' === $pathinfo) {
+                    return array (  '_controller' => 'BackBundle\\Controller\\CategorieController::AfficheAction',  '_route' => 'afficher_categorie',);
+                }
+
+                if (0 === strpos($pathinfo, '/afficher_produit')) {
+                    // afficher_produit
+                    if ('/afficher_produit' === $pathinfo) {
+                        return array (  '_controller' => 'BackBundle\\Controller\\ProduitController::AfficheAction',  '_route' => 'afficher_produit',);
+                    }
+
+                    // afficher_produitF
+                    if ('/afficher_produitF' === $pathinfo) {
+                        return array (  '_controller' => 'FrontBundle\\Controller\\ProduitController::AfficheFAction',  '_route' => 'afficher_produitF',);
+                    }
+
+                }
+
+                // afficher_stock
+                if ('/afficher_stock' === $pathinfo) {
+                    return array (  '_controller' => 'BackBundle\\Controller\\StockController::AfficheAction',  '_route' => 'afficher_stock',);
+                }
+
+            }
+
         }
 
-        // supprimer_categorie
-        if ('/supprimer_categorie' === $pathinfo) {
-            return array (  '_controller' => 'BackBundle\\Controller\\CategorieController::SupprimerAction',  '_route' => 'supprimer_categorie',);
+        elseif (0 === strpos($pathinfo, '/supprimer_')) {
+            // supprimer_categorie
+            if ('/supprimer_categorie' === $pathinfo) {
+                return array (  '_controller' => 'BackBundle\\Controller\\CategorieController::SupprimerAction',  '_route' => 'supprimer_categorie',);
+            }
+
+            // supprimer_produit
+            if ('/supprimer_produit' === $pathinfo) {
+                return array (  '_controller' => 'BackBundle\\Controller\\ProduitController::SupprimerAction',  '_route' => 'supprimer_produit',);
+            }
+
+            // supprimer_stock
+            if ('/supprimer_stock' === $pathinfo) {
+                return array (  '_controller' => 'BackBundle\\Controller\\StockController::SupprimerAction',  '_route' => 'supprimer_stock',);
+            }
+
         }
 
-        // supprimer_produit
-        if ('/supprimer_produit' === $pathinfo) {
-            return array (  '_controller' => 'BackBundle\\Controller\\ProduitController::SupprimerAction',  '_route' => 'supprimer_produit',);
-        }
+        elseif (0 === strpos($pathinfo, '/modifier_')) {
+            // modifier_categorie
+            if ('/modifier_categorie' === $pathinfo) {
+                return array (  '_controller' => 'BackBundle\\Controller\\CategorieController::ModifierAction',  '_route' => 'modifier_categorie',);
+            }
 
-        // modifier_categorie
-        if ('/modifier_categorie' === $pathinfo) {
-            return array (  '_controller' => 'BackBundle\\Controller\\CategorieController::ModifierAction',  '_route' => 'modifier_categorie',);
-        }
+            // modifier_produit
+            if ('/modifier_produit' === $pathinfo) {
+                return array (  '_controller' => 'BackBundle\\Controller\\ProduitController::ModifierAction',  '_route' => 'modifier_produit',);
+            }
 
-        // modifier_produit
-        if ('/modifier_produit' === $pathinfo) {
-            return array (  '_controller' => 'BackBundle\\Controller\\ProduitController::ModifierAction',  '_route' => 'modifier_produit',);
+            // modifier_stock
+            if ('/modifier_stock' === $pathinfo) {
+                return array (  '_controller' => 'BackBundle\\Controller\\StockController::ModifierAction',  '_route' => 'modifier_stock',);
+            }
+
         }
 
         // front_homepage

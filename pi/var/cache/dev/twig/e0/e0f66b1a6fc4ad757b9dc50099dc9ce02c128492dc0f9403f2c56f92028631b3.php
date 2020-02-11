@@ -420,143 +420,7 @@ class __TwigTemplate_1b6336740ac29a501201a66da4014d1940fa591fc64da8f49d296305f7b
     </footer>
     <!-- End footer area -->
     <!--Quickview Product Start -->
-    <div id=\"quickview-wrapper\">
-        <!-- Modal -->
-        <div class=\"modal fade\" id=\"productModal\" tabindex=\"-1\" role=\"dialog\">
-            <div class=\"modal-dialog\" role=\"document\">
-                <div class=\"modal-content\">
-                    <div class=\"modal-header\">
-                        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>
-                    </div>
-                    <div class=\"modal-body\">
-                        <div class=\"modal-product\">
-                            <div class=\"single-product-image\">
-                                <div id=\"product-img-content\">
-                                    <div id=\"my-tab-content\" class=\"tab-content mb-20\">
-                                        <div class=\"tab-pane b-img active\" id=\"view1\">
-                                            <a class=\"venobox\" href=\"";
-        // line 347
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
-        echo "images/product/product-details/1.jpg\" data-gall=\"gallery\" title=\"\"><img src=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
-        echo "images/product/product-details/1.jpg\" alt=\"\"></a>
-                                        </div>
-                                        <div class=\"tab-pane b-img\" id=\"view2\">
-                                            <a class=\"venobox\" href=\"";
-        // line 350
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
-        echo "images/product/product-details/2.jpg\" data-gall=\"gallery\" title=\"\"><img src=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
-        echo "images/product/product-details/2.jpg\" alt=\"\"></a>
-                                        </div>
-                                        <div class=\"tab-pane b-img\" id=\"view3\">
-                                            <a class=\"venobox\" href=\"";
-        // line 353
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
-        echo "images/product/product-details/3.jpg\" data-gall=\"gallery\" title=\"\"><img src=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
-        echo "images/product/product-details/3.jpg\" alt=\"\"></a>
-                                        </div>
-                                        <div class=\"tab-pane b-img\" id=\"view4\">
-                                            <a class=\"venobox\" href=\"";
-        // line 356
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
-        echo "images/product/product-details/4.jpg\" data-gall=\"gallery\" title=\"\"><img src=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
-        echo "images/product/product-details/4.jpg\" alt=\"\"></a>
-                                        </div>
-                                    </div>
-                                    <div id=\"viewproduct\" class=\"nav nav-tabs product-view bxslider\" data-tabs=\"tabs\">
-                                        <div class=\"pro-view b-img active\"><a href=\"#view1\" data-toggle=\"tab\"><img src=\"";
-        // line 360
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
-        echo "images/product/product-details/s-1.jpg\" alt=\"\"></a></div>
-                                        <div class=\"pro-view b-img\"><a href=\"#view2\" data-toggle=\"tab\"><img src=\"";
-        // line 361
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
-        echo "images/product/product-details/s-2.jpg\" alt=\"\"></a></div>
-                                        <div class=\"pro-view b-img\"><a href=\"#view3\" data-toggle=\"tab\"><img src=\"";
-        // line 362
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
-        echo "images/product/product-details/s-3.jpg\" alt=\"\"></a></div>
-                                        <div class=\"pro-view b-img\"><a href=\"#view4\" data-toggle=\"tab\"><img src=\"";
-        // line 363
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
-        echo "images/product/product-details/s-4.jpg\" alt=\"\"></a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=\"product-details-content\">
-                                <div class=\"product-content text-uppercase\">
-                                    <a href=\"product-details.html\" title=\"Slim Shirt With Stretch\">Slim Shirt With Stretch</a>
-                                    <div class=\"rating-icon pb-20 mt-10\">
-                                        <i class=\"zmdi zmdi-star\"></i>
-                                        <i class=\"zmdi zmdi-star\"></i>
-                                        <i class=\"zmdi zmdi-star\"></i>
-                                        <i class=\"zmdi zmdi-star-half\"></i>
-                                        <i class=\"zmdi zmdi-star-half\"></i>
-                                    </div>
-                                    <div class=\"product-price pb-20\">
-                                        <span class=\"new-price\">£ 185.00</span>
-                                        <span class=\"old-price\">£ 200.00</span>
-                                    </div>
-                                </div>
-                                <div class=\"product-view pb-20\">
-                                    <h4 class=\"product-details-tilte text-uppercase\">overview</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. luptate. </p>
-                                </div>
-                                <div class=\"product-size text-uppercase pb-30\">
-                                    <h4 class=\"product-details-tilte text-uppercase pb-10\">size</h4>
-                                    <ul>
-                                        <li><a href=\"#\">s</a></li>
-                                        <li><a href=\"#\">m</a></li>
-                                        <li><a href=\"#\">l</a></li>
-                                        <li><a href=\"#\">xl</a></li>
-                                        <li><a href=\"#\">xxl</a></li>
-                                    </ul>
-                                </div>
-                                <div class=\"product-attributes clearfix\">
-                                    <div class=\"product-color text-uppercase pb-30\">
-                                        <h4 class=\"product-details-tilte text-uppercase pb-10\">color</h4>
-                                        <ul>
-                                            <li class=\"color-1\"><a href=\"#\"></a></li>
-                                            <li class=\"color-2\"><a href=\"#\"></a></li>
-                                            <li class=\"color-3\"><a href=\"#\"></a></li>
-                                            <li class=\"color-4\"><a href=\"#\"></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class=\"pull-left\" id=\"quantity-wanted\">
-                                        <h4 class=\"product-details-tilte text-uppercase pb-10\">quantity</h4>
-                                        <input type=\"number\" value=\"1\">
-                                    </div>
-                                </div>
-                                <div class=\"product-action-shop text-center mb-30\">
-                                    <a href=\"#\" title=\"Quick view\">
-                                        <i class=\"zmdi zmdi-eye\"></i>
-                                    </a>
-                                    <a href=\"#\" title=\"Add to cart\">
-                                        <i class=\"zmdi zmdi-shopping-cart\"></i>
-                                    </a>
-                                    <a href=\"#\" title=\"Add to Wishlist\">
-                                        <i class=\"zmdi zmdi-favorite\"></i>
-                                    </a>
-                                </div>
-                                <div class=\"socialsharing-product\">
-                                    <h4 class=\"product-details-tilte text-uppercase pb-10\">share this on</h4>
-                                    <button type=\"button\"><i class=\"zmdi zmdi-facebook\"></i></button>
-                                    <button type=\"button\"><i class=\"zmdi zmdi-instagram\"></i></button>
-                                    <button type=\"button\"><i class=\"zmdi zmdi-rss\"></i></button>
-                                    <button type=\"button\"><i class=\"zmdi zmdi-twitter\"></i></button>
-                                    <button type=\"button\"><i class=\"zmdi zmdi-pinterest\"></i></button>
-                                </div>
-                            </div>
-                            <!-- .product-info -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <!--End of Quickview Product-->
 </div>
 <!-- Body main wrapper end -->
@@ -565,35 +429,35 @@ class __TwigTemplate_1b6336740ac29a501201a66da4014d1940fa591fc64da8f49d296305f7b
 
 <!-- jquery latest version -->
 <script src=\"";
-        // line 445
+        // line 341
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "js/vendor/jquery-3.1.1.min.js\"></script>
 <!-- Bootstrap framework js -->
 <script src=\"";
-        // line 447
+        // line 343
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "js/bootstrap.min.js\"></script>
 <!-- Particles js -->
 <script src=\"";
-        // line 449
+        // line 345
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "js/particles.js\"></script>
 <!-- All js plugins included in this file. -->
 <script src=\"";
-        // line 451
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
-        echo "js/plugins.js\"></script>
+        // line 347
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/js/plugins.js"), "html", null, true);
+        echo "\"></script>
 <!-- Main js file that contents all jQuery plugins activation. -->
 <script src=\"";
-        // line 453
+        // line 349
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("freak/"), "html", null, true);
         echo "js/main.js\"></script>
 
 
 ";
-        // line 456
+        // line 352
         $this->displayBlock('js', $context, $blocks);
-        // line 458
+        // line 354
         echo "
 </body>
 
@@ -625,7 +489,7 @@ class __TwigTemplate_1b6336740ac29a501201a66da4014d1940fa591fc64da8f49d296305f7b
 
     }
 
-    // line 456
+    // line 352
     public function block_js($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -654,7 +518,7 @@ class __TwigTemplate_1b6336740ac29a501201a66da4014d1940fa591fc64da8f49d296305f7b
 
     public function getDebugInfo()
     {
-        return array (  629 => 456,  619 => 239,  610 => 238,  597 => 458,  595 => 456,  589 => 453,  584 => 451,  579 => 449,  574 => 447,  569 => 445,  484 => 363,  480 => 362,  476 => 361,  472 => 360,  463 => 356,  455 => 353,  447 => 350,  439 => 347,  413 => 324,  338 => 252,  324 => 240,  322 => 238,  278 => 197,  267 => 189,  222 => 147,  206 => 134,  190 => 121,  168 => 102,  154 => 91,  90 => 30,  83 => 26,  78 => 24,  73 => 22,  68 => 20,  63 => 18,  58 => 16,  51 => 12,  38 => 1,);
+        return array (  493 => 352,  483 => 239,  474 => 238,  461 => 354,  459 => 352,  453 => 349,  448 => 347,  443 => 345,  438 => 343,  433 => 341,  413 => 324,  338 => 252,  324 => 240,  322 => 238,  278 => 197,  267 => 189,  222 => 147,  206 => 134,  190 => 121,  168 => 102,  154 => 91,  90 => 30,  83 => 26,  78 => 24,  73 => 22,  68 => 20,  63 => 18,  58 => 16,  51 => 12,  38 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -999,111 +863,7 @@ class __TwigTemplate_1b6336740ac29a501201a66da4014d1940fa591fc64da8f49d296305f7b
     </footer>
     <!-- End footer area -->
     <!--Quickview Product Start -->
-    <div id=\"quickview-wrapper\">
-        <!-- Modal -->
-        <div class=\"modal fade\" id=\"productModal\" tabindex=\"-1\" role=\"dialog\">
-            <div class=\"modal-dialog\" role=\"document\">
-                <div class=\"modal-content\">
-                    <div class=\"modal-header\">
-                        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>
-                    </div>
-                    <div class=\"modal-body\">
-                        <div class=\"modal-product\">
-                            <div class=\"single-product-image\">
-                                <div id=\"product-img-content\">
-                                    <div id=\"my-tab-content\" class=\"tab-content mb-20\">
-                                        <div class=\"tab-pane b-img active\" id=\"view1\">
-                                            <a class=\"venobox\" href=\"{{ asset('freak/') }}images/product/product-details/1.jpg\" data-gall=\"gallery\" title=\"\"><img src=\"{{ asset('freak/') }}images/product/product-details/1.jpg\" alt=\"\"></a>
-                                        </div>
-                                        <div class=\"tab-pane b-img\" id=\"view2\">
-                                            <a class=\"venobox\" href=\"{{ asset('freak/') }}images/product/product-details/2.jpg\" data-gall=\"gallery\" title=\"\"><img src=\"{{ asset('freak/') }}images/product/product-details/2.jpg\" alt=\"\"></a>
-                                        </div>
-                                        <div class=\"tab-pane b-img\" id=\"view3\">
-                                            <a class=\"venobox\" href=\"{{ asset('freak/') }}images/product/product-details/3.jpg\" data-gall=\"gallery\" title=\"\"><img src=\"{{ asset('freak/') }}images/product/product-details/3.jpg\" alt=\"\"></a>
-                                        </div>
-                                        <div class=\"tab-pane b-img\" id=\"view4\">
-                                            <a class=\"venobox\" href=\"{{ asset('freak/') }}images/product/product-details/4.jpg\" data-gall=\"gallery\" title=\"\"><img src=\"{{ asset('freak/') }}images/product/product-details/4.jpg\" alt=\"\"></a>
-                                        </div>
-                                    </div>
-                                    <div id=\"viewproduct\" class=\"nav nav-tabs product-view bxslider\" data-tabs=\"tabs\">
-                                        <div class=\"pro-view b-img active\"><a href=\"#view1\" data-toggle=\"tab\"><img src=\"{{ asset('freak/') }}images/product/product-details/s-1.jpg\" alt=\"\"></a></div>
-                                        <div class=\"pro-view b-img\"><a href=\"#view2\" data-toggle=\"tab\"><img src=\"{{ asset('freak/') }}images/product/product-details/s-2.jpg\" alt=\"\"></a></div>
-                                        <div class=\"pro-view b-img\"><a href=\"#view3\" data-toggle=\"tab\"><img src=\"{{ asset('freak/') }}images/product/product-details/s-3.jpg\" alt=\"\"></a></div>
-                                        <div class=\"pro-view b-img\"><a href=\"#view4\" data-toggle=\"tab\"><img src=\"{{ asset('freak/') }}images/product/product-details/s-4.jpg\" alt=\"\"></a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=\"product-details-content\">
-                                <div class=\"product-content text-uppercase\">
-                                    <a href=\"product-details.html\" title=\"Slim Shirt With Stretch\">Slim Shirt With Stretch</a>
-                                    <div class=\"rating-icon pb-20 mt-10\">
-                                        <i class=\"zmdi zmdi-star\"></i>
-                                        <i class=\"zmdi zmdi-star\"></i>
-                                        <i class=\"zmdi zmdi-star\"></i>
-                                        <i class=\"zmdi zmdi-star-half\"></i>
-                                        <i class=\"zmdi zmdi-star-half\"></i>
-                                    </div>
-                                    <div class=\"product-price pb-20\">
-                                        <span class=\"new-price\">£ 185.00</span>
-                                        <span class=\"old-price\">£ 200.00</span>
-                                    </div>
-                                </div>
-                                <div class=\"product-view pb-20\">
-                                    <h4 class=\"product-details-tilte text-uppercase\">overview</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. luptate. </p>
-                                </div>
-                                <div class=\"product-size text-uppercase pb-30\">
-                                    <h4 class=\"product-details-tilte text-uppercase pb-10\">size</h4>
-                                    <ul>
-                                        <li><a href=\"#\">s</a></li>
-                                        <li><a href=\"#\">m</a></li>
-                                        <li><a href=\"#\">l</a></li>
-                                        <li><a href=\"#\">xl</a></li>
-                                        <li><a href=\"#\">xxl</a></li>
-                                    </ul>
-                                </div>
-                                <div class=\"product-attributes clearfix\">
-                                    <div class=\"product-color text-uppercase pb-30\">
-                                        <h4 class=\"product-details-tilte text-uppercase pb-10\">color</h4>
-                                        <ul>
-                                            <li class=\"color-1\"><a href=\"#\"></a></li>
-                                            <li class=\"color-2\"><a href=\"#\"></a></li>
-                                            <li class=\"color-3\"><a href=\"#\"></a></li>
-                                            <li class=\"color-4\"><a href=\"#\"></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class=\"pull-left\" id=\"quantity-wanted\">
-                                        <h4 class=\"product-details-tilte text-uppercase pb-10\">quantity</h4>
-                                        <input type=\"number\" value=\"1\">
-                                    </div>
-                                </div>
-                                <div class=\"product-action-shop text-center mb-30\">
-                                    <a href=\"#\" title=\"Quick view\">
-                                        <i class=\"zmdi zmdi-eye\"></i>
-                                    </a>
-                                    <a href=\"#\" title=\"Add to cart\">
-                                        <i class=\"zmdi zmdi-shopping-cart\"></i>
-                                    </a>
-                                    <a href=\"#\" title=\"Add to Wishlist\">
-                                        <i class=\"zmdi zmdi-favorite\"></i>
-                                    </a>
-                                </div>
-                                <div class=\"socialsharing-product\">
-                                    <h4 class=\"product-details-tilte text-uppercase pb-10\">share this on</h4>
-                                    <button type=\"button\"><i class=\"zmdi zmdi-facebook\"></i></button>
-                                    <button type=\"button\"><i class=\"zmdi zmdi-instagram\"></i></button>
-                                    <button type=\"button\"><i class=\"zmdi zmdi-rss\"></i></button>
-                                    <button type=\"button\"><i class=\"zmdi zmdi-twitter\"></i></button>
-                                    <button type=\"button\"><i class=\"zmdi zmdi-pinterest\"></i></button>
-                                </div>
-                            </div>
-                            <!-- .product-info -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <!--End of Quickview Product-->
 </div>
 <!-- Body main wrapper end -->
@@ -1117,7 +877,7 @@ class __TwigTemplate_1b6336740ac29a501201a66da4014d1940fa591fc64da8f49d296305f7b
 <!-- Particles js -->
 <script src=\"{{ asset('freak/') }}js/particles.js\"></script>
 <!-- All js plugins included in this file. -->
-<script src=\"{{ asset('freak/') }}js/plugins.js\"></script>
+<script src=\"{{ asset('freak/js/plugins.js') }}\"></script>
 <!-- Main js file that contents all jQuery plugins activation. -->
 <script src=\"{{ asset('freak/') }}js/main.js\"></script>
 

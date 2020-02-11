@@ -3,6 +3,7 @@
 namespace BackBundle\Form;
 
 use BackBundle\Entity\Categorie;
+use BackBundle\Entity\Fournisseur;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
@@ -23,8 +24,11 @@ class ProduitType extends AbstractType
             ->add('categorie', EntityType::class, [
                     'class' => Categorie::class,
                     'choice_label' => 'libelleC',])
+            ->add('fournisseur', EntityType::class, [
+                'class' => Fournisseur::class,
+                'choice_label' => 'nomf',])
             ->add('prixAchat')
-            ->add('prixVente')
+
             ->add('image',FileType::class, array('data_class'=>null, 'required'=>false))
             ->add('Submit', SubmitType::class);
     }/**

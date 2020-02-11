@@ -45,6 +45,10 @@
                                                 <input type="number" class="cart-plus-minus-box" value="1">
                                             </div>
                                         </div>
+                                        <div class="product-view pb-30">
+                                            <h4 class="product-details-tilte text-uppercase">Nombre de vues : {{ nbrVues }}</h4>
+                                        </div>
+
                                         <br>
                                         <div class="product-action-shop text-center mb-40">
                                             <a href="#" title="Quick view" data-toggle="modal" data-target="#productModal">
@@ -68,6 +72,11 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="product-view pb-30">
+                                <a href="{{ path('afficher_produitF') }}" ><h4 class="product-details-tilte text-uppercase">consulter la liste</h4></a>
+
+                            </div>
+
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="product-details-content pt-90">

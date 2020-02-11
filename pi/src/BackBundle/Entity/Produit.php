@@ -113,6 +113,53 @@ class Produit
     }
 
 
+    /**
+     * @var
+     * @ORM\ManyToOne(targetEntity="BackBundle\Entity\Fournisseur")
+     * @ORM\JoinColumn(name="id_fournisseur",referencedColumnName="id", onDelete="CASCADE")
+     */
+    private $fournisseur;
+
+    /**
+     * @return mixed
+     */
+    public function getFournisseur()
+    {
+        return $this->fournisseur;
+    }
+
+    /**
+     * @param mixed $fournisseur
+     */
+    public function setFournisseur($fournisseur)
+    {
+        $this->fournisseur = $fournisseur;
+    }
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="nbrVues", type="integer")
+     */
+    private $nbrVues;
+
+    /**
+     * @return int
+     */
+    public function getNbrVues()
+    {
+        return $this->nbrVues;
+    }
+
+    /**
+     * @param int $nbrVues
+     */
+    public function setNbrVues($nbrVues)
+    {
+        $this->nbrVues = $nbrVues;
+    }
+
+
 
 
     /**

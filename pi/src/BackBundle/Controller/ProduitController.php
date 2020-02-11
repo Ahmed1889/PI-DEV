@@ -3,6 +3,7 @@
 namespace BackBundle\Controller;
 
 use BackBundle\Entity\Categorie;
+use BackBundle\Entity\Fournisseur;
 use BackBundle\Entity\Produit;
 use BackBundle\Form\ProduitType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
@@ -31,7 +32,8 @@ class ProduitController extends Controller
             $filename= md5(uniqid()) . '.' . $file->guessExtension();
             $file->move($this->getParameter('photos_directory'), $filename);
             $produit->setImage($filename);
-
+            $a=$produit->getPrixAchat();
+            $produit->setPrixVente($a+($a*0.4));
             $em->persist($produit);
             $em->flush();
             return $this->redirectToRoute("afficher_produit");
@@ -71,6 +73,9 @@ class ProduitController extends Controller
             ->add('categorie', EntityType::class, [
                 'class' => Categorie::class,
                 'choice_label' => 'libelleC',])
+            ->add('fournisseur', EntityType::class, [
+                'class' => Fournisseur::class,
+                'choice_label' => 'nomf',])
             ->add('prixAchat')
             ->add('prixVente')
             ->add('image',FileType::class, array('data_class'=>null, 'required'=>false))

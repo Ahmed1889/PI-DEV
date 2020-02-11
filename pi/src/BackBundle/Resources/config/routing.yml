@@ -25,3 +25,15 @@ supprimer_produit:
 modifier_produit:
     path:     /modifier_produit
     defaults: { _controller: BackBundle:Produit:Modifier}
+ajout_stock:
+    path:     /ajout_stock
+    defaults: { _controller: BackBundle:Stock:Ajout }
+afficher_stock:
+    path:     /afficher_stock
+    defaults: { _controller: BackBundle:Stock:Affiche }
+supprimer_stock:
+    path:     /supprimer_stock
+    defaults: { _controller: BackBundle:Stock:Supprimer}
+modifier_stock:
+    path:     /modifier_stock
+    defaults: { _controller: BackBundle:Stock:Modifier}
