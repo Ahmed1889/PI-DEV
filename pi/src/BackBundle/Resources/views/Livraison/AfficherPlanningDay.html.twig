@@ -3,19 +3,18 @@
 {% block bodyBack %}
 
     <h2> Planning du jour  </h2>
-    <iframe name="date du jour" id="date-du-jour" style="width:105px;height:75px;" src="https://www.mathieuweb.fr/calendrier/date-jour-rouge-noir.html" scrolling="no" frameborder="0" allowtransparency="true"></iframe>
 
 
-
-    <table border="1">
+    <table class="table table-striped table-bordered dataTable"  role="grid" aria-describedby="zero_config_info" id="zero_config" border="1">
         <tr>
             <th> id </th>
             <th> statut</th>
             <th> Doit être livrée</th>
+            <th> Livrée</th>
 
         </tr>
 
-        {%  for t in plannigs | sort((a, b) => a.dateLivraison  >= b.dateLivraison )|reverse %}
+        {%  for t in plannigs |reverse %}
             <tr>
                 <th> {{ t.id }}</th>
                 {% if t.statut==false %}
@@ -25,6 +24,14 @@
 
 {% endif %}
                 <th> {{ t.dateLivraison |date(' H:i') }}</th>
+
+                {% if t.statut==false %}
+                <th> <a  href="{{ path('LivrerCommande',
+                        {'id':t.id}) }}"  >
+                        Livrée</a></th>
+                    {% else %}
+                    <th></th>
+                {% endif %}
             </tr>
         {% endfor %}
     </table>

@@ -48,6 +48,12 @@ abstract class User implements UserInterface, GroupableInterface
     protected $emailCanonical;
 
     /**
+     * @var string
+     */
+    protected $adresseC;
+
+
+    /**
      * @var bool
      */
     protected $enabled;
@@ -148,6 +154,7 @@ abstract class User implements UserInterface, GroupableInterface
             $this->id,
             $this->email,
             $this->emailCanonical,
+            $this->adresseC,
         ));
     }
 
@@ -176,7 +183,8 @@ abstract class User implements UserInterface, GroupableInterface
             $this->enabled,
             $this->id,
             $this->email,
-            $this->emailCanonical
+            $this->emailCanonical,
+            $this->adresseC,
         ) = $data;
     }
 
@@ -554,4 +562,21 @@ abstract class User implements UserInterface, GroupableInterface
 
         return $this;
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getAdresseC()
+    {
+        return $this->adresseC;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setAdresseC($adresseC)
+    {
+        $this->adresseC = $adresseC;
+    }
+
 }

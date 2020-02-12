@@ -38,3 +38,40 @@ modifierVehicule:
 affichePlannigDay:
     path:     /affichePlanningDay
     defaults: { _controller: BackBundle:Livraison:AfficherVPlanningDay }
+
+afficherCommandeNonLivre:
+    path:     /AfficherCommandeNonLivre
+    defaults: { _controller: BackBundle:Livraison:AfficherCommandeNonLivre }
+
+affecterLivraison:
+    path:     /affecterLivraison
+    defaults: { _controller: BackBundle:Livraison:AffecterLivraison }
+
+afficherLivreurDispo:
+    path:     /afficherLivreurDispo
+    defaults: { _controller: BackBundle:Livraison:AfficherLivreurDispo }
+
+afficherVehiculeDispo:
+    path:     /afficherVehiculeDispo
+    defaults: { _controller: BackBundle:Livraison:AfficherVehiculeDispo }
+
+AffecterCommande:
+    path:     /AffecterCommande
+    defaults: { _controller: BackBundle:Livraison:AffecterCommande }
+
+LivrerCommande:
+    path:     /LivrerCommande
+    defaults: { _controller: BackBundle:Livraison:LivrerCommande }
+
+
+ModifierVehicule2:
+    path:     /ModifierVehicule2
+    defaults: { _controller: BackBundle:Livraison:ModifierVehicule2 }
+
+ModifierVehicule22:
+    path:     /ModifierVehicule22
+    defaults: { _controller: BackBundle:Livraison:ModifierVehicule22 }
+
+ModifierVehiculePop:
+  path:     /ModifierVehiculePop
+  defaults: { _controller: BackBundle:Livraison:ModifierVehiculePop }

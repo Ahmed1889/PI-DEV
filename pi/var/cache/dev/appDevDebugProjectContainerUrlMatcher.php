@@ -124,9 +124,22 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             }
 
             if (0 === strpos($pathinfo, '/affiche')) {
-                // afficherTypeVehicules
-                if ('/afficherTypes' === $pathinfo) {
-                    return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::AfficherTypeVehiculeAction',  '_route' => 'afficherTypeVehicules',);
+                if (0 === strpos($pathinfo, '/afficher')) {
+                    // afficherTypeVehicules
+                    if ('/afficherTypes' === $pathinfo) {
+                        return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::AfficherTypeVehiculeAction',  '_route' => 'afficherTypeVehicules',);
+                    }
+
+                    // afficherLivreurDispo
+                    if ('/afficherLivreurDispo' === $pathinfo) {
+                        return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::AfficherLivreurDispoAction',  '_route' => 'afficherLivreurDispo',);
+                    }
+
+                    // afficherVehiculeDispo
+                    if ('/afficherVehiculeDispo' === $pathinfo) {
+                        return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::AfficherVehiculeDispoAction',  '_route' => 'afficherVehiculeDispo',);
+                    }
+
                 }
 
                 // afficheVehicule
@@ -139,6 +152,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::AfficherVPlanningDayAction',  '_route' => 'affichePlannigDay',);
                 }
 
+            }
+
+            // affecterLivraison
+            if ('/affecterLivraison' === $pathinfo) {
+                return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::AffecterLivraisonAction',  '_route' => 'affecterLivraison',);
             }
 
         }
@@ -161,6 +179,39 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         // modifierVehicule
         if ('/modifierVehicule' === $pathinfo) {
             return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::ModifierVehiculeAction',  '_route' => 'modifierVehicule',);
+        }
+
+        // afficherCommandeNonLivre
+        if ('/AfficherCommandeNonLivre' === $pathinfo) {
+            return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::AfficherCommandeNonLivreAction',  '_route' => 'afficherCommandeNonLivre',);
+        }
+
+        // AffecterCommande
+        if ('/AffecterCommande' === $pathinfo) {
+            return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::AffecterCommandeAction',  '_route' => 'AffecterCommande',);
+        }
+
+        // LivrerCommande
+        if ('/LivrerCommande' === $pathinfo) {
+            return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::LivrerCommandeAction',  '_route' => 'LivrerCommande',);
+        }
+
+        if (0 === strpos($pathinfo, '/ModifierVehicule2')) {
+            // ModifierVehicule2
+            if ('/ModifierVehicule2' === $pathinfo) {
+                return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::ModifierVehicule2Action',  '_route' => 'ModifierVehicule2',);
+            }
+
+            // ModifierVehicule22
+            if ('/ModifierVehicule22' === $pathinfo) {
+                return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::ModifierVehicule22Action',  '_route' => 'ModifierVehicule22',);
+            }
+
+        }
+
+        // ModifierVehiculePop
+        if ('/ModifierVehiculePop' === $pathinfo) {
+            return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::ModifierVehiculePopAction',  '_route' => 'ModifierVehiculePop',);
         }
 
         // front_homepage

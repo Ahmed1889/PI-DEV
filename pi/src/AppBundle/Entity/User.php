@@ -19,6 +19,28 @@ class User extends BaseUser
      */
     protected $id;
 
+    /**
+     * @ORM\Column(type="string",length=255)
+     */
+    protected $adresseC;
+
+    /**
+     * @return mixed
+     */
+    public function getAdresseC()
+    {
+        return $this->adresseC;
+    }
+
+    /**
+     * @param mixed $adresseC
+     */
+    public function setAdresseC($adresseC)
+    {
+        $this->adresseC = $adresseC;
+    }
+
+
     public function __construct()
     {
         parent::__construct();

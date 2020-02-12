@@ -265,6 +265,7 @@
                             <li class="sidebar-item"><a href="{{ path('afficherTypeVehicules') }}" class="sidebar-link"><i class="fas fa-plus"></i><span class="hide-menu"> Liste  des types des vehicules </span></a></li>
                             <li class="sidebar-item"><a href="{{ path('afficheVehicule') }}" class="sidebar-link"><i class="fas fa-plus"></i><span class="hide-menu"> Liste  des vehicules </span></a></li>
                             <li class="sidebar-item"><a href="{{ path('ajoutVehicule') }}" class="sidebar-link"><i class="fas fa-plus"></i><span class="hide-menu"> ajouter des vehicules </span></a></li>
+                            <li class="sidebar-item"><a href="{{ path('afficherCommandeNonLivre') }}" class="sidebar-link"><i class="fas fa-plus"></i><span class="hide-menu"> Liste commande non livrée </span></a></li>
                         </ul>
                     </li>
                     <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="charts.html" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span class="hide-menu">Statistiques</span></a></li>
@@ -347,6 +348,7 @@
 <script src="{{ asset('back/') }}dist/js/pages/chart/chart-page-init.js"></script>
 
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="{{ asset('back/') }}dist/js/moment.js "></script>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <script>
     $( function() {
@@ -382,11 +384,39 @@
             theHREF = $(this).attr("href");
             $("#dialog-confirm").dialog("open");
         });
-    } );
+
+        var theHREF2;
+
+        $( "#dialog-confirm2" ).dialog({
+            resizable: false,
+            height:460,
+            width:800,
+            autoOpen: false,
+            show: {
+                effect: "blind",
+                duration: 1000
+            },
+            hide: {
+                effect: "explode",
+                duration: 1000
+            },
+            modal: true,
+
+        });
+
+        $(".confirmModal2").click(function(e) {
+            e.preventDefault();
+            theHREF2 = $(this).attr("href");
+            $("#dialog-confirm2").dialog("open");
+        });
+    });
+
 </script>
 
 {% block js2 %}
 {% endblock %}
+
+
 </body>
 
 </html>

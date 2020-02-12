@@ -36,10 +36,52 @@ class Livraison_Planning
     private $dateLivraison;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Employe"),inversedBy="plannings"
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User"),inversedBy="plannings"
      * @ORM\JoinColumn(name="employe",referencedColumnName="id",onDelete="CASCADE")
      */
     private $employe;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Vehicule"),inversedBy="plannings"
+     * @ORM\JoinColumn(name="vehicule",referencedColumnName="id",onDelete="CASCADE")
+     */
+    private $vehicule;
+
+    /**
+     * @ORM\OneToOne(targetEntity=Commande::class)
+     */
+    private $commande;
+    /**
+     * @return mixed
+     */
+    public function getVehicule()
+    {
+        return $this->vehicule;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCommande()
+    {
+        return $this->commande;
+    }
+
+    /**
+     * @param mixed $commande
+     */
+    public function setCommande($commande)
+    {
+        $this->commande = $commande;
+    }
+
+    /**
+     * @param mixed $vehicule
+     */
+    public function setVehicule($vehicule)
+    {
+        $this->vehicule = $vehicule;
+    }
 
     /**
      * Get id

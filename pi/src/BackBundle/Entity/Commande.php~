@@ -181,28 +181,5 @@ class Commande
     }
 
 
-
-    /**
-     * Set idU
-     *
-     * @param \AppBundle\Entity\User $idU
-     *
-     * @return Commande
-     */
-    public function setId_u(\AppBundle\Entity\User $idU = null)
-    {
-        $this->id_u = $idU;
-
-        return $this;
-    }
-
-    /**
-     * Get idU
-     *
-     * @return \AppBundle\Entity\User
-     */
-    public function getId_u()
-    {
-        return $this->id_u;
-    }
 }
+

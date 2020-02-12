@@ -10,4 +10,15 @@ namespace BackBundle\Repository;
  */
 class CommandeRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function getCommandeNonLivre(){
+        $qb=$this->createQuery("SELECT u FROM COMMANDE u");
+
+          //  ->where('c.etatLivraion = :nonAffecte' )
+            //->orWhere( 'c.etatLivraion = :Affecte')
+           /// ->setParameter('nonAffecte', "non affecté")
+          //  ->setParameter('Affecte', "affecté")
+
+        return $qb->getResult();
+
+    }
 }
