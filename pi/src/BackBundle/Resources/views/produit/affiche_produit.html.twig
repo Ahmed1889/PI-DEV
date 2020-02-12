@@ -12,6 +12,7 @@
             <td><b>Prix d'achat</b></td>
             <td><b>Prix de vente</b></td>
             <td><b>Image</b></td>
+            <td><b>Nbr vues</b></td>
             <td colspan="2"><b>Action</b></td>
 
         </tr>
@@ -24,11 +25,13 @@
                 <td>{{p.prixAchat}}</td>
                 <td>{{p.prixVente}}</td>
                 <td><img class="imageproduit" src="{{ asset( 'photos/') }}{{ p.image }}"></td>
+                <td>{{p.nbrVues}}</td>
                 <td><a href="{{ path('modifier_produit',{'id':p.id}) }}"><i class="fa fa-edit" style="color:#2e6da4 " ></i></a></td>
                 <td><a class="confirmModal" href="{{ path('supprimer_produit',{'id':p.id}) }}" ><i class="fa fa-trash" style="color: #ff6c5f"></i></a></td>
             </tr>
         {% endfor %}
     </table>
+    <a href="{{ path('ajout_produit') }}" class="sidebar-link"><i class="fas fa-plus"></i><span class="hide-menu"> ajouter produit </span></a>
     <div id="dialog-confirm" title="Confirmation de la suppression" style="display:none;">
         <p>
             <span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>

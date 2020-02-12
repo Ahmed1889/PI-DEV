@@ -1,0 +1,40 @@
+{% extends 'baseBack.html.twig' %}
+
+{% block body %}
+    
+    <h1>Bonreductions list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Numero</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for bonReduction in bonReductions %}
+            <tr>
+                <td><a href="{{ path('bonreduction_show', { 'id': bonReduction.id }) }}">{{ bonReduction.id }}</a></td>
+                <td>{{ bonReduction.numero }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('bonreduction_show', { 'id': bonReduction.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('bonreduction_edit', { 'id': bonReduction.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('bonreduction_new') }}">Create a new bonReduction</a>
+        </li>
+    </ul>
+{% endblock %}

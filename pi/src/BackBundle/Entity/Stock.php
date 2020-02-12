@@ -34,6 +34,51 @@ class Stock
      * @ORM\Column(name="seuil", type="integer")
      */
     private $seuil;
+    /**
+     * @var
+     * @ORM\ManyToOne(targetEntity="BackBundle\Entity\Produit")
+     * @ORM\JoinColumn(name="id_produit",referencedColumnName="id", onDelete="CASCADE")
+     */
+    private $produit;
+
+    /**
+     * @return mixed
+     */
+    public function getProduit()
+    {
+        return $this->produit;
+    }
+
+    /**
+     * @param mixed $produit
+     */
+    public function setProduit($produit)
+    {
+        $this->produit = $produit;
+    }
+
+    /**
+     * @var
+     * @ORM\ManyToOne(targetEntity="BackBundle\Entity\Depot")
+     * @ORM\JoinColumn(name="id_depot",referencedColumnName="id", onDelete="CASCADE")
+     */
+    private $depot;
+
+    /**
+     * @return mixed
+     */
+    public function getDepot()
+    {
+        return $this->depot;
+    }
+
+    /**
+     * @param mixed $depot
+     */
+    public function setDepot($depot)
+    {
+        $this->depot = $depot;
+    }
 
 
     /**

@@ -7,11 +7,11 @@
     {{ form_start(form) }}
     <tr>
         <td>{{ form_label(form.libelleC)  }}</td>
-        <td>{{ form_widget(form.libelleC)  }}</td>
+        <td>{{ form_widget(form.libelleC,{ 'attr': {'class': 'form-control '}})  }}</td>
     </tr>
     <tr>
         <td></td>
-        <td>{{ form_widget(form.Submit,{ 'attr': {'class': 'btn btn-info '}})  }}</td>
+        <td>{{ form_widget(form.Submit,{ 'attr': {'class': 'btn btn-success '}})  }}</td>
     </tr>
     {{ form_end(form)  }}
 </table>

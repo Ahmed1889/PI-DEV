@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <section id="page-content" class="page-wrapper">
+    <div class="banner-area section-padding">
+    <div class="container">
+    <br>
+    <h2><strong>Liste de produits :</strong></h2>
+    <br>
+        {% for p in produit %}
+
+        <div class="product-list tab-content">
+            <div role="tabpanel" class="tab-pane fade in active" id="home">
+        <div class="col-md-3 col-sm-4 col-xs-12">
+        <div class="single-product mb-40">
+            <div class="product-img-content mb-20">
+                <div class="product-img">
+                    <a href="{{ path('details_produitF',{'id':p.id}) }}">
+                        <img class="imageproduit2" src="{{ asset( 'photos/') }}{{ p.image }}" alt="{{ p.libelleP }}">
+                    </a>
+                </div>
+                <div class="product-action text-center">
+                    <a href="#" title="Quick view" data-toggle="modal" data-target="#productModal">
+                        <i class="zmdi zmdi-eye"></i>
+                    </a>
+                    <a href="{{ path('ajouter_pr_pan',{'idd':p.id}) }}">
+                        <i class="zmdi zmdi-shopping-cart"></i>
+                    </a>
+                    <a href="#" title="Add to Wishlist">
+                        <i class="zmdi zmdi-favorite"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="product-content text-center text-uppercase">
+                <a href="product-details.html" >{{ p.libelleP }}</a>
+                <div class="rating-icon">
+                    <i class="zmdi zmdi-star"></i>
+                    <i class="zmdi zmdi-star"></i>
+                    <i class="zmdi zmdi-star"></i>
+                    <i class="zmdi zmdi-star-half"></i>
+                    <i class="zmdi zmdi-star-half"></i>
+                </div>
+                <div class="product-price">
+                    <span class="new-price">{{ p.prixVente }} DT</span>
+                </div>
+            </div>
+        </div>
+        </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    </div>
+    </section>
+{% endblock %}

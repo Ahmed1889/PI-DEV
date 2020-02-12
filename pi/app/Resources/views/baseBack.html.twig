@@ -231,7 +231,16 @@
 
                     <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-box-open"></i><span class="hide-menu">Gestion produits</span></a>
                         <ul aria-expanded="false" class="collapse  first-level">
+<<<<<<< HEAD
+                            <li class="sidebar-item"><a href="{{ path('ajout_categorie') }}" class="sidebar-link"><i class="fas fa-plus"></i><span class="hide-menu"> ajouter categorie </span></a></li>
+                            <li class="sidebar-item"><a href="{{ path('afficher_categorie') }}" class="sidebar-link"><i class="fas fa-list"></i><span class="hide-menu"> lister categories </span></a></li>
+                            <li class="sidebar-item"><a href="{{ path('ajout_produit') }}" class="sidebar-link"><i class="fas fa-plus"></i><span class="hide-menu"> ajouter produit </span></a></li>
+                            <li class="sidebar-item"><a href="{{ path('afficher_produit') }}" class="sidebar-link"><i class="fas fa-list"></i><span class="hide-menu"> lister produits </span></a></li>
+                            <li class="sidebar-item"><a href="{{ path('ajout_stock') }}" class="sidebar-link"><i class="fas fa-plus"></i><span class="hide-menu"> ajouter stock </span></a></li>
+                            <li class="sidebar-item"><a href="{{ path('afficher_stock') }}" class="sidebar-link"><i class="fas fa-list"></i><span class="hide-menu"> lister stocks </span></a></li>
+=======
 
+>>>>>>> a43438cf8b2ecdc1fbc9f667445e24fe10f77218
                         </ul>
                     </li>
                     <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-shopping-cart"></i><span class="hide-menu">Gestion panier/commandes </span></a>
@@ -378,6 +387,7 @@
                 }
             }
         });
+
 
         $("a.confirmModal").click(function(e) {
             e.preventDefault();
