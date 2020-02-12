@@ -1,0 +1,21 @@
+{% extends 'baseBack.html.twig' %}
+{% block bodyBack %}
+<table class="table">
+
+    <tr>
+        <td>id </td>
+        <td>user </td>
+        <td> date </td>
+
+    </tr>
+    {% for c in commande %}
+    <tr>
+        <td>{{ c.id }}</td>
+        <td>{{ c.idU }}</td>
+        <td>{{ c.date|date }}</td>
+    </tr>
+        <td> <a href="{{ path ('supprimercommande',{'id':c.id}) }}">supprimer</a></td>
+    {% endfor %}
+</table>
+
+{%  endblock %}

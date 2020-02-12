@@ -1,0 +1,33 @@
+{% extends 'baseBack.html.twig' %}
+
+{% block bodyBack %}
+
+    <h2> Planning du jour  </h2>
+    <iframe name="date du jour" id="date-du-jour" style="width:105px;height:75px;" src="https://www.mathieuweb.fr/calendrier/date-jour-rouge-noir.html" scrolling="no" frameborder="0" allowtransparency="true"></iframe>
+
+
+
+    <table border="1">
+        <tr>
+            <th> id </th>
+            <th> statut</th>
+            <th> Doit être livrée</th>
+
+        </tr>
+
+        {%  for t in plannigs | sort((a, b) => a.dateLivraison  >= b.dateLivraison )|reverse %}
+            <tr>
+                <th> {{ t.id }}</th>
+                {% if t.statut==false %}
+                <th style="color: red"> Non livre</th>
+                {% else %}
+                    <th style="color: green">  livre</th>
+
+{% endif %}
+                <th> {{ t.dateLivraison |date(' H:i') }}</th>
+            </tr>
+        {% endfor %}
+    </table>
+
+
+{%  endblock %}

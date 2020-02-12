@@ -1,0 +1,30 @@
+{% block body %}
+    <h1>Bonreduction</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ bonReduction.id }}</td>
+            </tr>
+            <tr>
+                <th>Numero</th>
+                <td>{{ bonReduction.numero }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('bonreduction_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('bonreduction_edit', { 'id': bonReduction.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

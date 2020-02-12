@@ -1,0 +1,38 @@
+{% extends 'baseBack.html.twig' %}
+{% block bodyBack %}
+    <br>
+    <h2><strong>Modifier un produit :</strong></h2>
+    <br>
+    <table class="table table-striped">
+        {{ form_start(form) }}
+        <tr>
+            <td>{{ form_label(form.libelleP)  }}</td>
+            <td>{{ form_widget(form.libelleP)  }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.description)  }}</td>
+            <td>{{ form_widget(form.description)  }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.categorie)  }}</td>
+            <td>{{ form_widget(form.categorie)  }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.prixAchat)  }}</td>
+            <td>{{ form_widget(form.prixAchat)  }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.prixVente)  }}</td>
+            <td>{{ form_widget(form.prixVente)  }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.image)  }}</td>
+            <td>{{ form_widget(form.image)  }}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>{{ form_widget(form.modifier,{ 'attr': {'class': 'btn btn-info '}})  }}</td>
+        </tr>
+        {{ form_end(form)  }}
+    </table>
+{% endblock %}
