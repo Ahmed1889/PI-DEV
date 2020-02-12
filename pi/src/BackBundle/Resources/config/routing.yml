@@ -1,8 +1,17 @@
 back_homepage:
     path:     /aa
     defaults: { _controller: BackBundle:Default:index }
+<<<<<<< HEAD
+ajout_categorie:
+    path:     /ajout_categorie
+    defaults: { _controller: BackBundle:Categorie:Ajout }
+afficher_categorie:
+    path:     /afficher_categorie
+    defaults: { _controller: BackBundle:Categorie:Affiche }
+supprimer_categorie:
     path:     /supprimer_categorie
     defaults: { _controller: BackBundle:Categorie:Supprimer}
+modifier_categorie:
     path:     /modifier_categorie
     defaults: { _controller: BackBundle:Categorie:Modifier}
 ajout_produit:
@@ -19,6 +28,17 @@ modifier_produit:
     defaults: { _controller: BackBundle:Produit:Modifier}
 ajout_stock:
     path:     /ajout_stock
+    defaults: { _controller: BackBundle:Stock:Ajout }
+afficher_stock:
+    path:     /afficher_stock
+    defaults: { _controller: BackBundle:Stock:Affiche }
+supprimer_stock:
+    path:     /supprimer_stock
+    defaults: { _controller: BackBundle:Stock:Supprimer}
+modifier_stock:
+    path:     /modifier_stock
+    defaults: { _controller: BackBundle:Stock:Modifier}
+=======
 
 ajoutTypeVehicule:
     path:     /ajoutType
@@ -56,6 +76,7 @@ modifierVehicule:
 affichePlannigDay:
     path:     /affichePlanningDay
     defaults: { _controller: BackBundle:Livraison:AfficherVPlanningDay }
+<<<<<<< HEAD
 
 afficherCommandeNonLivre:
     path:     /AfficherCommandeNonLivre
@@ -93,3 +114,6 @@ ModifierVehicule22:
 ModifierVehiculePop:
   path:     /ModifierVehiculePop
   defaults: { _controller: BackBundle:Livraison:ModifierVehiculePop }
+=======
+>>>>>>> a43438cf8b2ecdc1fbc9f667445e24fe10f77218
+>>>>>>> 6354dfc33820908844330453d56c31640410dfb2
