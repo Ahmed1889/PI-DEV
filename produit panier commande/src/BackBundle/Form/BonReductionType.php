@@ -5,6 +5,8 @@ namespace BackBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+
 
 class BonReductionType extends AbstractType
 {
@@ -13,7 +15,12 @@ class BonReductionType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('numero');
+        $builder->add('numero',IntegerType::class ,[
+            'required'   => true,
+            'attr' => [
+                'min'  => 1000,
+            ]
+        ]);
     }/**
      * {@inheritdoc}
      */

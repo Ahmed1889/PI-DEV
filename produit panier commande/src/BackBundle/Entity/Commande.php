@@ -178,13 +178,6 @@ class Commande
         $this->date = $date;
         return $this;
     }
-    /**
-     * @return mixed
-     */
-    public function getIdU()
-    {
-        return $this->id_u;
-    }
 
     /**
      * @param mixed $id_u
@@ -193,5 +186,17 @@ class Commande
     {
         $this->id_u = $id_u;
     }
+
+    /**
+     * Get idU
+     *
+     * @return int
+     */
+    public function getIdU()
+    {
+        return $this->id_u;
+    }
+
+
 }
 

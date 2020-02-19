@@ -17,7 +17,6 @@
                                                     <th class="product-thumbnail"></th>
                                                     <th class="product-name"><span class="nobr">Product</span></th>
                                                     <th class="product-prices"><span class="nobr"> Price </span></th>
-                                                    <th class="product-stock-stauts"><span class="nobr"> stock status </span></th>
                                                     <th class="product-add-to-cart"><span class="nobr">Add to Cart </span></th>
                                                     <th class="product-remove"><span class="nobr">Remove</span></th>
                                                 </tr>
@@ -37,11 +36,13 @@
                                                             <p class="w-size m-0">
                                                         </td>
                                                         <td class="product-prices"><span class="amount">{{ p.prixVente  }} TND</span></td>
-                                                        <td class="product-stock-status"><span class="wishlist-in-stock">In Stock</span></td>
                                                         <td class="product-value">
-                                                            <input type="number" id="{{ p.id }}" value={{p.qte}}  >
+                                                            <a class="product-remove">  <a href="{{ path('decrement',{'idd':p.id}) }}">-</a></a>
+                                                            <input  id="{{ p.id }}" value={{p.qte}}  disabled>
+                                                        <a class="product-remove">  <a href="{{ path('increment',{'idd':p.id}) }}">+</a></a>
+
                                                         </td>
-                                                        <td class="product-remove"><a href="{{ path('supprimer',{'id':p.id}) }}">×</a></td>
+                                                        <td class="product-remove"><a href="{{ path('supprimer',{'idd':p.libelleP,'calledfromcart':true}) }}">×</a></td>
                                                     </tr>
 
                 {% endfor %}

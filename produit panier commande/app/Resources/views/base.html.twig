@@ -112,7 +112,11 @@
                                 <li class="cart-link lh-50">
                                     <a href="#" class="pl-20">
                                         <i class="zmdi zmdi-shopping-cart"></i>
-                                        <span>2</span>
+                                        {% if panier is defined and panier is not empty %}
+                                        <span>{{ panier|length }}</span>
+                                        {% endif %}
+
+
                                     </a>
 
                                     <div class="mini-cart-inner header-top-down p-20">
@@ -122,10 +126,10 @@
                                             <li class="p-10 mb-15">
 
                                                 <div class="product-details ml-10">
-                                                    <a href="#" class="remove">
+                                                    <a href="{{ path('supprimer',{'idd':p,'calledfromcart':false}) }}" class="remove">
                                                         <i class="zmdi zmdi-close"></i>
                                                     </a>
-                                                    <a href="#" class="product-name mb-10">{{ p}}</a>
+                                                    <a href="#" class="product-name mb-10">{{p}}</a>
                                                     <span class="selected-size">{{ v }} </span>
                                                 </div>
                                             </li>
@@ -137,7 +141,7 @@
                                             <p class="total mtb-15">
                                             </p>
                                             <p class="buttons m-0">
-                                                <a href="#" class="button extra-small">
+                                                <a href="{{ path('cart') }}" class="button extra-small">
                                                     <span>Checkout</span>
                                                 </a>
                                             </p>

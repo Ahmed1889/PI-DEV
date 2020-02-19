@@ -207,25 +207,38 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        elseif (0 === strpos($pathinfo, '/supprimer')) {
-            // supprimer_categorie
-            if ('/supprimer_categorie' === $pathinfo) {
-                return array (  '_controller' => 'BackBundle\\Controller\\CategorieController::SupprimerAction',  '_route' => 'supprimer_categorie',);
+        elseif (0 === strpos($pathinfo, '/s')) {
+            if (0 === strpos($pathinfo, '/supprimer')) {
+                // supprimer_categorie
+                if ('/supprimer_categorie' === $pathinfo) {
+                    return array (  '_controller' => 'BackBundle\\Controller\\CategorieController::SupprimerAction',  '_route' => 'supprimer_categorie',);
+                }
+
+                // supprimer_produit
+                if ('/supprimer_produit' === $pathinfo) {
+                    return array (  '_controller' => 'BackBundle\\Controller\\ProduitController::SupprimerAction',  '_route' => 'supprimer_produit',);
+                }
+
+                // supprimercommande
+                if (0 === strpos($pathinfo, '/supprimercommande') && preg_match('#^/supprimercommande/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, ['_route' => 'supprimercommande']), array (  '_controller' => 'BackBundle\\Controller\\CommandeController::deleteAction',));
+                }
+
+                // supprimer
+                if ('/supprimer' === $pathinfo) {
+                    return array (  '_controller' => 'FrontBundle\\Controller\\PanierController::supprimerAction',  '_route' => 'supprimer',);
+                }
+
             }
 
-            // supprimer_produit
-            if ('/supprimer_produit' === $pathinfo) {
-                return array (  '_controller' => 'BackBundle\\Controller\\ProduitController::SupprimerAction',  '_route' => 'supprimer_produit',);
+            // searchmyass
+            if ('/searchmyass' === $pathinfo) {
+                return array (  '_controller' => 'BackBundle\\Controller\\CommandeController::searchMyAssAction',  '_route' => 'searchmyass',);
             }
 
-            // supprimercommande
-            if (0 === strpos($pathinfo, '/supprimercommande') && preg_match('#^/supprimercommande/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, ['_route' => 'supprimercommande']), array (  '_controller' => 'BackBundle\\Controller\\CommandeController::deleteAction',));
-            }
-
-            // supprimer
-            if ('/supprimer' === $pathinfo) {
-                return array (  '_controller' => 'FrontBundle\\Controller\\PanierController::supprimerAction',  '_route' => 'supprimer',);
+            // showdetailscommande
+            if ('/showdetailscommande' === $pathinfo) {
+                return array (  '_controller' => 'BackBundle\\Controller\\CommandeController::showAction',  '_route' => 'showdetailscommande',);
             }
 
         }
@@ -238,6 +251,16 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         // modifier_produit
         if ('/modifier_produit' === $pathinfo) {
             return array (  '_controller' => 'BackBundle\\Controller\\ProduitController::ModifierAction',  '_route' => 'modifier_produit',);
+        }
+
+        // imprimer
+        if ('/imprimer' === $pathinfo) {
+            return array (  '_controller' => 'BackBundle\\Controller\\CommandeController::pdfAction',  '_route' => 'imprimer',);
+        }
+
+        // increment
+        if ('/increment' === $pathinfo) {
+            return array (  '_controller' => 'FrontBundle\\Controller\\PanierController::IncrimentQteAction',  '_route' => 'increment',);
         }
 
         if (0 === strpos($pathinfo, '/c')) {
@@ -263,55 +286,73 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return array (  '_controller' => 'FrontBundle\\Controller\\ProduitController::DetailsAction',  '_route' => 'details_produitF',);
         }
 
-        // produitupdate
-        if ('/produitupdate' === $pathinfo) {
-            return array (  '_controller' => 'FrontBundle\\Controller\\PanierController::ProduitUpdateAction',  '_route' => 'produitupdate',);
+        // decrement
+        if ('/decrement' === $pathinfo) {
+            return array (  '_controller' => 'FrontBundle\\Controller\\PanierController::DecrimentQteAction',  '_route' => 'decrement',);
         }
 
-        if (0 === strpos($pathinfo, '/profile')) {
-            // fos_user_profile_show
-            if ('/profile' === $trimmedPathinfo) {
-                $ret = array (  '_controller' => 'fos_user.profile.controller:showAction',  '_route' => 'fos_user_profile_show',);
-                if ('/' === substr($pathinfo, -1)) {
-                    // no-op
-                } elseif ('GET' !== $canonicalMethod) {
-                    goto not_fos_user_profile_show;
-                } else {
-                    return array_replace($ret, $this->redirect($rawPathinfo.'/', 'fos_user_profile_show'));
-                }
-
-                if (!in_array($canonicalMethod, ['GET'])) {
-                    $allow = array_merge($allow, ['GET']);
-                    goto not_fos_user_profile_show;
-                }
-
-                return $ret;
+        if (0 === strpos($pathinfo, '/p')) {
+            // produitupdate
+            if ('/produitupdate' === $pathinfo) {
+                return array (  '_controller' => 'FrontBundle\\Controller\\PanierController::ProduitUpdateAction',  '_route' => 'produitupdate',);
             }
-            not_fos_user_profile_show:
 
-            // fos_user_profile_edit
-            if ('/profile/edit' === $pathinfo) {
-                $ret = array (  '_controller' => 'fos_user.profile.controller:editAction',  '_route' => 'fos_user_profile_edit',);
-                if (!in_array($canonicalMethod, ['GET', 'POST'])) {
-                    $allow = array_merge($allow, ['GET', 'POST']);
-                    goto not_fos_user_profile_edit;
+            if (0 === strpos($pathinfo, '/profile')) {
+                // fos_user_profile_show
+                if ('/profile' === $trimmedPathinfo) {
+                    $ret = array (  '_controller' => 'fos_user.profile.controller:showAction',  '_route' => 'fos_user_profile_show',);
+                    if ('/' === substr($pathinfo, -1)) {
+                        // no-op
+                    } elseif ('GET' !== $canonicalMethod) {
+                        goto not_fos_user_profile_show;
+                    } else {
+                        return array_replace($ret, $this->redirect($rawPathinfo.'/', 'fos_user_profile_show'));
+                    }
+
+                    if (!in_array($canonicalMethod, ['GET'])) {
+                        $allow = array_merge($allow, ['GET']);
+                        goto not_fos_user_profile_show;
+                    }
+
+                    return $ret;
                 }
+                not_fos_user_profile_show:
 
-                return $ret;
-            }
-            not_fos_user_profile_edit:
+                // fos_user_profile_edit
+                if ('/profile/edit' === $pathinfo) {
+                    $ret = array (  '_controller' => 'fos_user.profile.controller:editAction',  '_route' => 'fos_user_profile_edit',);
+                    if (!in_array($canonicalMethod, ['GET', 'POST'])) {
+                        $allow = array_merge($allow, ['GET', 'POST']);
+                        goto not_fos_user_profile_edit;
+                    }
 
-            // fos_user_change_password
-            if ('/profile/change-password' === $pathinfo) {
-                $ret = array (  '_controller' => 'fos_user.change_password.controller:changePasswordAction',  '_route' => 'fos_user_change_password',);
-                if (!in_array($canonicalMethod, ['GET', 'POST'])) {
-                    $allow = array_merge($allow, ['GET', 'POST']);
-                    goto not_fos_user_change_password;
+                    return $ret;
                 }
+                not_fos_user_profile_edit:
 
-                return $ret;
+                // fos_user_change_password
+                if ('/profile/change-password' === $pathinfo) {
+                    $ret = array (  '_controller' => 'fos_user.change_password.controller:changePasswordAction',  '_route' => 'fos_user_change_password',);
+                    if (!in_array($canonicalMethod, ['GET', 'POST'])) {
+                        $allow = array_merge($allow, ['GET', 'POST']);
+                        goto not_fos_user_change_password;
+                    }
+
+                    return $ret;
+                }
+                not_fos_user_change_password:
+
             }
-            not_fos_user_change_password:
+
+            // payment
+            if ('/payment' === $pathinfo) {
+                return array (  '_controller' => 'FrontBundle\\Controller\\PanierController::PaimentAction',  '_route' => 'payment',);
+            }
+
+            // payer
+            if ('/payer' === $pathinfo) {
+                return array (  '_controller' => 'FrontBundle\\Controller\\PanierController::PayerAction',  '_route' => 'payer',);
+            }
 
         }
 

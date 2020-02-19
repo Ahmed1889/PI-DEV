@@ -1,10 +1,10 @@
 {% extends 'baseBack.html.twig' %}
 
-{% block body %}
-    
-    <h1>Bonreductions list</h1>
+{% block bodyback %}
 
-    <table>
+    <h1>Bon de reductions</h1>
+
+    <table class="table table-striped">
         <thead>
             <tr>
                 <th>Id</th>
@@ -18,14 +18,13 @@
                 <td><a href="{{ path('bonreduction_show', { 'id': bonReduction.id }) }}">{{ bonReduction.id }}</a></td>
                 <td>{{ bonReduction.numero }}</td>
                 <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('bonreduction_show', { 'id': bonReduction.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('bonreduction_edit', { 'id': bonReduction.id }) }}">edit</a>
-                        </li>
-                    </ul>
+
+
+                            <a class="btn btn-success" href="{{ path('bonreduction_show', { 'id': bonReduction.id }) }}">Afficher</a>
+                            <a class="btn btn-info" href="{{ path('bonreduction_edit', { 'id': bonReduction.id }) }}">Modifier</a>
+                            <a class="btn btn-danger" href="{{ path('bonreduction_delete', { 'id': bonReduction.id }) }}">Supprimer</a>
+
+
                 </td>
             </tr>
         {% endfor %}
@@ -33,8 +32,8 @@
     </table>
 
     <ul>
-        <li>
-            <a href="{{ path('bonreduction_new') }}">Create a new bonReduction</a>
-        </li>
+
+            <a class="btn btn-success" href="{{ path('bonreduction_new') }} ">Créer un Bon de Reduction</a>
+
     </ul>
 {% endblock %}

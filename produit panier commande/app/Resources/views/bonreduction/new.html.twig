@@ -1,15 +1,17 @@
+
 {% extends 'baseBack.html.twig' %}
-{% block body %}
-    <h1>Bonreduction creation</h1>
+{% block bodyback %}
+    <br>
+    <h2><strong>Ajouter un Bon De Redcution :</strong></h2>
+    <br>
+    <table class="table table-striped">
+        {{ form_start(form) }}
+        <tr>
+           <td>{{ form_label(form.numero, 'Numéro : ') }}</td>
+            <td>{{ form_widget(form.numero)  }}  </td>
+        </tr>
 
-    {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input type="submit" value="Create" />
-    {{ form_end(form) }}
-
-    <ul>
-        <li>
-            <a href="{{ path('bonreduction_index') }}">Back to the list</a>
-        </li>
-    </ul>
+    </table>
+    <input type="submit" value="créer" class="btn btn-info" align="center"/>
+    {{ form_end(form)}}
 {% endblock %}

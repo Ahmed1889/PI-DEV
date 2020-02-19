@@ -2,6 +2,8 @@
 
 namespace BackBundle\Repository;
 
+use Doctrine\ORM\EntityRepository;
+use BackBundle\Entity\Commande;
 /**
  * CommandeRepository
  *
@@ -10,4 +12,14 @@ namespace BackBundle\Repository;
  */
 class CommandeRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function findEntitiesByString($str){
+        return $this->getEntityManager()
+            ->createQuery(
+                'SELECT c
+                FROM BackBundle:Commande c
+                WHERE c.id LIKE :str'
+            )
+            ->setParameter('str', '%'.$str.'%')
+            ->getResult();
+    }
 }

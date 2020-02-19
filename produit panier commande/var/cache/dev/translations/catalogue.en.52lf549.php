@@ -202,6 +202,11 @@ the Team.
     'form.new_password' => 'New password',
     'form.new_password_confirmation' => 'Repeat new password',
   ),
+  'KnpPaginatorBundle' => 
+  array (
+    'label_previous' => 'Previous',
+    'label_next' => 'Next',
+  ),
 ));
 
 

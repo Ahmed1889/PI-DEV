@@ -25,5 +25,17 @@ produitupdate:
 supprimer:
     path:     /supprimer
     defaults: { _controller: FrontBundle:Panier:supprimer }
+increment:
+    path:     /increment
+    defaults: { _controller: FrontBundle:Panier:IncrimentQte }
+decrement:
+    path:     /decrement
+    defaults: { _controller: FrontBundle:Panier:DecrimentQte }
+payment:
+    path:     /payment
+    defaults: { _controller: FrontBundle:Panier:Paiment }
+payer:
+    path:     /payer
+    defaults: { _controller: FrontBundle:Panier:Payer }
 
 

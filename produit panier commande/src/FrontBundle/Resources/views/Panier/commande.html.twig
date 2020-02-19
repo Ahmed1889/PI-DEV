@@ -6,37 +6,7 @@
         <div class="checkout-area section-padding">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="billing-details-info azure-bg p-30">
-                            <div class="billing-title text-uppercase mb-30">
-                                <h5><strong>billing details</strong></h5>
-                            </div>
-                            <p class="form-row pb-20 m-0">
-                                <input type="text" placeholder="Your Name">
-                            </p>
-                            <p class="form-row pb-20 m-0">
-                                <input type="text" placeholder="Enter Your Here">
-                            </p>
-                            <p class="form-row pb-20 m-0">
-                                <input type="text" placeholder="Phone Here">
-                            </p>
-                            <p class="form-row pb-20 m-0">
-                                <input type="text" placeholder="Company Name Here">
-                            </p>
-                            <p class="form-row pb-20 m-0">
-                                <input type="text" placeholder="Country">
-                            </p>
-                            <p class="form-row pb-20 m-0">
-                                <input type="text" placeholder="State">
-                            </p>
-                            <p class="form-row pb-20 m-0">
-                                <input type="text" placeholder="Town / City">
-                            </p>
-                            <p class="form-row m-0">
-                                <textarea placeholder="Type Your Message"></textarea>
-                            </p>
-                        </div>
-                    </div>
+
                     <div class="col-md-6">
                         <div class="order-info azure-bg p-30">
                             <div class="billing-title text-uppercase mb-15">
@@ -50,28 +20,13 @@
                                     <td>{{ p.PrixVente }} TND</td>
                                 </tr>
                                 {% endfor %}
-                                <tr>
-                                    <th>Women’s Blue T-Shirt</th>
-                                    <td>£69.00</td>
-                                </tr>
-                                <tr>
-                                    <th>Cart Subtotal</th>
-                                    <td>£155.00</td>
-                                </tr>
-                                <tr>
-                                    <th>Shipping and Handing</th>
-                                    <td>£15.00</td>
-                                </tr>
-                                <tr>
-                                    <th>Vat</th>
-                                    <td>£00.00</td>
-                                </tr>
                                 <tr class="total">
                                     <th>Order Total</th>
-                                    <td>£325.00</td>
+                                    <td>{{ total }}TND</td>
                                 </tr>
                                 </tbody>
                             </table>
+
                             <div class="billing-title text-uppercase mt-40 pb-30">
                                 <h5><strong>payment method</strong></h5>
                             </div>

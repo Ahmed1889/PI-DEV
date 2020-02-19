@@ -31,3 +31,12 @@ affichercommande:
 supprimercommande:
     path:     /supprimercommande/{id}
     defaults: { _controller: BackBundle:Commande:delete}
+searchmyass:
+    path:     /searchmyass
+    defaults: { _controller: BackBundle:Commande:searchMyAss}
+imprimer:
+    path:     /imprimer
+    defaults: { _controller: BackBundle:Commande:pdf}
+showdetailscommande:
+    path:     /showdetailscommande
+    defaults: { _controller: BackBundle:Commande:show}
