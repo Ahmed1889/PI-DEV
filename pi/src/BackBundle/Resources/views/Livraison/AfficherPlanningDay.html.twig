@@ -1,0 +1,40 @@
+{% extends 'baseBack.html.twig' %}
+
+{% block bodyBack %}
+
+    <h2> Planning du jour  </h2>
+
+
+    <table class="table table-striped table-bordered dataTable"  role="grid" aria-describedby="zero_config_info" id="zero_config" border="1">
+        <tr>
+            <th> id </th>
+            <th> statut</th>
+            <th> Doit être livrée</th>
+            <th> Livrée</th>
+
+        </tr>
+
+        {%  for t in plannigs |reverse %}
+            <tr>
+                <th> {{ t.id }}</th>
+                {% if t.statut==false %}
+                <th style="color: red"> Non livre</th>
+                {% else %}
+                    <th style="color: green">  livre</th>
+
+{% endif %}
+                <th> {{ t.dateLivraison |date(' H:i') }}</th>
+
+                {% if t.statut==false %}
+                <th> <a  href="{{ path('LivrerCommande',
+                        {'id':t.id}) }}"  >
+                        Livrée</a></th>
+                    {% else %}
+                    <th></th>
+                {% endif %}
+            </tr>
+        {% endfor %}
+    </table>
+
+
+{%  endblock %}

@@ -1,0 +1,532 @@
+<?php
+
+use Symfony\Component\Routing\Exception\MethodNotAllowedException;
+use Symfony\Component\Routing\Exception\ResourceNotFoundException;
+use Symfony\Component\Routing\RequestContext;
+
+/**
+ * This class has been auto-generated
+ * by the Symfony Routing Component.
+ */
+class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\RedirectableUrlMatcher
+{
+    public function __construct(RequestContext $context)
+    {
+        $this->context = $context;
+    }
+
+    public function match($rawPathinfo)
+    {
+        $allow = [];
+        $pathinfo = rawurldecode($rawPathinfo);
+        $trimmedPathinfo = rtrim($pathinfo, '/');
+        $context = $this->context;
+        $request = $this->request ?: $this->createRequest($pathinfo);
+        $requestMethod = $canonicalMethod = $context->getMethod();
+
+        if ('HEAD' === $requestMethod) {
+            $canonicalMethod = 'GET';
+        }
+
+        if (0 === strpos($pathinfo, '/_')) {
+            // _wdt
+            if (0 === strpos($pathinfo, '/_wdt') && preg_match('#^/_wdt/(?P<token>[^/]++)$#sD', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, ['_route' => '_wdt']), array (  '_controller' => 'web_profiler.controller.profiler:toolbarAction',));
+            }
+
+            if (0 === strpos($pathinfo, '/_profiler')) {
+                // _profiler_home
+                if ('/_profiler' === $trimmedPathinfo) {
+                    $ret = array (  '_controller' => 'web_profiler.controller.profiler:homeAction',  '_route' => '_profiler_home',);
+                    if ('/' === substr($pathinfo, -1)) {
+                        // no-op
+                    } elseif ('GET' !== $canonicalMethod) {
+                        goto not__profiler_home;
+                    } else {
+                        return array_replace($ret, $this->redirect($rawPathinfo.'/', '_profiler_home'));
+                    }
+
+                    return $ret;
+                }
+                not__profiler_home:
+
+                if (0 === strpos($pathinfo, '/_profiler/search')) {
+                    // _profiler_search
+                    if ('/_profiler/search' === $pathinfo) {
+                        return array (  '_controller' => 'web_profiler.controller.profiler:searchAction',  '_route' => '_profiler_search',);
+                    }
+
+                    // _profiler_search_bar
+                    if ('/_profiler/search_bar' === $pathinfo) {
+                        return array (  '_controller' => 'web_profiler.controller.profiler:searchBarAction',  '_route' => '_profiler_search_bar',);
+                    }
+
+                }
+
+                // _profiler_phpinfo
+                if ('/_profiler/phpinfo' === $pathinfo) {
+                    return array (  '_controller' => 'web_profiler.controller.profiler:phpinfoAction',  '_route' => '_profiler_phpinfo',);
+                }
+
+                // _profiler_search_results
+                if (preg_match('#^/_profiler/(?P<token>[^/]++)/search/results$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, ['_route' => '_profiler_search_results']), array (  '_controller' => 'web_profiler.controller.profiler:searchResultsAction',));
+                }
+
+                // _profiler_open_file
+                if ('/_profiler/open' === $pathinfo) {
+                    return array (  '_controller' => 'web_profiler.controller.profiler:openAction',  '_route' => '_profiler_open_file',);
+                }
+
+                // _profiler
+                if (preg_match('#^/_profiler/(?P<token>[^/]++)$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, ['_route' => '_profiler']), array (  '_controller' => 'web_profiler.controller.profiler:panelAction',));
+                }
+
+                // _profiler_router
+                if (preg_match('#^/_profiler/(?P<token>[^/]++)/router$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, ['_route' => '_profiler_router']), array (  '_controller' => 'web_profiler.controller.router:panelAction',));
+                }
+
+                // _profiler_exception
+                if (preg_match('#^/_profiler/(?P<token>[^/]++)/exception$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, ['_route' => '_profiler_exception']), array (  '_controller' => 'web_profiler.controller.exception:showAction',));
+                }
+
+                // _profiler_exception_css
+                if (preg_match('#^/_profiler/(?P<token>[^/]++)/exception\\.css$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, ['_route' => '_profiler_exception_css']), array (  '_controller' => 'web_profiler.controller.exception:cssAction',));
+                }
+
+            }
+
+            // _twig_error_test
+            if (0 === strpos($pathinfo, '/_error') && preg_match('#^/_error/(?P<code>\\d+)(?:\\.(?P<_format>[^/]++))?$#sD', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, ['_route' => '_twig_error_test']), array (  '_controller' => 'twig.controller.preview_error:previewErrorPageAction',  '_format' => 'html',));
+            }
+
+        }
+
+        elseif (0 === strpos($pathinfo, '/a')) {
+            // back_homepage
+            if ('/aa' === $pathinfo) {
+                return array (  '_controller' => 'BackBundle\\Controller\\DefaultController::indexAction',  '_route' => 'back_homepage',);
+            }
+
+<<<<<<< HEAD
+            if (0 === strpos($pathinfo, '/ajout_')) {
+                // ajout_categorie
+                if ('/ajout_categorie' === $pathinfo) {
+                    return array (  '_controller' => 'BackBundle\\Controller\\CategorieController::AjoutAction',  '_route' => 'ajout_categorie',);
+                }
+
+                // ajout_produit
+                if ('/ajout_produit' === $pathinfo) {
+                    return array (  '_controller' => 'BackBundle\\Controller\\ProduitController::AjoutAction',  '_route' => 'ajout_produit',);
+                }
+
+                // ajout_stock
+                if ('/ajout_stock' === $pathinfo) {
+                    return array (  '_controller' => 'BackBundle\\Controller\\StockController::AjoutAction',  '_route' => 'ajout_stock',);
+                }
+
+            }
+
+            elseif (0 === strpos($pathinfo, '/afficher_')) {
+                // afficher_categorie
+                if ('/afficher_categorie' === $pathinfo) {
+                    return array (  '_controller' => 'BackBundle\\Controller\\CategorieController::AfficheAction',  '_route' => 'afficher_categorie',);
+                }
+
+                if (0 === strpos($pathinfo, '/afficher_produit')) {
+                    // afficher_produit
+                    if ('/afficher_produit' === $pathinfo) {
+                        return array (  '_controller' => 'BackBundle\\Controller\\ProduitController::AfficheAction',  '_route' => 'afficher_produit',);
+                    }
+
+                    // afficher_produitF
+                    if ('/afficher_produitF' === $pathinfo) {
+                        return array (  '_controller' => 'FrontBundle\\Controller\\ProduitController::AfficheFAction',  '_route' => 'afficher_produitF',);
+                    }
+
+                }
+
+                // afficher_stock
+                if ('/afficher_stock' === $pathinfo) {
+                    return array (  '_controller' => 'BackBundle\\Controller\\StockController::AfficheAction',  '_route' => 'afficher_stock',);
+=======
+            // ajoutTypeVehicule
+            if ('/ajoutType' === $pathinfo) {
+                return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::AjouterTypeVehiculeAction',  '_route' => 'ajoutTypeVehicule',);
+            }
+
+            // ajoutVehicule
+            if ('/ajoutVehicule' === $pathinfo) {
+                return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::AjouterVehiculeAction',  '_route' => 'ajoutVehicule',);
+            }
+
+            if (0 === strpos($pathinfo, '/affiche')) {
+                if (0 === strpos($pathinfo, '/afficher')) {
+                    // afficherTypeVehicules
+                    if ('/afficherTypes' === $pathinfo) {
+                        return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::AfficherTypeVehiculeAction',  '_route' => 'afficherTypeVehicules',);
+                    }
+
+                    // afficherLivreurDispo
+                    if ('/afficherLivreurDispo' === $pathinfo) {
+                        return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::AfficherLivreurDispoAction',  '_route' => 'afficherLivreurDispo',);
+                    }
+
+                    // afficherVehiculeDispo
+                    if ('/afficherVehiculeDispo' === $pathinfo) {
+                        return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::AfficherVehiculeDispoAction',  '_route' => 'afficherVehiculeDispo',);
+                    }
+
+                }
+
+                // afficheVehicule
+                if ('/afficheVehicule' === $pathinfo) {
+                    return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::AfficherVehiculeAction',  '_route' => 'afficheVehicule',);
+                }
+
+                // affichePlannigDay
+                if ('/affichePlanningDay' === $pathinfo) {
+                    return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::AfficherVPlanningDayAction',  '_route' => 'affichePlannigDay',);
+>>>>>>> a43438cf8b2ecdc1fbc9f667445e24fe10f77218
+                }
+
+            }
+
+            // affecterLivraison
+            if ('/affecterLivraison' === $pathinfo) {
+                return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::AffecterLivraisonAction',  '_route' => 'affecterLivraison',);
+            }
+
+        }
+
+<<<<<<< HEAD
+        elseif (0 === strpos($pathinfo, '/supprimer_')) {
+            // supprimer_categorie
+            if ('/supprimer_categorie' === $pathinfo) {
+                return array (  '_controller' => 'BackBundle\\Controller\\CategorieController::SupprimerAction',  '_route' => 'supprimer_categorie',);
+            }
+
+            // supprimer_produit
+            if ('/supprimer_produit' === $pathinfo) {
+                return array (  '_controller' => 'BackBundle\\Controller\\ProduitController::SupprimerAction',  '_route' => 'supprimer_produit',);
+            }
+
+            // supprimer_stock
+            if ('/supprimer_stock' === $pathinfo) {
+                return array (  '_controller' => 'BackBundle\\Controller\\StockController::SupprimerAction',  '_route' => 'supprimer_stock',);
+            }
+
+        }
+
+        elseif (0 === strpos($pathinfo, '/modifier_')) {
+            // modifier_categorie
+            if ('/modifier_categorie' === $pathinfo) {
+                return array (  '_controller' => 'BackBundle\\Controller\\CategorieController::ModifierAction',  '_route' => 'modifier_categorie',);
+            }
+
+            // modifier_produit
+            if ('/modifier_produit' === $pathinfo) {
+                return array (  '_controller' => 'BackBundle\\Controller\\ProduitController::ModifierAction',  '_route' => 'modifier_produit',);
+            }
+
+            // modifier_stock
+            if ('/modifier_stock' === $pathinfo) {
+                return array (  '_controller' => 'BackBundle\\Controller\\StockController::ModifierAction',  '_route' => 'modifier_stock',);
+            }
+
+=======
+        // supprimerTypeVehicule
+        if ('/supprimerType' === $pathinfo) {
+            return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::SupprimerTypeVehiculeAction',  '_route' => 'supprimerTypeVehicule',);
+        }
+
+        // supprimerVehicule
+        if ('/supprimerVehicule' === $pathinfo) {
+            return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::SupprimerVehiculeAction',  '_route' => 'supprimerVehicule',);
+        }
+
+        // modifierTypeVehicule
+        if ('/modifierType' === $pathinfo) {
+            return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::ModifierTypeVehiculeAction',  '_route' => 'modifierTypeVehicule',);
+        }
+
+        // modifierVehicule
+        if ('/modifierVehicule' === $pathinfo) {
+            return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::ModifierVehiculeAction',  '_route' => 'modifierVehicule',);
+>>>>>>> a43438cf8b2ecdc1fbc9f667445e24fe10f77218
+        }
+
+        // afficherCommandeNonLivre
+        if ('/AfficherCommandeNonLivre' === $pathinfo) {
+            return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::AfficherCommandeNonLivreAction',  '_route' => 'afficherCommandeNonLivre',);
+        }
+
+        // AffecterCommande
+        if ('/AffecterCommande' === $pathinfo) {
+            return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::AffecterCommandeAction',  '_route' => 'AffecterCommande',);
+        }
+
+        // LivrerCommande
+        if ('/LivrerCommande' === $pathinfo) {
+            return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::LivrerCommandeAction',  '_route' => 'LivrerCommande',);
+        }
+
+        if (0 === strpos($pathinfo, '/ModifierVehicule2')) {
+            // ModifierVehicule2
+            if ('/ModifierVehicule2' === $pathinfo) {
+                return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::ModifierVehicule2Action',  '_route' => 'ModifierVehicule2',);
+            }
+
+            // ModifierVehicule22
+            if ('/ModifierVehicule22' === $pathinfo) {
+                return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::ModifierVehicule22Action',  '_route' => 'ModifierVehicule22',);
+            }
+
+        }
+
+        // ModifierVehiculePop
+        if ('/ModifierVehiculePop' === $pathinfo) {
+            return array (  '_controller' => 'BackBundle\\Controller\\LivraisonController::ModifierVehiculePopAction',  '_route' => 'ModifierVehiculePop',);
+        }
+
+        // front_homepage
+        if ('/cc' === $pathinfo) {
+            return array (  '_controller' => 'FrontBundle\\Controller\\DefaultController::indexAction',  '_route' => 'front_homepage',);
+        }
+
+        // f
+        if ('/front' === $pathinfo) {
+            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'f',);
+        }
+
+        // homepage
+        if ('/back' === $pathinfo) {
+            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexbackAction',  '_route' => 'homepage',);
+        }
+
+        // app_security_redirect
+        if ('' === $trimmedPathinfo) {
+            $ret = array (  '_controller' => 'AppBundle\\Controller\\SecurityController::RedirectAction',  '_route' => 'app_security_redirect',);
+            if ('/' === substr($pathinfo, -1)) {
+                // no-op
+            } elseif ('GET' !== $canonicalMethod) {
+                goto not_app_security_redirect;
+            } else {
+                return array_replace($ret, $this->redirect($rawPathinfo.'/', 'app_security_redirect'));
+            }
+
+            return $ret;
+        }
+        not_app_security_redirect:
+
+        if (0 === strpos($pathinfo, '/login')) {
+            // fos_user_security_login
+            if ('/login' === $pathinfo) {
+                $ret = array (  '_controller' => 'fos_user.security.controller:loginAction',  '_route' => 'fos_user_security_login',);
+                if (!in_array($canonicalMethod, ['GET', 'POST'])) {
+                    $allow = array_merge($allow, ['GET', 'POST']);
+                    goto not_fos_user_security_login;
+                }
+
+                return $ret;
+            }
+            not_fos_user_security_login:
+
+            // fos_user_security_check
+            if ('/login_check' === $pathinfo) {
+                $ret = array (  '_controller' => 'fos_user.security.controller:checkAction',  '_route' => 'fos_user_security_check',);
+                if (!in_array($requestMethod, ['POST'])) {
+                    $allow = array_merge($allow, ['POST']);
+                    goto not_fos_user_security_check;
+                }
+
+                return $ret;
+            }
+            not_fos_user_security_check:
+
+        }
+
+        // fos_user_security_logout
+        if ('/logout' === $pathinfo) {
+            $ret = array (  '_controller' => 'fos_user.security.controller:logoutAction',  '_route' => 'fos_user_security_logout',);
+            if (!in_array($canonicalMethod, ['GET', 'POST'])) {
+                $allow = array_merge($allow, ['GET', 'POST']);
+                goto not_fos_user_security_logout;
+            }
+
+            return $ret;
+        }
+        not_fos_user_security_logout:
+
+        if (0 === strpos($pathinfo, '/profile')) {
+            // fos_user_profile_show
+            if ('/profile' === $trimmedPathinfo) {
+                $ret = array (  '_controller' => 'fos_user.profile.controller:showAction',  '_route' => 'fos_user_profile_show',);
+                if ('/' === substr($pathinfo, -1)) {
+                    // no-op
+                } elseif ('GET' !== $canonicalMethod) {
+                    goto not_fos_user_profile_show;
+                } else {
+                    return array_replace($ret, $this->redirect($rawPathinfo.'/', 'fos_user_profile_show'));
+                }
+
+                if (!in_array($canonicalMethod, ['GET'])) {
+                    $allow = array_merge($allow, ['GET']);
+                    goto not_fos_user_profile_show;
+                }
+
+                return $ret;
+            }
+            not_fos_user_profile_show:
+
+            // fos_user_profile_edit
+            if ('/profile/edit' === $pathinfo) {
+                $ret = array (  '_controller' => 'fos_user.profile.controller:editAction',  '_route' => 'fos_user_profile_edit',);
+                if (!in_array($canonicalMethod, ['GET', 'POST'])) {
+                    $allow = array_merge($allow, ['GET', 'POST']);
+                    goto not_fos_user_profile_edit;
+                }
+
+                return $ret;
+            }
+            not_fos_user_profile_edit:
+
+            // fos_user_change_password
+            if ('/profile/change-password' === $pathinfo) {
+                $ret = array (  '_controller' => 'fos_user.change_password.controller:changePasswordAction',  '_route' => 'fos_user_change_password',);
+                if (!in_array($canonicalMethod, ['GET', 'POST'])) {
+                    $allow = array_merge($allow, ['GET', 'POST']);
+                    goto not_fos_user_change_password;
+                }
+
+                return $ret;
+            }
+            not_fos_user_change_password:
+
+        }
+
+        elseif (0 === strpos($pathinfo, '/register')) {
+            // fos_user_registration_register
+            if ('/register' === $trimmedPathinfo) {
+                $ret = array (  '_controller' => 'fos_user.registration.controller:registerAction',  '_route' => 'fos_user_registration_register',);
+                if ('/' === substr($pathinfo, -1)) {
+                    // no-op
+                } elseif ('GET' !== $canonicalMethod) {
+                    goto not_fos_user_registration_register;
+                } else {
+                    return array_replace($ret, $this->redirect($rawPathinfo.'/', 'fos_user_registration_register'));
+                }
+
+                if (!in_array($canonicalMethod, ['GET', 'POST'])) {
+                    $allow = array_merge($allow, ['GET', 'POST']);
+                    goto not_fos_user_registration_register;
+                }
+
+                return $ret;
+            }
+            not_fos_user_registration_register:
+
+            // fos_user_registration_check_email
+            if ('/register/check-email' === $pathinfo) {
+                $ret = array (  '_controller' => 'fos_user.registration.controller:checkEmailAction',  '_route' => 'fos_user_registration_check_email',);
+                if (!in_array($canonicalMethod, ['GET'])) {
+                    $allow = array_merge($allow, ['GET']);
+                    goto not_fos_user_registration_check_email;
+                }
+
+                return $ret;
+            }
+            not_fos_user_registration_check_email:
+
+            if (0 === strpos($pathinfo, '/register/confirm')) {
+                // fos_user_registration_confirm
+                if (preg_match('#^/register/confirm/(?P<token>[^/]++)$#sD', $pathinfo, $matches)) {
+                    $ret = $this->mergeDefaults(array_replace($matches, ['_route' => 'fos_user_registration_confirm']), array (  '_controller' => 'fos_user.registration.controller:confirmAction',));
+                    if (!in_array($canonicalMethod, ['GET'])) {
+                        $allow = array_merge($allow, ['GET']);
+                        goto not_fos_user_registration_confirm;
+                    }
+
+                    return $ret;
+                }
+                not_fos_user_registration_confirm:
+
+                // fos_user_registration_confirmed
+                if ('/register/confirmed' === $pathinfo) {
+                    $ret = array (  '_controller' => 'fos_user.registration.controller:confirmedAction',  '_route' => 'fos_user_registration_confirmed',);
+                    if (!in_array($canonicalMethod, ['GET'])) {
+                        $allow = array_merge($allow, ['GET']);
+                        goto not_fos_user_registration_confirmed;
+                    }
+
+                    return $ret;
+                }
+                not_fos_user_registration_confirmed:
+
+            }
+
+        }
+
+        elseif (0 === strpos($pathinfo, '/resetting')) {
+            // fos_user_resetting_request
+            if ('/resetting/request' === $pathinfo) {
+                $ret = array (  '_controller' => 'fos_user.resetting.controller:requestAction',  '_route' => 'fos_user_resetting_request',);
+                if (!in_array($canonicalMethod, ['GET'])) {
+                    $allow = array_merge($allow, ['GET']);
+                    goto not_fos_user_resetting_request;
+                }
+
+                return $ret;
+            }
+            not_fos_user_resetting_request:
+
+            // fos_user_resetting_reset
+            if (0 === strpos($pathinfo, '/resetting/reset') && preg_match('#^/resetting/reset/(?P<token>[^/]++)$#sD', $pathinfo, $matches)) {
+                $ret = $this->mergeDefaults(array_replace($matches, ['_route' => 'fos_user_resetting_reset']), array (  '_controller' => 'fos_user.resetting.controller:resetAction',));
+                if (!in_array($canonicalMethod, ['GET', 'POST'])) {
+                    $allow = array_merge($allow, ['GET', 'POST']);
+                    goto not_fos_user_resetting_reset;
+                }
+
+                return $ret;
+            }
+            not_fos_user_resetting_reset:
+
+            // fos_user_resetting_send_email
+            if ('/resetting/send-email' === $pathinfo) {
+                $ret = array (  '_controller' => 'fos_user.resetting.controller:sendEmailAction',  '_route' => 'fos_user_resetting_send_email',);
+                if (!in_array($requestMethod, ['POST'])) {
+                    $allow = array_merge($allow, ['POST']);
+                    goto not_fos_user_resetting_send_email;
+                }
+
+                return $ret;
+            }
+            not_fos_user_resetting_send_email:
+
+            // fos_user_resetting_check_email
+            if ('/resetting/check-email' === $pathinfo) {
+                $ret = array (  '_controller' => 'fos_user.resetting.controller:checkEmailAction',  '_route' => 'fos_user_resetting_check_email',);
+                if (!in_array($canonicalMethod, ['GET'])) {
+                    $allow = array_merge($allow, ['GET']);
+                    goto not_fos_user_resetting_check_email;
+                }
+
+                return $ret;
+            }
+            not_fos_user_resetting_check_email:
+
+        }
+
+        if ('/' === $pathinfo && !$allow) {
+            throw new Symfony\Component\Routing\Exception\NoConfigurationException();
+        }
+
+        throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
+    }
+}

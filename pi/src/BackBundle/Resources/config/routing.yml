@@ -1,0 +1,119 @@
+back_homepage:
+    path:     /aa
+    defaults: { _controller: BackBundle:Default:index }
+<<<<<<< HEAD
+ajout_categorie:
+    path:     /ajout_categorie
+    defaults: { _controller: BackBundle:Categorie:Ajout }
+afficher_categorie:
+    path:     /afficher_categorie
+    defaults: { _controller: BackBundle:Categorie:Affiche }
+supprimer_categorie:
+    path:     /supprimer_categorie
+    defaults: { _controller: BackBundle:Categorie:Supprimer}
+modifier_categorie:
+    path:     /modifier_categorie
+    defaults: { _controller: BackBundle:Categorie:Modifier}
+ajout_produit:
+    path:     /ajout_produit
+    defaults: { _controller: BackBundle:Produit:Ajout }
+afficher_produit:
+    path:     /afficher_produit
+    defaults: { _controller: BackBundle:Produit:Affiche }
+supprimer_produit:
+    path:     /supprimer_produit
+    defaults: { _controller: BackBundle:Produit:Supprimer}
+modifier_produit:
+    path:     /modifier_produit
+    defaults: { _controller: BackBundle:Produit:Modifier}
+ajout_stock:
+    path:     /ajout_stock
+    defaults: { _controller: BackBundle:Stock:Ajout }
+afficher_stock:
+    path:     /afficher_stock
+    defaults: { _controller: BackBundle:Stock:Affiche }
+supprimer_stock:
+    path:     /supprimer_stock
+    defaults: { _controller: BackBundle:Stock:Supprimer}
+modifier_stock:
+    path:     /modifier_stock
+    defaults: { _controller: BackBundle:Stock:Modifier}
+=======
+
+ajoutTypeVehicule:
+    path:     /ajoutType
+    defaults: { _controller: BackBundle:Livraison:AjouterTypeVehicule }
+
+afficherTypeVehicules:
+    path:     /afficherTypes
+    defaults: { _controller: BackBundle:Livraison:AfficherTypeVehicule }
+
+supprimerTypeVehicule:
+    path:     /supprimerType
+    defaults: { _controller: BackBundle:Livraison:SupprimerTypeVehicule }
+
+modifierTypeVehicule:
+    path:     /modifierType
+    defaults: { _controller: BackBundle:Livraison:ModifierTypeVehicule }
+
+ajoutVehicule:
+    path:     /ajoutVehicule
+    defaults: { _controller: BackBundle:Livraison:AjouterVehicule }
+
+
+afficheVehicule:
+    path:     /afficheVehicule
+    defaults: { _controller: BackBundle:Livraison:AfficherVehicule }
+
+supprimerVehicule:
+    path:     /supprimerVehicule
+    defaults: { _controller: BackBundle:Livraison:SupprimerVehicule }
+
+modifierVehicule:
+    path:     /modifierVehicule
+    defaults: { _controller: BackBundle:Livraison:ModifierVehicule }
+
+affichePlannigDay:
+    path:     /affichePlanningDay
+    defaults: { _controller: BackBundle:Livraison:AfficherVPlanningDay }
+<<<<<<< HEAD
+
+afficherCommandeNonLivre:
+    path:     /AfficherCommandeNonLivre
+    defaults: { _controller: BackBundle:Livraison:AfficherCommandeNonLivre }
+
+affecterLivraison:
+    path:     /affecterLivraison
+    defaults: { _controller: BackBundle:Livraison:AffecterLivraison }
+
+afficherLivreurDispo:
+    path:     /afficherLivreurDispo
+    defaults: { _controller: BackBundle:Livraison:AfficherLivreurDispo }
+
+afficherVehiculeDispo:
+    path:     /afficherVehiculeDispo
+    defaults: { _controller: BackBundle:Livraison:AfficherVehiculeDispo }
+
+AffecterCommande:
+    path:     /AffecterCommande
+    defaults: { _controller: BackBundle:Livraison:AffecterCommande }
+
+LivrerCommande:
+    path:     /LivrerCommande
+    defaults: { _controller: BackBundle:Livraison:LivrerCommande }
+
+
+ModifierVehicule2:
+    path:     /ModifierVehicule2
+    defaults: { _controller: BackBundle:Livraison:ModifierVehicule2 }
+
+ModifierVehicule22:
+    path:     /ModifierVehicule22
+    defaults: { _controller: BackBundle:Livraison:ModifierVehicule22 }
+
+ModifierVehiculePop:
+  path:     /ModifierVehiculePop
+  defaults: { _controller: BackBundle:Livraison:ModifierVehiculePop }
+=======
+>>>>>>> a43438cf8b2ecdc1fbc9f667445e24fe10f77218
+>>>>>>> 6354dfc33820908844330453d56c31640410dfb2
