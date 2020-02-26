@@ -30,6 +30,30 @@ class Commande
     private $id_u;
 
     /**
+     * @return mixed
+     */
+    public function getIdBon()
+    {
+        return $this->id_bon;
+    }
+
+    /**
+     * @param mixed $id_bon
+     * @return Commande
+     */
+    public function setIdBon($id_bon)
+    {
+        $this->id_bon = $id_bon;
+        return $this;
+    }
+    /**
+     * @var
+     * @ORM\ManyToOne(targetEntity="BackBundle\Entity\BonReduction")
+     * @ORM\JoinColumn(name="id_bon",referencedColumnName="id", onDelete="CASCADE", nullable=true )
+     */
+    private $id_bon;
+
+    /**
      * @return int
      */
     public function getPrixT(): int
@@ -178,13 +202,6 @@ class Commande
         $this->date = $date;
         return $this;
     }
-    /**
-     * @return mixed
-     */
-    public function getIdU()
-    {
-        return $this->id_u;
-    }
 
     /**
      * @param mixed $id_u
@@ -193,5 +210,17 @@ class Commande
     {
         $this->id_u = $id_u;
     }
+
+    /**
+     * Get idU
+     *
+     * @return int
+     */
+    public function getIdU()
+    {
+        return $this->id_u;
+    }
+
+
 }
 

@@ -1,0 +1,560 @@
+<?php
+
+use Symfony\Component\Routing\Exception\MethodNotAllowedException;
+use Symfony\Component\Routing\Exception\ResourceNotFoundException;
+use Symfony\Component\Routing\RequestContext;
+
+/**
+ * This class has been auto-generated
+ * by the Symfony Routing Component.
+ */
+class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\RedirectableUrlMatcher
+{
+    public function __construct(RequestContext $context)
+    {
+        $this->context = $context;
+    }
+
+    public function match($rawPathinfo)
+    {
+        $allow = [];
+        $pathinfo = rawurldecode($rawPathinfo);
+        $trimmedPathinfo = rtrim($pathinfo, '/');
+        $context = $this->context;
+        $request = $this->request ?: $this->createRequest($pathinfo);
+        $requestMethod = $canonicalMethod = $context->getMethod();
+
+        if ('HEAD' === $requestMethod) {
+            $canonicalMethod = 'GET';
+        }
+
+        if (0 === strpos($pathinfo, '/_')) {
+            // _wdt
+            if (0 === strpos($pathinfo, '/_wdt') && preg_match('#^/_wdt/(?P<token>[^/]++)$#sD', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, ['_route' => '_wdt']), array (  '_controller' => 'web_profiler.controller.profiler:toolbarAction',));
+            }
+
+            if (0 === strpos($pathinfo, '/_profiler')) {
+                // _profiler_home
+                if ('/_profiler' === $trimmedPathinfo) {
+                    $ret = array (  '_controller' => 'web_profiler.controller.profiler:homeAction',  '_route' => '_profiler_home',);
+                    if ('/' === substr($pathinfo, -1)) {
+                        // no-op
+                    } elseif ('GET' !== $canonicalMethod) {
+                        goto not__profiler_home;
+                    } else {
+                        return array_replace($ret, $this->redirect($rawPathinfo.'/', '_profiler_home'));
+                    }
+
+                    return $ret;
+                }
+                not__profiler_home:
+
+                if (0 === strpos($pathinfo, '/_profiler/search')) {
+                    // _profiler_search
+                    if ('/_profiler/search' === $pathinfo) {
+                        return array (  '_controller' => 'web_profiler.controller.profiler:searchAction',  '_route' => '_profiler_search',);
+                    }
+
+                    // _profiler_search_bar
+                    if ('/_profiler/search_bar' === $pathinfo) {
+                        return array (  '_controller' => 'web_profiler.controller.profiler:searchBarAction',  '_route' => '_profiler_search_bar',);
+                    }
+
+                }
+
+                // _profiler_phpinfo
+                if ('/_profiler/phpinfo' === $pathinfo) {
+                    return array (  '_controller' => 'web_profiler.controller.profiler:phpinfoAction',  '_route' => '_profiler_phpinfo',);
+                }
+
+                // _profiler_search_results
+                if (preg_match('#^/_profiler/(?P<token>[^/]++)/search/results$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, ['_route' => '_profiler_search_results']), array (  '_controller' => 'web_profiler.controller.profiler:searchResultsAction',));
+                }
+
+                // _profiler_open_file
+                if ('/_profiler/open' === $pathinfo) {
+                    return array (  '_controller' => 'web_profiler.controller.profiler:openAction',  '_route' => '_profiler_open_file',);
+                }
+
+                // _profiler
+                if (preg_match('#^/_profiler/(?P<token>[^/]++)$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, ['_route' => '_profiler']), array (  '_controller' => 'web_profiler.controller.profiler:panelAction',));
+                }
+
+                // _profiler_router
+                if (preg_match('#^/_profiler/(?P<token>[^/]++)/router$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, ['_route' => '_profiler_router']), array (  '_controller' => 'web_profiler.controller.router:panelAction',));
+                }
+
+                // _profiler_exception
+                if (preg_match('#^/_profiler/(?P<token>[^/]++)/exception$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, ['_route' => '_profiler_exception']), array (  '_controller' => 'web_profiler.controller.exception:showAction',));
+                }
+
+                // _profiler_exception_css
+                if (preg_match('#^/_profiler/(?P<token>[^/]++)/exception\\.css$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, ['_route' => '_profiler_exception_css']), array (  '_controller' => 'web_profiler.controller.exception:cssAction',));
+                }
+
+            }
+
+            // _twig_error_test
+            if (0 === strpos($pathinfo, '/_error') && preg_match('#^/_error/(?P<code>\\d+)(?:\\.(?P<_format>[^/]++))?$#sD', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, ['_route' => '_twig_error_test']), array (  '_controller' => 'twig.controller.preview_error:previewErrorPageAction',  '_format' => 'html',));
+            }
+
+        }
+
+        elseif (0 === strpos($pathinfo, '/bonreduction')) {
+            // bonreduction_index
+            if ('/bonreduction' === $trimmedPathinfo) {
+                $ret = array (  '_controller' => 'BackBundle\\Controller\\BonReductionController::indexAction',  '_route' => 'bonreduction_index',);
+                if ('/' === substr($pathinfo, -1)) {
+                    // no-op
+                } elseif ('GET' !== $canonicalMethod) {
+                    goto not_bonreduction_index;
+                } else {
+                    return array_replace($ret, $this->redirect($rawPathinfo.'/', 'bonreduction_index'));
+                }
+
+                return $ret;
+            }
+            not_bonreduction_index:
+
+            // bonreduction_new
+            if ('/bonreduction/new' === $pathinfo) {
+                return array (  '_controller' => 'BackBundle\\Controller\\BonReductionController::newAction',  '_route' => 'bonreduction_new',);
+            }
+
+            // bonreduction_show
+            if (preg_match('#^/bonreduction/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, ['_route' => 'bonreduction_show']), array (  '_controller' => 'BackBundle\\Controller\\BonReductionController::showAction',));
+            }
+
+            // bonreduction_edit
+            if (preg_match('#^/bonreduction/(?P<id>[^/]++)/edit$#sD', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, ['_route' => 'bonreduction_edit']), array (  '_controller' => 'BackBundle\\Controller\\BonReductionController::editAction',));
+            }
+
+            // bonreduction_delete
+            if (preg_match('#^/bonreduction/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, ['_route' => 'bonreduction_delete']), array (  '_controller' => 'BackBundle\\Controller\\BonReductionController::deleteAction',));
+            }
+
+        }
+
+        // homepage
+        if ('/back' === $pathinfo) {
+            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexbackAction',  '_route' => 'homepage',);
+        }
+
+        if (0 === strpos($pathinfo, '/a')) {
+            // back_homepage
+            if ('/aa' === $pathinfo) {
+                return array (  '_controller' => 'BackBundle\\Controller\\DefaultController::indexAction',  '_route' => 'back_homepage',);
+            }
+
+            if (0 === strpos($pathinfo, '/ajout')) {
+                // ajout_categorie
+                if ('/ajout_categorie' === $pathinfo) {
+                    return array (  '_controller' => 'BackBundle\\Controller\\CategorieController::AjoutAction',  '_route' => 'ajout_categorie',);
+                }
+
+                // ajout_produit
+                if ('/ajout_produit' === $pathinfo) {
+                    return array (  '_controller' => 'BackBundle\\Controller\\ProduitController::AjoutAction',  '_route' => 'ajout_produit',);
+                }
+
+                // ajouter_pr_pan
+                if ('/ajouter_pr_pan' === $pathinfo) {
+                    return array (  '_controller' => 'FrontBundle\\Controller\\PanierController::AjouterproduitaupanierAction',  '_route' => 'ajouter_pr_pan',);
+                }
+
+            }
+
+            elseif (0 === strpos($pathinfo, '/afficher')) {
+                // afficher_categorie
+                if ('/afficher_categorie' === $pathinfo) {
+                    return array (  '_controller' => 'BackBundle\\Controller\\CategorieController::AfficheAction',  '_route' => 'afficher_categorie',);
+                }
+
+                if (0 === strpos($pathinfo, '/afficher_produit')) {
+                    // afficher_produit
+                    if ('/afficher_produit' === $pathinfo) {
+                        return array (  '_controller' => 'BackBundle\\Controller\\ProduitController::AfficheAction',  '_route' => 'afficher_produit',);
+                    }
+
+                    // afficher_produitF
+                    if ('/afficher_produitF' === $pathinfo) {
+                        return array (  '_controller' => 'FrontBundle\\Controller\\ProduitController::AfficheFAction',  '_route' => 'afficher_produitF',);
+                    }
+
+                }
+
+                // affichercommande
+                if ('/affichercommande' === $pathinfo) {
+                    return array (  '_controller' => 'BackBundle\\Controller\\CommandeController::AfficheCommandeAction',  '_route' => 'affichercommande',);
+                }
+
+            }
+
+            // add_product_tocart
+            if ('/add_product_tocart' === $pathinfo) {
+                return array (  '_controller' => 'FrontBundle\\Controller\\PanierController::AddtocartAction',  '_route' => 'add_product_tocart',);
+            }
+
+        }
+
+        elseif (0 === strpos($pathinfo, '/s')) {
+            if (0 === strpos($pathinfo, '/supprimer')) {
+                // supprimer_categorie
+                if ('/supprimer_categorie' === $pathinfo) {
+                    return array (  '_controller' => 'BackBundle\\Controller\\CategorieController::SupprimerAction',  '_route' => 'supprimer_categorie',);
+                }
+
+                // supprimer_produit
+                if ('/supprimer_produit' === $pathinfo) {
+                    return array (  '_controller' => 'BackBundle\\Controller\\ProduitController::SupprimerAction',  '_route' => 'supprimer_produit',);
+                }
+
+                // supprimercommande
+                if (0 === strpos($pathinfo, '/supprimercommande') && preg_match('#^/supprimercommande/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, ['_route' => 'supprimercommande']), array (  '_controller' => 'BackBundle\\Controller\\CommandeController::deleteAction',));
+                }
+
+                // supprimer
+                if ('/supprimer' === $pathinfo) {
+                    return array (  '_controller' => 'FrontBundle\\Controller\\PanierController::supprimerAction',  '_route' => 'supprimer',);
+                }
+
+            }
+
+            // searchmyass
+            if ('/searchmyass' === $pathinfo) {
+                return array (  '_controller' => 'BackBundle\\Controller\\CommandeController::FilterAction',  '_route' => 'searchmyass',);
+            }
+
+            // showdetailscommande
+            if ('/showdetailscommande' === $pathinfo) {
+                return array (  '_controller' => 'BackBundle\\Controller\\CommandeController::showAction',  '_route' => 'showdetailscommande',);
+            }
+
+        }
+
+        // modifier_categorie
+        if ('/modifier_categorie' === $pathinfo) {
+            return array (  '_controller' => 'BackBundle\\Controller\\CategorieController::ModifierAction',  '_route' => 'modifier_categorie',);
+        }
+
+        // modifier_produit
+        if ('/modifier_produit' === $pathinfo) {
+            return array (  '_controller' => 'BackBundle\\Controller\\ProduitController::ModifierAction',  '_route' => 'modifier_produit',);
+        }
+
+        // imprimer
+        if ('/imprimer' === $pathinfo) {
+            return array (  '_controller' => 'BackBundle\\Controller\\CommandeController::pdfAction',  '_route' => 'imprimer',);
+        }
+
+        // increment
+        if ('/increment' === $pathinfo) {
+            return array (  '_controller' => 'FrontBundle\\Controller\\PanierController::IncrimentQteAction',  '_route' => 'increment',);
+        }
+
+        if (0 === strpos($pathinfo, '/de')) {
+            // delete
+            if (0 === strpos($pathinfo, '/delete') && preg_match('#^/delete/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, ['_route' => 'delete']), array (  '_controller' => 'BackBundle\\Controller\\BonReductionController::deleteAction',));
+            }
+
+            // details_produitF
+            if ('/details_produitF' === $pathinfo) {
+                return array (  '_controller' => 'FrontBundle\\Controller\\ProduitController::DetailsAction',  '_route' => 'details_produitF',);
+            }
+
+            // decrement
+            if ('/decrement' === $pathinfo) {
+                return array (  '_controller' => 'FrontBundle\\Controller\\PanierController::DecrimentQteAction',  '_route' => 'decrement',);
+            }
+
+        }
+
+        elseif (0 === strpos($pathinfo, '/p')) {
+            // pdfbon
+            if ('/pdfbon' === $pathinfo) {
+                return array (  '_controller' => 'BackBundle\\Controller\\BonReductionController::pdf2Action',  '_route' => 'pdfbon',);
+            }
+
+            // produitupdate
+            if ('/produitupdate' === $pathinfo) {
+                return array (  '_controller' => 'FrontBundle\\Controller\\PanierController::ProduitUpdateAction',  '_route' => 'produitupdate',);
+            }
+
+            if (0 === strpos($pathinfo, '/profile')) {
+                // fos_user_profile_show
+                if ('/profile' === $trimmedPathinfo) {
+                    $ret = array (  '_controller' => 'fos_user.profile.controller:showAction',  '_route' => 'fos_user_profile_show',);
+                    if ('/' === substr($pathinfo, -1)) {
+                        // no-op
+                    } elseif ('GET' !== $canonicalMethod) {
+                        goto not_fos_user_profile_show;
+                    } else {
+                        return array_replace($ret, $this->redirect($rawPathinfo.'/', 'fos_user_profile_show'));
+                    }
+
+                    if (!in_array($canonicalMethod, ['GET'])) {
+                        $allow = array_merge($allow, ['GET']);
+                        goto not_fos_user_profile_show;
+                    }
+
+                    return $ret;
+                }
+                not_fos_user_profile_show:
+
+                // fos_user_profile_edit
+                if ('/profile/edit' === $pathinfo) {
+                    $ret = array (  '_controller' => 'fos_user.profile.controller:editAction',  '_route' => 'fos_user_profile_edit',);
+                    if (!in_array($canonicalMethod, ['GET', 'POST'])) {
+                        $allow = array_merge($allow, ['GET', 'POST']);
+                        goto not_fos_user_profile_edit;
+                    }
+
+                    return $ret;
+                }
+                not_fos_user_profile_edit:
+
+                // fos_user_change_password
+                if ('/profile/change-password' === $pathinfo) {
+                    $ret = array (  '_controller' => 'fos_user.change_password.controller:changePasswordAction',  '_route' => 'fos_user_change_password',);
+                    if (!in_array($canonicalMethod, ['GET', 'POST'])) {
+                        $allow = array_merge($allow, ['GET', 'POST']);
+                        goto not_fos_user_change_password;
+                    }
+
+                    return $ret;
+                }
+                not_fos_user_change_password:
+
+            }
+
+            // payment
+            if ('/payment' === $pathinfo) {
+                return array (  '_controller' => 'FrontBundle\\Controller\\PanierController::PaimentAction',  '_route' => 'payment',);
+            }
+
+            // payer
+            if ('/payer' === $pathinfo) {
+                return array (  '_controller' => 'FrontBundle\\Controller\\PanierController::PayerAction',  '_route' => 'payer',);
+            }
+
+        }
+
+        elseif (0 === strpos($pathinfo, '/c')) {
+            // front_homepage
+            if ('/cc' === $pathinfo) {
+                return array (  '_controller' => 'FrontBundle\\Controller\\DefaultController::indexAction',  '_route' => 'front_homepage',);
+            }
+
+            // checkout
+            if ('/checkout' === $pathinfo) {
+                return array (  '_controller' => 'FrontBundle\\Controller\\PanierController::CheckoutAction',  '_route' => 'checkout',);
+            }
+
+            // cart
+            if ('/cart' === $pathinfo) {
+                return array (  '_controller' => 'FrontBundle\\Controller\\PanierController::ShowCartAction',  '_route' => 'cart',);
+            }
+
+        }
+
+        // verifycoupon
+        if ('/verifycoupon' === $pathinfo) {
+            return array (  '_controller' => 'FrontBundle\\Controller\\PanierController::verifyCouponAction',  '_route' => 'verifycoupon',);
+        }
+
+        // SMS
+        if ('/SMS' === $pathinfo) {
+            return array (  '_controller' => 'FrontBundle\\Controller\\PanierController::SMSAction',  '_route' => 'SMS',);
+        }
+
+        // f
+        if ('/front' === $pathinfo) {
+            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'f',);
+        }
+
+        // app_security_redirect
+        if ('' === $trimmedPathinfo) {
+            $ret = array (  '_controller' => 'AppBundle\\Controller\\SecurityController::RedirectAction',  '_route' => 'app_security_redirect',);
+            if ('/' === substr($pathinfo, -1)) {
+                // no-op
+            } elseif ('GET' !== $canonicalMethod) {
+                goto not_app_security_redirect;
+            } else {
+                return array_replace($ret, $this->redirect($rawPathinfo.'/', 'app_security_redirect'));
+            }
+
+            return $ret;
+        }
+        not_app_security_redirect:
+
+        if (0 === strpos($pathinfo, '/login')) {
+            // fos_user_security_login
+            if ('/login' === $pathinfo) {
+                $ret = array (  '_controller' => 'fos_user.security.controller:loginAction',  '_route' => 'fos_user_security_login',);
+                if (!in_array($canonicalMethod, ['GET', 'POST'])) {
+                    $allow = array_merge($allow, ['GET', 'POST']);
+                    goto not_fos_user_security_login;
+                }
+
+                return $ret;
+            }
+            not_fos_user_security_login:
+
+            // fos_user_security_check
+            if ('/login_check' === $pathinfo) {
+                $ret = array (  '_controller' => 'fos_user.security.controller:checkAction',  '_route' => 'fos_user_security_check',);
+                if (!in_array($requestMethod, ['POST'])) {
+                    $allow = array_merge($allow, ['POST']);
+                    goto not_fos_user_security_check;
+                }
+
+                return $ret;
+            }
+            not_fos_user_security_check:
+
+        }
+
+        // fos_user_security_logout
+        if ('/logout' === $pathinfo) {
+            $ret = array (  '_controller' => 'fos_user.security.controller:logoutAction',  '_route' => 'fos_user_security_logout',);
+            if (!in_array($canonicalMethod, ['GET', 'POST'])) {
+                $allow = array_merge($allow, ['GET', 'POST']);
+                goto not_fos_user_security_logout;
+            }
+
+            return $ret;
+        }
+        not_fos_user_security_logout:
+
+        if (0 === strpos($pathinfo, '/register')) {
+            // fos_user_registration_register
+            if ('/register' === $trimmedPathinfo) {
+                $ret = array (  '_controller' => 'fos_user.registration.controller:registerAction',  '_route' => 'fos_user_registration_register',);
+                if ('/' === substr($pathinfo, -1)) {
+                    // no-op
+                } elseif ('GET' !== $canonicalMethod) {
+                    goto not_fos_user_registration_register;
+                } else {
+                    return array_replace($ret, $this->redirect($rawPathinfo.'/', 'fos_user_registration_register'));
+                }
+
+                if (!in_array($canonicalMethod, ['GET', 'POST'])) {
+                    $allow = array_merge($allow, ['GET', 'POST']);
+                    goto not_fos_user_registration_register;
+                }
+
+                return $ret;
+            }
+            not_fos_user_registration_register:
+
+            // fos_user_registration_check_email
+            if ('/register/check-email' === $pathinfo) {
+                $ret = array (  '_controller' => 'fos_user.registration.controller:checkEmailAction',  '_route' => 'fos_user_registration_check_email',);
+                if (!in_array($canonicalMethod, ['GET'])) {
+                    $allow = array_merge($allow, ['GET']);
+                    goto not_fos_user_registration_check_email;
+                }
+
+                return $ret;
+            }
+            not_fos_user_registration_check_email:
+
+            if (0 === strpos($pathinfo, '/register/confirm')) {
+                // fos_user_registration_confirm
+                if (preg_match('#^/register/confirm/(?P<token>[^/]++)$#sD', $pathinfo, $matches)) {
+                    $ret = $this->mergeDefaults(array_replace($matches, ['_route' => 'fos_user_registration_confirm']), array (  '_controller' => 'fos_user.registration.controller:confirmAction',));
+                    if (!in_array($canonicalMethod, ['GET'])) {
+                        $allow = array_merge($allow, ['GET']);
+                        goto not_fos_user_registration_confirm;
+                    }
+
+                    return $ret;
+                }
+                not_fos_user_registration_confirm:
+
+                // fos_user_registration_confirmed
+                if ('/register/confirmed' === $pathinfo) {
+                    $ret = array (  '_controller' => 'fos_user.registration.controller:confirmedAction',  '_route' => 'fos_user_registration_confirmed',);
+                    if (!in_array($canonicalMethod, ['GET'])) {
+                        $allow = array_merge($allow, ['GET']);
+                        goto not_fos_user_registration_confirmed;
+                    }
+
+                    return $ret;
+                }
+                not_fos_user_registration_confirmed:
+
+            }
+
+        }
+
+        elseif (0 === strpos($pathinfo, '/resetting')) {
+            // fos_user_resetting_request
+            if ('/resetting/request' === $pathinfo) {
+                $ret = array (  '_controller' => 'fos_user.resetting.controller:requestAction',  '_route' => 'fos_user_resetting_request',);
+                if (!in_array($canonicalMethod, ['GET'])) {
+                    $allow = array_merge($allow, ['GET']);
+                    goto not_fos_user_resetting_request;
+                }
+
+                return $ret;
+            }
+            not_fos_user_resetting_request:
+
+            // fos_user_resetting_reset
+            if (0 === strpos($pathinfo, '/resetting/reset') && preg_match('#^/resetting/reset/(?P<token>[^/]++)$#sD', $pathinfo, $matches)) {
+                $ret = $this->mergeDefaults(array_replace($matches, ['_route' => 'fos_user_resetting_reset']), array (  '_controller' => 'fos_user.resetting.controller:resetAction',));
+                if (!in_array($canonicalMethod, ['GET', 'POST'])) {
+                    $allow = array_merge($allow, ['GET', 'POST']);
+                    goto not_fos_user_resetting_reset;
+                }
+
+                return $ret;
+            }
+            not_fos_user_resetting_reset:
+
+            // fos_user_resetting_send_email
+            if ('/resetting/send-email' === $pathinfo) {
+                $ret = array (  '_controller' => 'fos_user.resetting.controller:sendEmailAction',  '_route' => 'fos_user_resetting_send_email',);
+                if (!in_array($requestMethod, ['POST'])) {
+                    $allow = array_merge($allow, ['POST']);
+                    goto not_fos_user_resetting_send_email;
+                }
+
+                return $ret;
+            }
+            not_fos_user_resetting_send_email:
+
+            // fos_user_resetting_check_email
+            if ('/resetting/check-email' === $pathinfo) {
+                $ret = array (  '_controller' => 'fos_user.resetting.controller:checkEmailAction',  '_route' => 'fos_user_resetting_check_email',);
+                if (!in_array($canonicalMethod, ['GET'])) {
+                    $allow = array_merge($allow, ['GET']);
+                    goto not_fos_user_resetting_check_email;
+                }
+
+                return $ret;
+            }
+            not_fos_user_resetting_check_email:
+
+        }
+
+        if ('/' === $pathinfo && !$allow) {
+            throw new Symfony\Component\Routing\Exception\NoConfigurationException();
+        }
+
+        throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
+    }
+}

@@ -1,0 +1,144 @@
+{% extends 'baseBack.html.twig' %}
+
+{% block bodyback %}
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card m-t-0">
+                <div class="row">
+                    <div  class="col-md-6">
+                        <div class="box bg-danger text-center">
+                            <h1 class="font-light text-white"><i class="mdi mdi-chart-areaspline"></i></h1>
+                            <h6 class="text-white"> Nombre de Commandes</h6>
+                        </div>
+                    </div>
+                    <div class="col-md-6 border-left text-center p-t-10">
+                        <h1 class="mb-0 font-weight-bold">{{ l }}</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card m-t-0">
+                <div class="row">
+                    <div  class="col-md-6">
+                        <div class="box bg-warning text-center">
+                            <h1 class="font-light text-white"><i class="mdi mdi-chart-areaspline"></i></h1>
+                            <h6 class="text-white">Revenus Totals d'achats</h6>
+                        </div>
+                    </div>
+                    <div class="col-md-6 border-left text-center p-t-10">
+                        <h1 class="mb-0 font-weight-bold">{{ total }} dt</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="sidebar-search">
+
+        <div class="input-group custom-search-form">
+
+            <input type="number" id="search" class="form-control" placeholder="Search by Id">
+        </div>
+        <!-- /input-group -->
+    </div>
+    <ul class="nav" id="side-menu">
+        <li>
+            <ul class="nav nav-second-level" id="entitiesNav">
+            </ul>
+        </li>
+        <table class="table table-striped">
+            <tr align="center"  >
+
+            <tr>
+                <td>{{ knp_pagination_sortable(commande,'Identifiant Commande ','id') }}</td>
+                <td>{{  knp_pagination_sortable(commande,'Client ','idU') }}</td>
+                <td>{{ knp_pagination_sortable(commande,'Date Commande ','date') }}</td>
+                <td colspan="4"><b>Action</b></td>
+            </tr>
+        <div id="commandes"></div>
+        </table>
+<table class="table table-striped">
+    <tr align="center"  >
+
+    <tr>
+        <td>{{ knp_pagination_sortable(commande,'Identifiant Commande ','id') }}</td>
+        <td>{{  knp_pagination_sortable(commande,'Client ','idU') }}</td>
+        <td>{{ knp_pagination_sortable(commande,'Date Commande ','date') }}</td>
+        <td colspan="4"><b>Action</b></td>
+    </tr>
+    {% for c in commande %}
+    <tr>
+        <td>{{ c.id }}</td>
+        <td>{{ c.idU }}</td>
+        <td>{{ c.date|date }}</td>
+        <td> <a href="{{ path ('supprimercommande',{'id':c.id}) }}" onclick="return confirm('Etes vous sur?')" class="btn btn-danger" >supprimer</a></td>
+        <td> <a class="btn btn-success" href="{{ path('showdetailscommande',{'id':c.id}) }}">Afficher Details Commande</a></td>
+        <td> <a class="btn btn-info" href="{{ path('imprimer',{'id':c.id}) }}">Imprimer facture</a></td>
+
+    </tr>
+
+    {% endfor %}
+</table>
+        <div class="navigation " style="width:100%">
+            {{ knp_pagination_render(commande) }}
+        </div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+        <script language = "javascript">
+
+            $(document).ready(function(){
+
+                $("#search").on("keyup",function(event){
+
+                    $r=$("#search").val();
+                    $.ajax({
+                            url:        '/searchmyass',
+                            type:       'POST',
+                            dataType:   'json',
+                            data:{'nomf':$r},
+                            async:      true,
+
+                        success: function(data) {
+                            console.log(" zaaaaaaaaaaaab");
+                            console.log(data);
+
+                            var e=$('<tr><th>id</th><th>Client</th><th>Date</th><th>Actions</th></tr>');
+                            $("#commandes").html('');
+
+                            var e ='';
+                            for(i=0;i<data.length;i++) {
+                                commande = data[i];
+
+                                e =e + $('<tr><td id="id">qqq</td>' +
+                                    '<td>'+commande['idc']+'</td>' +
+                                    '<td>'+commande['idU']+'</td>' +
+                                    '<td>'+commande['date']['date']+'</td>' +
+                                ' </tr>'
+
+                            );
+                                $('#commandes').html(e);
+
+
+
+
+                            }
+                        },
+                        error : function(xhr, textStatus, errorThrown) {
+                            alert('Commande introuvable ');
+                            console.log(textStatus);
+                            console.log(xhr);
+                            console.log(errorThrown);
+                        }
+                    });
+
+                })
+            });
+
+        </script>
+{%  endblock %}
+
+{% block javascripts %}
+
+{%  endblock %}

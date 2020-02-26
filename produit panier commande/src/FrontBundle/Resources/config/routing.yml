@@ -1,0 +1,47 @@
+front_homepage:
+    path:     /cc
+    defaults: { _controller: FrontBundle:Default:index }
+afficher_produitF:
+    path:     /afficher_produitF
+    defaults: { _controller: FrontBundle:Produit:AfficheF }
+details_produitF:
+    path:     /details_produitF
+    defaults: { _controller: FrontBundle:Produit:Details }
+add_product_tocart:
+    path:     /add_product_tocart
+    defaults: { _controller: FrontBundle:Panier:Addtocart }
+ajouter_pr_pan:
+    path:     /ajouter_pr_pan
+    defaults: { _controller: FrontBundle:Panier:Ajouterproduitaupanier }
+checkout:
+    path:     /checkout
+    defaults: { _controller: FrontBundle:Panier:Checkout }
+cart:
+    path:     /cart
+    defaults: { _controller: FrontBundle:Panier:ShowCart }
+produitupdate:
+    path:     /produitupdate
+    defaults: { _controller: FrontBundle:Panier:ProduitUpdate }
+supprimer:
+    path:     /supprimer
+    defaults: { _controller: FrontBundle:Panier:supprimer }
+increment:
+    path:     /increment
+    defaults: { _controller: FrontBundle:Panier:IncrimentQte }
+decrement:
+    path:     /decrement
+    defaults: { _controller: FrontBundle:Panier:DecrimentQte }
+payment:
+    path:     /payment
+    defaults: { _controller: FrontBundle:Panier:Paiment }
+payer:
+    path:     /payer
+    defaults: { _controller: FrontBundle:Panier:Payer }
+verifycoupon:
+    path:     /verifycoupon
+    defaults: { _controller: FrontBundle:Panier:verifyCoupon }
+SMS:
+    path:     /SMS
+    defaults: { _controller: FrontBundle:Panier:SMS }
+
+

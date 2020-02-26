@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Example 1</title>
+    <link rel="stylesheet" href="style.css" media="all" />
+</head>
+<body>
+<style>.clearfix:after {
+content: "";
+display: table;
+clear: both;
+}
+
+a {
+color: #5D6975;
+text-decoration: underline;
+}
+
+body {
+position: relative;
+width: 21cm;
+height: 29.7cm;
+margin: 0 auto;
+color: #001028;
+background: #FFFFFF;
+font-family: Arial, sans-serif;
+font-size: 12px;
+font-family: Arial;
+}
+
+header {
+padding: 10px 0;
+margin-bottom: 30px;
+}
+
+#logo {
+text-align: center;
+margin-bottom: 10px;
+}
+
+
+
+
+h1 {
+border-top: 1px solid  #5D6975;
+border-bottom: 1px solid  #5D6975;
+color: #5D6975;
+font-size: 2.4em;
+line-height: 1.4em;
+font-weight: normal;
+text-align: center;
+margin: 0 0 20px 0;
+
+}
+
+#project {
+float: left;
+}
+
+#project span {
+color: #5D6975;
+text-align: right;
+width: 52px;
+margin-right: 10px;
+display: inline-block;
+font-size: 0.8em;
+}
+
+#company {
+float: right;
+text-align: right;
+}
+
+#project div,
+#company div {
+white-space: nowrap;
+}
+
+table {
+width: 100%;
+border-collapse: collapse;
+border-spacing: 0;
+margin-bottom: 20px;
+}
+
+table tr:nth-child(2n-1) td {
+background: #F5F5F5;
+}
+
+table th,
+table td {
+text-align: center;
+}
+
+table th {
+padding: 5px 20px;
+color: #5D6975;
+border-bottom: 1px solid #C1CED9;
+white-space: nowrap;
+font-weight: normal;
+}
+
+table .service,
+table .desc {
+text-align: left;
+}
+
+table td {
+padding: 20px;
+text-align: right;
+}
+
+table td.service,
+table td.desc {
+vertical-align: top;
+}
+
+table td.unit,
+table td.qty,
+table td.total {
+font-size: 1.2em;
+}
+
+table td.grand {
+border-top: 1px solid #5D6975;;
+}
+
+#notices .notice {
+color: #5D6975;
+font-size: 1.2em;
+}
+
+footer {
+color: #5D6975;
+width: 100%;
+height: 30px;
+position: absolute;
+bottom: 0;
+border-top: 1px solid #C1CED9;
+padding: 8px 0;
+text-align: center;
+}</style>
+<header class="clearfix">
+    <div id="logo">
+        <img src="/Applications/MAMP/htdocs/pi3/logo.png" height="250" width="250" align="center" >
+    </div>
+    <h1>Commande du client : {{ client.username }} </h1>
+    <div id="company" class="clearfix">
+        <div>Maxi-Entrepot</div>
+        <div>24 555 555</div>
+        <div>Maxi-Entrepot@gmail.com</div>
+    </div>
+</header>
+<main>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+
+            <th class="service">Produit</th>
+            <th>Quantite</th>
+            <th>Prix Unitaire</th>
+            <th>TOTAL</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for p in produits %}
+        <tr>
+
+            <td class="desc">{{ p.libelleP }}</td>
+            <td class="unit">{{ p.qte }}</td>
+            <td class="qty">{{ p.prixVente }}</td>
+            <td class="total">{{ p.prixt }}</td>
+
+        </tr>
+        {% endfor %}
+        <tr class="total">
+            <td></td>
+            <td></td>
+
+            <th>Order Total: </th>
+            <td>{{ total }}TND</td>
+        </tr>
+        {% if totalReduit is defined %}
+            <tr class="total">
+                <td></td>
+                <td></td>
+                <td></td>
+                <th>Reduction value: </th>
+                <td>{{ couponValue }}%</td>
+            </tr>
+            <tr class="total">
+                <td></td>
+                <td></td>
+                <td></td>
+                <th>New Total: </th>
+                <td>{{ totalReduit }}TND</td>
+            </tr>
+        {% endif  %}
+
+        </tbody>
+    </table>
+    <div id="notices">
+        <div>NOTICE:</div>
+        <div class="notice">A finance charge of 1.5% will be made on unpaid balances after 30 days.</div>
+    </div>
+    <div id="logo">
+        <img align="right" src="/Applications/MAMP/htdocs/pi3/sig.png" width="300" height="300" >
+    </div>
+</main>
+<footer>
+    Invoice was created on a computer and is valid without the signature and seal.
+</footer>
+</body>
+</html>
+
+

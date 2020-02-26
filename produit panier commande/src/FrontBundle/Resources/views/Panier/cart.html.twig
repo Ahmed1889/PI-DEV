@@ -1,0 +1,137 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <section id="page-content" class="page-wrapper">
+        <div class="banner-area section-padding">
+            <div class="container">
+                <div class="wishlist-area section-padding">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="wishlist-content">
+                                    <form name="ok" action="#">
+                                        <div class="wishlist-table table-responsive p-30 text-uppercase">
+                                            <table>
+                                                <thead>
+                                                <tr>
+                                                    <th class="product-thumbnail"></th>
+                                                    <th class="product-name"><span class="nobr">Product</span></th>
+                                                    <th class="product-prices"><span class="nobr"> Price </span></th>
+                                                    <th class="product-add-to-cart"><span class="nobr">Add to Cart </span></th>
+                                                    <th class="product-remove"><span class="nobr">Remove</span></th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                {% for p in produits %}
+
+
+                                                    <tr>
+                                                        <td class="product-thumbnail"><a href="#" title="men’s black t-shirt"><img class="imageproduit2" src="{{ asset( 'photos/') }}{{ p.image }}" alt="{{ p.libelleP }}"/></a></td>
+                                                        <td class="product-name pull-left mt-20" >
+                                                            <a href="{{ path('details_produitF') }}" title="men’s black t-shirt">{{ p.libelleP }}</a>
+                                                            <p class="w-color m-0">
+                                                                <label> Categorie :</label>
+                                                                {{ p.cat.libelleC }}
+                                                            </p>
+                                                            <p class="w-size m-0">
+                                                        </td>
+                                                        <td class="product-prices"><span class="amount">{{ p.prixVente  }} TND</span></td>
+                                                        <td class="product-value">
+                                                            <a class="product-remove">  <a href="{{ path('decrement',{'idd':p.id}) }}">-</a></a>
+                                                            <input  id="{{ p.id }}" value={{p.qte}}  disabled>
+                                                        <a class="product-remove">  <a href="{{ path('increment',{'idd':p.id}) }}">+</a></a>
+
+                                                        </td>
+                                                        <td class="product-remove"><a href="{{ path('supprimer',{'idd':p.libelleP,'calledfromcart':true}) }}">×</a></td>
+                                                    </tr>
+
+                {% endfor %}
+
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="row">
+                                            <div class="cart-requerment mt-50 clearfix">
+
+                                                <div class="col-md-4 col-sm-6 clearfix">
+                                                    <div class="counpon-info ml-35">
+                                                        <div class="cart-title text-uppercase">
+                                                            <h5 class="mb-30"><strong>COUPON DISCOUNT</strong></h5>
+                                                        </div>
+                                                        <div class="coupon-discount">
+                                                            <label class="pb-10">Enter Your Coupon Code Here</label>
+                                                            <input id="inputcoupon" type="text">
+                                                        </div>
+                                                        <a class="button extra-small pull-right mt-35" href="#" title="Add to Cart">
+                                                            <span id="apply">Apply Coupon</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-offset-0 col-md-4 col-sm-offset-3 col-sm-6 clearfix">
+                                                    <div class="counpon-total ml-35">
+                                                        <div class="cart-title text-uppercase">
+                                                            <h5 class="mb-30"><strong>CART TOTAL</strong></h5>
+                                                        </div>
+
+                                                        <table>
+                                                            <tbody>
+                                                            <tr class="cart-total">
+                                                                <th>Grand Total</th>
+                                                                <td><span id="total">{{ total }}</span> TND</td>
+                                                            </tr>
+
+                                                            </tbody>
+                                                            </table>
+
+                                                            <a class="button extra-small pull-right" href="{{ path('checkout') }}" title="Add to Cart">
+                                                                <span>Procced to checkout</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script language = "javascript">
+
+        $(document).ready(function(){
+
+            $("#apply").click(function(){
+
+                $r=$("#inputcoupon").val();
+                $.ajax({
+                    url:        '/verifycoupon',
+                    type:       'POST',
+                    dataType:   'json',
+                    data:{'coupon':$r},
+                    async:      true,
+
+                    success: function(data) {
+                                if(data['success']){
+                                    $tot= $("#total").text();
+                                    $newTotal = ($tot/100)*(100-data['value']);
+                                    $("#total").text($newTotal);
+                                    alert('coupon valide ' + $tot);
+                                }else {
+                                    alert('coupon invalide');
+                                }
+                    },
+                    error : function(xhr, textStatus, errorThrown) {
+                        alert('Ajax request failed.');
+                    }
+                });
+
+            })
+        });
+
+    </script>
+{% endblock %}

@@ -1,0 +1,49 @@
+back_homepage:
+    path:     /aa
+    defaults: { _controller: BackBundle:Default:index }
+ajout_categorie:
+    path:     /ajout_categorie
+    defaults: { _controller: BackBundle:Categorie:Ajout }
+afficher_categorie:
+    path:     /afficher_categorie
+    defaults: { _controller: BackBundle:Categorie:Affiche }
+supprimer_categorie:
+    path:     /supprimer_categorie
+    defaults: { _controller: BackBundle:Categorie:Supprimer}
+modifier_categorie:
+    path:     /modifier_categorie
+    defaults: { _controller: BackBundle:Categorie:Modifier}
+ajout_produit:
+    path:     /ajout_produit
+    defaults: { _controller: BackBundle:Produit:Ajout }
+afficher_produit:
+    path:     /afficher_produit
+    defaults: { _controller: BackBundle:Produit:Affiche }
+supprimer_produit:
+    path:     /supprimer_produit
+    defaults: { _controller: BackBundle:Produit:Supprimer}
+modifier_produit:
+    path:     /modifier_produit
+    defaults: { _controller: BackBundle:Produit:Modifier}
+affichercommande:
+    path:     /affichercommande
+    defaults: { _controller: BackBundle:Commande:AfficheCommande}
+supprimercommande:
+    path:     /supprimercommande/{id}
+    defaults: { _controller: BackBundle:Commande:delete}
+searchmyass:
+    path:     /searchmyass
+    defaults: { _controller: BackBundle:Commande:Filter}
+imprimer:
+    path:     /imprimer
+    defaults: { _controller: BackBundle:Commande:pdf}
+showdetailscommande:
+    path:     /showdetailscommande
+    defaults: { _controller: BackBundle:Commande:show}
+delete:
+    path:     /delete/{id}
+    defaults: { _controller: BackBundle:BonReduction:delete}
+pdfbon:
+    path:       /pdfbon
+    defaults: { _controller: BackBundle:BonReduction:pdf2}
+
