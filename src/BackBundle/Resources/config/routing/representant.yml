@@ -1,0 +1,28 @@
+representant_index:
+    path:     /
+    defaults: { _controller: "BackBundle:Representant:index" }
+    methods:  GET
+
+representant_show:
+    path:     /{id}/show
+    defaults: { _controller: "BackBundle:Representant:show" }
+    methods:  GET
+
+representant_new:
+    path:     /new
+    defaults: { _controller: "BackBundle:Representant:new" }
+    methods:  [GET, POST]
+
+representant_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "BackBundle:Representant:edit" }
+    methods:  [GET, POST]
+
+representant_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "BackBundle:Representant:delete" }
+    methods:  DELETE
+filter:
+    path:     /filter
+    defaults: { _controller: "BackBundle:Representant:Filter" }
+    methods:  [GET, POST]

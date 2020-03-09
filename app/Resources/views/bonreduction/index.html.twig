@@ -1,0 +1,40 @@
+{% extends 'base2.html.twig' %}
+
+{% block body %}
+
+    <h1>Bon de reductions</h1>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Numero</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for bonReduction in bonReductions %}
+            <tr>
+                <td><a href="{{ path('bonreduction_show', { 'id': bonReduction.id }) }}">{{ bonReduction.id }}</a></td>
+                <td>{{ bonReduction.numero }}</td>
+                <td>
+
+
+                            <a class="btn btn-success" href="{{ path('bonreduction_show', { 'id': bonReduction.id }) }}">Afficher</a>
+                            <a class="btn btn-info" href="{{ path('bonreduction_edit', { 'id': bonReduction.id }) }}">Modifier</a>
+                            <a class="btn btn-danger" href="{{ path('deletebon', { 'id': bonReduction.id }) }}">Supprimer</a>
+
+
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+
+            <a class="btn btn-success" href="{{ path('bonreduction_new') }} ">Créer un Bon de Reduction</a>
+        <a class="btn btn-success" href="{{ path('pdfbon') }} ">Generer PDF bon reduction</a>
+
+    </ul>
+{% endblock %}

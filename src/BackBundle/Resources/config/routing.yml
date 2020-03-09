@@ -1,0 +1,232 @@
+back_homepage:
+    path:     /
+    defaults: { _controller: BackBundle:Default:index }
+delete:
+    path:     /del/{id}
+    defaults: { _controller: BackBundle:employee:delete }
+accepter:
+    path:     /accepter/{id}
+    defaults: { _controller: BackBundle:conge:AccepterConge}
+refuser:
+    path:     /refuser/{id}
+    defaults: { _controller: BackBundle:conge:RefuserConge}
+traiter:
+    path:     /traiter
+    defaults: { _controller: BackBundle:conge:TraiterConge}
+deleteC:
+    path:     /delC/{id}
+    defaults: { _controller: BackBundle:conge:delete}
+notifier:
+    path:     /not
+    defaults: { _controller: BackBundle:conge:notifier}
+robot:
+    path:     /robot
+    defaults: {_controller: BackBundle:Default:robot}
+affrobot:
+    path:     /affrobot
+    defaults: {_controller: BackBundle:Default:aff}
+ajout_categorie:
+    path:     /ajout_categorie
+    defaults: { _controller: BackBundle:Categorie:Ajout }
+afficher_categorie:
+    path:     /afficher_categorie
+    defaults: { _controller: BackBundle:Categorie:Affiche }
+supprimer_categorie:
+    path:     /supprimer_categorie
+    defaults: { _controller: BackBundle:Categorie:Supprimer}
+modifier_categorie:
+    path:     /modifier_categorie
+    defaults: { _controller: BackBundle:Categorie:Modifier}
+ajout_produit:
+    path:     /ajout_produit
+    defaults: { _controller: BackBundle:Produit:Ajout }
+afficher_produit:
+    path:     /afficher_produit
+    defaults: { _controller: BackBundle:Produit:Affiche }
+supprimer_produit:
+    path:     /supprimer_produit
+    defaults: { _controller: BackBundle:Produit:Supprimer}
+modifier_produit:
+    path:     /modifier_produit
+    defaults: { _controller: BackBundle:Produit:Modifier}
+ajout_stock:
+    path:     /ajout_stock
+    defaults: { _controller: BackBundle:Stock:Ajout }
+afficher_stock:
+    path:     /afficher_stock
+    defaults: { _controller: BackBundle:Stock:Affiche }
+supprimer_stock:
+    path:     /supprimer_stock
+    defaults: { _controller: BackBundle:Stock:Supprimer}
+modifier_stock:
+    path:     /modifier_stock
+    defaults: { _controller: BackBundle:Stock:Modifier}
+supprimer2_stock:
+    path:     /supprimer2_stock
+    defaults: { _controller: BackBundle:Stock:Supprimer2}
+affichercommande:
+    path:     /affichercommande
+    defaults: { _controller: BackBundle:Commande:AfficheCommande}
+supprimercommande:
+    path:     /supprimercommande/{id}
+    defaults: { _controller: BackBundle:Commande:delete}
+searchmyass:
+    path:     /searchmyass
+    defaults: { _controller: BackBundle:Commande:Filter}
+imprimer:
+    path:     /imprimer
+    defaults: { _controller: BackBundle:Commande:pdf}
+showdetailscommande:
+    path:     /showdetailscommande
+    defaults: { _controller: BackBundle:Commande:show}
+deletebon:
+    path:     /deletebon/{id}
+    defaults: { _controller: BackBundle:BonReduction:delete}
+
+
+ajoutTypeVehicule:
+    path:     /ajoutType
+    defaults: { _controller: BackBundle:Livraison:AjouterTypeVehicule }
+
+afficherTypeVehicules:
+    path:     /afficherTypes
+    defaults: { _controller: BackBundle:Livraison:AfficherTypeVehicule }
+
+supprimerTypeVehicule:
+    path:     /supprimerType
+    defaults: { _controller: BackBundle:Livraison:SupprimerTypeVehicule }
+
+modifierTypeVehicule:
+    path:     /modifierType
+    defaults: { _controller: BackBundle:Livraison:ModifierTypeVehicule }
+
+ajoutVehicule:
+    path:     /ajoutVehicule
+    defaults: { _controller: BackBundle:Livraison:AjouterVehicule }
+
+
+afficheVehicule:
+    path:     /afficheVehicule
+    defaults: { _controller: BackBundle:Livraison:AfficherVehicule }
+
+supprimerVehicule:
+    path:     /supprimerVehicule
+    defaults: { _controller: BackBundle:Livraison:SupprimerVehicule }
+
+modifierVehicule:
+    path:     /modifierVehicule
+    defaults: { _controller: BackBundle:Livraison:ModifierVehicule }
+
+affichePlannigDay:
+    path:     /affichePlanningDay
+    defaults: { _controller: BackBundle:Livraison:AfficherVPlanningDay }
+
+afficherCommandeNonLivre:
+    path:     /AfficherCommandeNonLivre
+    defaults: { _controller: BackBundle:Livraison:AfficherCommandeNonLivre }
+
+affecterLivraison:
+    path:     /affecterLivraison
+    defaults: { _controller: BackBundle:Livraison:AffecterLivraison }
+
+afficherLivreurDispo:
+    path:     /afficherLivreurDispo
+    defaults: { _controller: BackBundle:Livraison:AfficherLivreurDispo }
+
+afficherVehiculeDispo:
+    path:     /afficherVehiculeDispo
+    defaults: { _controller: BackBundle:Livraison:AfficherVehiculeDispo }
+stat:
+    path:     /stat
+    defaults: { _controller: BackBundle:Livraison:stat }
+
+Panne:
+    path:     /Panne
+    defaults: { _controller: BackBundle:Livraison:Panne }
+
+TomberPanne:
+    path:     /TomberPanne
+    defaults: { _controller: BackBundle:Livraison:TomberPanne }
+
+Reparer:
+    path:     /Reparer
+    defaults: { _controller: BackBundle:Livraison:Reparer }
+
+AffecterCommande:
+    path:     /AffecterCommande
+    defaults: { _controller: BackBundle:Livraison:AffecterCommande }
+
+LivrerCommande:
+    path:     /LivrerCommande
+    defaults: { _controller: BackBundle:Livraison:LivrerCommande }
+
+
+ModifierVehicule2:
+    path:     /ModifierVehicule2
+    defaults: { _controller: BackBundle:Livraison:ModifierVehicule2 }
+
+ModifierVehicule22:
+    path:     /ModifierVehicule22
+    defaults: { _controller: BackBundle:Livraison:ModifierVehicule22 }
+
+ModifierVehiculePop:
+    path:     /ModifierVehiculePop
+    defaults: { _controller: BackBundle:Livraison:ModifierVehiculePop }
+
+AfficherPlanning:
+    path:     /AfficherPlanning
+    defaults: { _controller: BackBundle:Livraison:AfficherPlanning }
+AfficherPlanningAdmin:
+    path:     /AfficherPlanningAdmin
+    defaults: { _controller: BackBundle:Livraison:AfficherPlanningAdmin }
+
+afficherCommandes:
+    path:     /afficherCommandes
+    defaults: { _controller: BackBundle:Livraison:afficherCommandes }
+
+suivi:
+    path:     /suivi
+    defaults: { _controller: BackBundle:Livraison:suivi }
+
+AjoutAdresseClient:
+    path:     /AjoutAdresseClient
+    defaults: { _controller: BackBundle:Livraison:AjoutAdresseClient }
+
+back_depot:
+    resource: "@BackBundle/Resources/config/routing/depot.yml"
+    prefix:   /depot
+back_representant:
+    resource: "@BackBundle/Resources/config/routing/representant.yml"
+    prefix:   /rep
+back_fournisseur:
+    resource: "@BackBundle/Resources/config/routing/fournisseur.yml"
+    prefix:   /fournisseur
+
+back_historique:
+    resource: "@BackBundle/Resources/config/routing/historique.yml"
+    prefix:   /historique
+back_commandef:
+    resource: "@BackBundle/Resources/config/routing/commandef.yml"
+    prefix:   /commandef
+
+filter2:
+    path:     /filter2
+    defaults: { _controller: BackBundle:Fournisseur:Filter2 }
+
+statistique:
+    path:     /statistique
+    defaults: { _controller: "BackBundle:Historique:showstat" }
+pdfbon:
+    path:     /pdfbon
+    defaults: { _controller: BackBundle:BonReduction:pdf2 }
+
+DetailsProduits:
+    path:     /DetailsProduits
+    defaults: { _controller: "BackBundle:Livraison:DetailsProduits" }
+ReclamationLivraison:
+    path:     /ReclamationLivraison
+    defaults: { _controller: "BackBundle:Livraison:ReclamationLivraison" }
+
+Avertir:
+    path:     /Avertir/{id}
+    defaults: { _controller: "BackBundle:Livraison:Avertir" }

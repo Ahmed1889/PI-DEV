@@ -1,0 +1,64 @@
+{% extends 'base2.html.twig' %}
+
+{% block body %}
+<div class="page-wrapper">
+    <!-- ============================================================== -->
+    <!-- Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <div class="page-breadcrumb">
+        <div class="row">
+            <div class="col-12 d-flex no-block align-items-center">
+
+
+            </div>
+        </div>
+    </div>
+
+    <h1>Mon Conge</h1>
+
+    <table id="zero_config" class="table table-striped table-bordered dataTable" role="grid" aria-describedby="zero_config_info">
+        <tbody>
+
+            <tr>
+                <th>Photo Profil</th>
+                <td><img style="height: 50px;width: 50px" src="{{ asset('photos/') }}{{ conge.idEmployee.image }}"></td>
+            </tr>
+            <tr>
+                <th>Date Debut</th>
+                <td>{% if conge.dateDebut %}{{ conge.dateDebut|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Date Fin</th>
+                <td>{% if conge.dateFin %}{{ conge.dateFin|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>{{ conge.type }}</td>
+
+            <tr>
+                <th>Etat</th>
+                <td>{{ conge.etat }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+    <td><a class="fa fa-wrench" href="{{ path('conge_edit', { 'id': conge.id }) }}"></a></td>
+    <li>
+        <td><a style="color: red" class="confirmModal" href="{{ path ('deleteC',{'id':conge.id}) }}">Supprimer</a></td>
+    </li>
+    </ul>
+    <div id="dialog-confirm" title="Confirmation de la suppression" style="display:none;">
+        <p>
+            <span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>
+            Etes-vous sûr de vouloir supprimer votre Congé?
+        </p>
+    </div>
+
+
+
+
+
+</div>
+{% endblock %}

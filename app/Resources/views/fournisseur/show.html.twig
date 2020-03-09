@@ -1,0 +1,44 @@
+{% extends 'base2.html.twig' %}
+
+{% block bodyBack %}
+    <h1>Fournisseurs</h1>
+<fieldset>
+    <table class="table-striped">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ fournisseur.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom:</th>
+                <td>{{ fournisseur.nomf }}</td>
+            </tr>
+            <tr>
+                <th>Tel:</th>
+                <td>{{ fournisseur.telf }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ fournisseur.emailf }}</td>
+            </tr>
+            <tr>
+                <th>Siteweb</th>
+                <td>{{ fournisseur.sitewebf }}</td>
+            </tr>
+        </tbody>
+    </table>
+</fieldset>
+    <ul>
+        <li>
+            <a href="{{ path('fournisseur_index') }}">Liste</a>
+        </li>
+        <li>
+            <a href="{{ path('fournisseur_edit', { 'id': fournisseur.id }) }}">Modifier</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Effacer">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'base2.html.twig' %}
+
+{% block bodyBack %}
+    <h1>Commande en cours</h1>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Fournisseur</th>
+                <th>Produit</th>
+                <th>Quantite</th>
+                <th>Prixtotal</th>
+
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for commandef in commandefs %}
+            <tr>
+
+                <td>{{ commandef.id }}</a></td>
+                <td>{{ commandef.idcf }}</td>
+                <td>{{ commandef.idcp }}</td>
+                <td>{{ commandef.quantite }}</td>
+                <td>{{ commandef.prixtotal }}</td>
+
+                <td>
+
+                    <a href="{{ path('commandef_accept', { 'id': commandef.id }) }}"><span class="badge badge-pill badge-success">Marquer comme Livré</span></a>
+
+
+
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('commandef_new') }}">Passer Commande</a>
+        </li>
+    </ul>
+{% endblock %}

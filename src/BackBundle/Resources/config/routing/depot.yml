@@ -1,0 +1,44 @@
+depot_index:
+    path:     /
+    defaults: { _controller: "BackBundle:Depot:index" }
+    methods:  [GET, POST]
+
+depot_show:
+    path:     /{id}/show
+    defaults: { _controller: "BackBundle:Depot:show" }
+    methods:  GET
+
+depot_new:
+    path:     /new
+    defaults: { _controller: "BackBundle:Depot:new" }
+    methods:  [GET, POST]
+
+depot_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "BackBundle:Depot:edit" }
+    methods:  [GET, POST]
+
+depot_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "BackBundle:Depot:delete" }
+    methods:  DELETE
+depot_n_verif:
+    path:     /verif
+    defaults: { _controller: "BackBundle:Depot:verifN" }
+    methods:  [GET, POST]
+send_notification:
+    path:     /send-notification
+    defaults: { _controller: "BackBundle:Depot:sendNotification" }
+    methods:  [GET, POST]
+filterN:
+    path:     /filterN
+    defaults: { _controller: "BackBundle:Depot:FilterN" }
+    methods:  [GET, POST]
+filterC:
+    path:     /filterC
+    defaults: { _controller: "BackBundle:Depot:FilterC" }
+    methods:  [GET, POST]
+count:
+    path:     /count
+    defaults: { _controller: "BackBundle:Depot:count" }
+    methods:  [GET, POST]

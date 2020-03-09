@@ -1,0 +1,130 @@
+{% extends 'base2.html.twig' %}
+{% block js2 %}
+    <script>
+        $(document).ready(function () {
+            $("#libelle").hide();
+            $("#description").hide();
+            $("#prix").hide();
+            $('#form_libelleP').keyup(function () {
+
+
+                $.ajax({
+
+                    success: function () {
+                        //var re = /^[A-Za-z]+$/;
+                        var x = $('#form_libelleP').val();
+                        if (isNaN( x.charAt(0))) {
+
+                            $('#form_modifier').prop('disabled', false);
+                            $('#form_libelleP').css('border',"1px  black");
+                            $("#libelle").hide();
+
+                        } else {
+
+                            $("#libelle").show();
+                            //alert('ce champs ne peut pas contenir des nombres');
+                            $('#form_modifier').prop('disabled', true);
+                            $('#form_libelleP').css('border',"1px solid #db4848");
+                        }
+                    }
+                });
+
+
+            });
+
+            $('#form_description').keyup(function () {
+
+
+                $.ajax({
+
+                    success: function () {
+                        // var re = /^([a-zA-Z]+[0-9]+)[0-9a-zA-Z]*$/;
+                        var x = $('#form_description').val();
+                        if ( isNaN( x.charAt(0))) {
+
+                            $('#form_modifier').prop('disabled', false);
+                            $('#form_description').css('border',"1px  black");
+                            $("#description").hide();
+
+                        } else {
+
+                            $("#description").show();
+                            //alert('ce champs ne peut pas contenir des nombres');
+                            $('#form_modifier').prop('disabled', true);
+                            $('#form_description').css('border',"1px solid #db4848");
+                        }
+                    }
+                });
+
+
+            });
+
+            $('#form_prixAchat').keyup(function () {
+
+
+                $.ajax({
+
+                    success: function () {
+                        //var re = /^[0-9]+$/;
+                        var x = $('#form_prixAchat').val();
+                        if (! isNaN(x)) {
+
+                            $('#form_modifier').prop('disabled', false);
+                            $('#form_prixAchat').css('border',"1px  black");
+                            $("#prix").hide();
+
+                        } else {
+
+                            $("#prix").show();
+                            //alert('ce champs ne peut pas contenir des nombres');
+                            $('#form_modifier').prop('disabled', true);
+                            $('#form_prixAchat').css('border',"1px solid #db4848");
+                        }
+                    }
+                });
+
+
+            });
+        })
+    </script>
+{% endblock %}
+{% block body %}
+    <br>
+    <h2><strong>Modifier un produit :</strong></h2>
+    <br>
+    <table class="table table-striped">
+        {{ form_start(form) }}
+        <tr>
+            <td>{{ form_label(form.libelleP)  }}</td>
+            <td>{{ form_widget(form.libelleP,{ 'attr': {'class': 'form-control '}})  }}</td>
+            <td><span class="text-danger" id="libelle"> *cet input n'est pas valide</span></td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.description)  }}</td>
+            <td>{{ form_widget(form.description,{ 'attr': {'class': 'form-control '}})  }}</td>
+            <td><span class="text-danger" id="description"> *cet input n'est pas valide</span></td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.categorie)  }}</td>
+            <td>{{ form_widget(form.categorie,{ 'attr': {'class': 'form-control '}})  }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.fournisseur)  }}</td>
+            <td>{{ form_widget(form.fournisseur,{ 'attr': {'class': 'form-control '}})  }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.prixAchat)  }}</td>
+            <td>{{ form_widget(form.prixAchat,{ 'attr': {'class': 'form-control '}})  }}</td>
+            <td><span class="text-danger" id="prix"> *cet input n'est pas valide</span></td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.image)  }}</td>
+            <td>{{ form_widget(form.image,{ 'attr': {'class': 'form-control '}})  }}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>{{ form_widget(form.modifier,{ 'attr': {'class': 'btn btn-success '}})  }}</td>
+        </tr>
+        {{ form_end(form)  }}
+    </table>
+{% endblock %}

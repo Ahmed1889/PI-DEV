@@ -1,0 +1,60 @@
+{% extends 'base2.html.twig' %}
+{% block body %}
+<div>
+    <!-- ============================================================== -->
+    <!-- Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+
+                <h1>Employees list</h1>
+
+              <center>  <table id="zero_config" class="table table-striped table-bordered dataTable" role="grid" aria-describedby="zero_config_info">
+                    <thead>
+                    <tr style="background-color: #80bdff">
+                        <th>Photo Profil</th>
+                        <th>ID</th>
+                        <th>Cin</th>
+                        <th>Nom</th>
+                        <th>Prenom</th>
+                        <th>Adresse</th>
+                        <th>Tel</th>
+                        <th>Salaire</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for employee in employees %}
+                        <tr>
+                            <td><img style="height: 80px;width: 80px" src="{{ asset('photos/') }}{{ employee.image }}"></td>
+                            <td><a href="{{ path('employee_show', { 'id': employee.id }) }}">{{ employee.id }}</a></td>
+                            <td>{{ employee.cin }}</td>
+                            <td>{{ employee.nom }}</td>
+                            <td>{{ employee.prenom }}</td>
+                            <td>{{ employee.adresse }}</td>
+                            <td>{{ employee.tel }}</td>
+                            <td>{{ employee.salaire }}</td>
+                            <td>
+                                <ul>
+
+                                        <a class="fas fa-eye" href="{{ path('employee_show', { 'id': employee.id }) }}"></a>
+
+                                        <a class="fas fa-wrench" href="{{ path('employee_edit', { 'id': employee.id }) }}"></a>
+
+                                </ul>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table></center>
+
+                <ul>
+                    <li>
+                        <a class="fas fa-plus" href="{{ path('employee_new') }}">   Ajouter Nouveau Employé</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>{% endblock %}
+
+
+

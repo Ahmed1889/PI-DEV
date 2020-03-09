@@ -1,0 +1,277 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+
+    <!-- Load Leaflet from CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+          integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+            integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+            crossorigin=""></script>
+
+
+    <!-- Load Esri Leaflet from CDN -->
+    <script src="https://unpkg.com/esri-leaflet@2.3.3/dist/esri-leaflet.js"
+            integrity="sha512-cMQ5e58BDuu1pr9BQ/eGRn6HaR6Olh0ofcHFWe5XesdCITVuSBiBZZbhCijBe5ya238f/zMMRYIMIIg1jxv4sQ=="
+            crossorigin=""></script>
+
+
+    <!-- Load Esri Leaflet Geocoder from CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/esri-leaflet-geocoder@2.3.2/dist/esri-leaflet-geocoder.css"
+          integrity="sha512-IM3Hs+feyi40yZhDH6kV8vQMg4Fh20s9OzInIIAc4nx7aMYMfo+IenRUekoYsHZqGkREUgx0VvlEsgm7nCDW9g=="
+          crossorigin="">
+    <script src="https://unpkg.com/esri-leaflet-geocoder@2.3.2/dist/esri-leaflet-geocoder.js"
+            integrity="sha512-8twnXcrOGP3WfMvjB0jS5pNigFuIWj4ALwWEgxhZ+mxvjF5/FBPVd5uAxqT8dd2kUmTVK9+yQJ4CmTmSg/sXAQ=="
+            crossorigin=""></script>
+
+
+
+    <style>
+
+        #map { position: absolute; top:0; bottom:0; right:0; left:0; }
+    </style>
+
+    <div id="dialog-confirm3" title="Adresse">
+        <!--<div style="position: absolute; left: 50px; top: 40px;"> -->
+
+        <div class="container-fluid">
+            <div id="map"></div>
+
+        </div>
+
+        <!--</div> -->
+    </div>
+
+    <section id="page-content" class="page-wrapper">
+        <div class="banner-area section-padding">
+            <div class="container">
+                <div class="wishlist-area section-padding">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="wishlist-content">
+
+                                        <div class="wishlist-table table-responsive p-30 text-uppercase">
+                                            <table>
+                                                <thead>
+                                                <tr>
+                                                    <th class="product-thumbnail"></th>
+                                                    <th class="product-name"><span class="nobr">Product</span></th>
+                                                    <th class="product-prices"><span class="nobr"> Price </span></th>
+                                                    <th class="product-add-to-cart"><span class="nobr">Add to Cart </span></th>
+                                                    <th class="product-remove"><span class="nobr">Remove</span></th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                {% for p in produits %}
+
+
+                                                    <tr>
+                                                        <td class="product-thumbnail"><a href="#" title="men’s black t-shirt"><img style="width: 35px;height: 35px" class="imageproduit2" src="{{ asset( 'photos/') }}{{ p.image }}" alt="{{ p.libelleP }}"/></a></td>
+                                                        <td class="product-name pull-left mt-20" >
+                                                            <a href="{{ path('details_produitF') }}" title="men’s black t-shirt">{{ p.libelleP }}</a>
+                                                            <p class="w-color m-0">
+                                                                <label> Categorie :</label>
+                                                                {{ p.cat.libelleC }}
+                                                            </p>
+                                                            <p class="w-size m-0">
+                                                        </td>
+                                                        <td class="product-prices"><span class="amount">{{ p.prixVente  }} TND</span></td>
+                                                        <td class="product-value">
+                                                            <a class="product-remove">  <a href="{{ path('decrement',{'idd':p.id}) }}">-</a></a>
+                                                            <input  id="{{ p.id }}" value={{p.qte}}  disabled>
+                                                        <a class="product-remove">  <a href="{{ path('increment',{'idd':p.id}) }}">+</a></a>
+
+                                                        </td>
+                                                        <td class="product-remove"><a href="{{ path('supprimer',{'idd':p.libelleP,'calledfromcart':true}) }}">×</a></td>
+                                                    </tr>
+
+                {% endfor %}
+
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    <form name="ff" id="ff" method="post" action="{{ path('checkout') }}">
+                                        <div class="row">
+                                            <div class="cart-requerment mt-50 clearfix">
+
+                                                <div class="col-md-4 col-sm-6 clearfix">
+                                                    <div class="counpon-info ml-35">
+                                                        <div class="cart-title text-uppercase">
+                                                            <h5 class="mb-30"><strong>COUPON DISCOUNT</strong></h5>
+                                                        </div>
+                                                        <div class="coupon-discount">
+                                                            <label class="pb-10">Enter Your Coupon Code Here</label>
+                                                            <input id="inputcoupon" type="text">
+                                                        </div>
+                                                        <a class="button extra-small pull-right mt-35" href="#" title="Add to Cart">
+                                                            <span id="apply">Apply Coupon</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-offset-0 col-md-4 col-sm-offset-3 col-sm-6 clearfix">
+                                                    <div class="counpon-total ml-35">
+                                                        <div class="cart-title text-uppercase">
+                                                            <h5 class="mb-30"><strong>ADRESSE DU COMMANDE</strong></h5>
+                                                        </div>
+
+                                                        <table>
+                                                            <tbody>
+                                                            <tr class="cart-total">
+
+                                                                <td><a style="color: #00aff0" href="#" class="confirmModal3"> Veuillez saisir votre adresse</a><br>
+
+                                                                    <input readonly="readonly" type="text" id="recupAdresseComplete" name="recupAdresseComplete" /><br>
+                                                                    <input type="hidden" id="latlng" name="latlng" />
+
+
+                                                                </td>
+                                                            </tr>
+
+                                                            </tbody>
+                                                            </table>
+
+
+                                                        </div>
+                                                    </div>
+
+
+
+
+                                                <div class="col-md-offset-0 col-md-4 col-sm-offset-3 col-sm-6 clearfix">
+                                                    <div class="counpon-total ml-35">
+                                                        <div class="cart-title text-uppercase">
+                                                            <h5 class="mb-30"><strong>CART TOTAL</strong></h5>
+                                                        </div>
+
+                                                        <table>
+                                                            <tbody>
+                                                            <tr class="cart-total">
+                                                                <th>Grand Total</th>
+                                                                <td><span id="total">{{ total }}</span> TND</td>
+                                                            </tr>
+
+                                                            </tbody>
+                                                        </table>
+
+                                                        <input style="background-color: #00a9da ; color: white" type="submit" class="button extra-small pull-right"  title="Add to Cart" value="Procced to checkout" />
+
+
+                                                    </div>
+                                                </div>
+
+
+                                    </form>
+
+                                                </div>
+                                            </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script language = "javascript">
+
+        $(document).ready(function(){
+
+            $("#apply").click(function(){
+
+                $r=$("#inputcoupon").val();
+                $.ajax({
+                    url:        'verifycoupon',
+                    type:       'POST',
+                    dataType:   'json',
+                    data:{'coupon':$r},
+                    async:      true,
+
+                    success: function(data) {
+                                if(data['success']){
+                                    $tot= $("#total").text();
+                                    $newTotal = ($tot/100)*(100-data['value']);
+                                    $("#total").text($newTotal);
+                                    alert('coupon valid ' + $tot);
+                                }else {
+                                    alert('coupon invalid');
+                                }
+                    },
+                    error : function(xhr, textStatus, errorThrown) {
+                        alert('Ajax request failed.');
+                    }
+                });
+
+            })
+        });
+
+    </script>
+{% endblock %}
+
+{% block js %}
+    <script>
+        $(document).ready(function () {
+            //map
+            var theHREF3;
+
+            $( "#dialog-confirm3" ).dialog({
+                resizable: true,
+                height:700,
+                width:1000,
+                autoOpen: false,
+                show: {
+                    effect: "blind",
+                    duration: 1000
+                },
+                hide: {
+                    effect: "explode",
+                    duration: 1000
+                },
+                modal: true,
+
+            });
+
+            $(".confirmModal3").click(function(e) {
+                e.preventDefault();
+                theHREF3 = $(this).attr("href");
+                $("#dialog-confirm3").dialog("open");
+                var container = L.DomUtil.get('map'); if(container != null){ container._leaflet_id = null; }
+
+            });
+
+        })
+    </script>
+
+
+
+    <script>
+        var map = L.map('map').setView([36.80001000000004,10.182700000000068], 4);
+        var recuperer=null;
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var searchControl = L.esri.Geocoding.geosearch().addTo(map);
+
+        var results = L.layerGroup().addTo(map);
+
+        searchControl.on('results', function (data) {
+            results.clearLayers();
+            for (var i = data.results.length - 1; i >= 0; i--) {
+                results.addLayer(L.marker(data.results[i].latlng));
+
+            }
+            latlng=data.latlng.lat+";"+data.latlng.lng;
+            document.getElementById("recupAdresseComplete").value= data.text;
+            document.getElementById("latlng").value= latlng;
+
+        });
+    </script>
+
+
+{% endblock %}

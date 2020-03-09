@@ -1,0 +1,41 @@
+{% extends 'base2.html.twig' %}
+
+{% block body %}
+    <h1>Depot</h1>
+
+    <div align="right">
+        <a href="{{ path('depot_index') }}" class="fas fa-backward"></a>
+    </div>
+
+    <table class="table table-striped table-bordered dataTable" id="zero_config">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ depot.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ depot.nom }}</td>
+            </tr>
+            <tr>
+                <th>Addresse</th>
+                <td>{{ depot.addresse }}</td>
+            </tr>
+            <tr>
+                <th>Capacite</th>
+                <td>{{ depot.capacite }}</td>
+            </tr>
+            <tr>
+                <th>Disponibilite</th>
+                <td>{% if depot.disponibilite %}Yes{% else %}No{% endif %}</td>
+            </tr>
+        </tbody>
+    </table>
+        <div align="right">
+            <a href="{{ path('depot_edit', { 'id': depot.id }) }}" class="fas fa-wrench" >Modifier</a>
+        </div>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Supprimer"  class="btn btn-primary">
+            {{ form_end(delete_form) }}
+
+{% endblock %}

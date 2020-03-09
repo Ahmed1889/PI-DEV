@@ -1,0 +1,20 @@
+{% extends 'base2.html.twig' %}
+
+{% block bodyBack %}
+    <h1>Modifier Historique</h1>
+
+        {{ form_start(edit_form) }}
+        {{ form_widget(edit_form) }}
+
+        <input type="submit" value="Modifier" />
+        {{ form_end(edit_form) }}
+
+
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Effacer">
+            {{ form_end(delete_form) }}
+
+
+            <a href="{{ path('historique_index') }}">Retour liste</a>
+
+{% endblock %}

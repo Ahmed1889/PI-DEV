@@ -1,0 +1,236 @@
+{% extends 'base.html.twig' %}
+{% block js %}
+    <script>
+
+        $(document).ready(function(){
+
+            /* 1. Visualizing things on Hover - See next part for action on click */
+            $('#stars td').on('mouseover', function(){
+                var onStar = parseInt($(this).data('value'), 10); // The star currently mouse on
+
+                // Now highlight all the stars that's not after the current hovered star
+                $(this).parent().children('td.star').each(function(e){
+                    if (e < onStar) {
+                        $(this).addClass('hover');
+                        $(this).css("color","gold");
+                    }
+                    else {
+                        $(this).removeClass('hover');
+                        $(this).css("color","");
+                    }
+                });
+
+            }).on('mouseout', function(){
+                $(this).parent().children('td.star').each(function(e){
+                    $(this).removeClass('hover');
+                });
+            });
+
+
+            /* 2. Action to perform on click */
+            $('#stars td').on('click', function(){
+                var onStar = parseInt($(this).data('value'), 10); // The star currently selected
+                var stars = $(this).parent().children('td.star');
+
+                for (i = 0; i < stars.length; i++) {
+                    $(stars[i]).removeClass('selected');
+
+                }
+
+                for (i = 0; i < onStar; i++) {
+                    $(stars[i]).addClass('selected');
+                    $(stars[i]).css("color","gold");
+                }
+
+                // JUST RESPONSE (Not needed)
+                var ratingValue = parseInt($('#stars td.selected').last().data('value'), 10);
+
+
+                responseMessage(ratingValue);
+
+            });
+
+
+        });
+
+
+        function responseMessage(ratingValue) {
+
+            var event = $('#event').val();
+            $.ajax({
+                url: 'rating',
+                type: "POST",
+                dataType: "json",
+                data: {
+                    event: event ,
+                    rating: ratingValue
+                },
+                async: true,
+                success: function (data) {
+                    if (ratingValue > 1) {
+                        $('#rating').html("Merci! Vous avez évalué ceci " + ratingValue + " étoiles.");
+
+                        $('#RatingModel').modal('show');
+
+                    }
+                    else {
+                        $('#rating').html("Nous nous améliorerons. Vous avez évalué ceci " + ratingValue + " étoiles.");
+
+                        $('#RatingModel').modal('show');
+                    }
+                }
+            })
+
+        }
+    </script>
+{% endblock %}
+{% block body %}
+
+    <section id="page-content" class="page-wrapper">
+        <div class="banner-area section-padding">
+            <div class="container">
+                <section id="page-content" class="page-wrapper">
+                    <!-- Start Shop Full Grid View -->
+                    <div class="product-details-area section-padding">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-5">
+                                    <div class="single-product-image">
+                                        <div id="product-img-content">
+                                            <div id="my-tab-content" class="tab-content mb-30">
+                                                <div class="tab-pane b-img active" id="view1">
+                                                    <a class="venobox" href="{{ asset('photos/' ~ image) }}"><img src="{{ asset('photos/' ~ image) }}"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-7">
+                                    <div class="product-details-content">
+                                        <div class="product-content text-uppercase">
+                                            <h5>{{ libelleP }}</h5>
+
+                                            <div class="product-price pb-30">
+                                                <span class="new-price">{{ prixVente }} DT</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-view pb-30">
+                                            <h4 class="product-details-tilte text-uppercase">categorie</h4>
+                                            <p>{{ categorie.libelleC }}</p>
+                                        </div>
+
+                                        <div class="product-view pb-30">
+                                            <i class="fas fa-eye"></i>         <span class="new-price">{{ nbrVues }}</span>
+                                        </div>
+                                        <input id="event" type="text" value="{{ id }}" hidden>
+
+                                        <br>
+                                        <div class="product-action-shop text-center mb-40">
+                                            <a title="Add to cart" href="#">
+                                                <i class="zmdi zmdi-shopping-cart"></i>
+                                            </a>
+                                        </div>
+
+                                        <section class='rating-widget'>
+
+                                            <!-- Rating Stars Box -->
+                                            <div class='rating-stars'>
+                                                <table id='stars'>
+                                                    <td class='star' title='Poor' data-value='1'>
+                                                        <i class='fa fa-star fa-fw'></i>
+                                                    </td>
+                                                    <td class='star' title='Fair' data-value='2'>
+                                                        <i class='fa fa-star fa-fw'></i>
+                                                    </td>
+                                                    <td class='star' title='Good' data-value='3'>
+                                                        <i class='fa fa-star fa-fw'></i>
+                                                    </td>
+                                                    <td class='star' title='Excellent' data-value='4'>
+                                                        <i class='fa fa-star fa-fw'></i>
+                                                    </td>
+                                                    <td class='star' title='WOW!!!' data-value='5'>
+                                                        <i class='fa fa-star fa-fw'></i>
+                                                    </td>
+                                                </table>
+                                            </div>
+                                        </section>
+                                            <br><br><br>
+
+                                        <div class="socialsharing-product">
+                                            <h4 class="product-details-tilte text-uppercase pb-10">share this on</h4>
+                                            <button type="button"><i class="zmdi zmdi-facebook"></i></button>
+                                            <button type="button"><i class="zmdi zmdi-instagram"></i></button>
+                                            <button type="button"><i class="zmdi zmdi-rss"></i></button>
+                                            <button type="button"><i class="zmdi zmdi-twitter"></i></button>
+                                            <button type="button"><i class="zmdi zmdi-pinterest"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-view pb-30">
+                                <a href="{{ path('afficher_produitF') }}" ><h4 class="product-details-tilte text-uppercase">consulter la liste</h4></a>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="product-details-content pt-90">
+                                        <div class="p-details-tab">
+                                            <ul class="nav nav-tabs text-uppercase mb-20" role="tablist">
+                                                <li role="presentation" class="active"><a href="#description" aria-controls="description" role="tab" data-toggle="tab">Description</a></li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="tab-content review">
+                                            <div role="tabpanel" class="tab-pane active" id="description">
+                                                <p>{{ descripion }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+            </div>
+        </div>
+    </section>
+    <div class="modal fade" id="RatingModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#ffff99 ">
+                    <h5 class="modal-title" id="exampleModalLabel">Succès!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="rating">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+<style>
+    /*-- Ratings --*/
+.rating-stars{
+    display: inline-block;
+    direction: ltr;
+
+}
+    /*-- //Ratings --*/
+
+</style>
+
+
+
+
+
+{% endblock %}

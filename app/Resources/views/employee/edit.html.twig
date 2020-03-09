@@ -1,0 +1,410 @@
+{% extends 'base2.html.twig' %}
+
+{% block body %}
+<div>
+    <!-- ============================================================== -->
+    <!-- Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <div class="page-breadcrumb">
+        <div class="row">
+            <div class="col-12 d-flex no-block align-items-center">
+
+
+            </div>
+        </div>
+    </div>
+    <table class="table table-striped">
+        {{ form_start(edit_form) }}
+        <tr>
+            <td>{{ form_label(edit_form.cin)  }}</td>
+            <td>{{ form_widget(edit_form.cin,{ 'attr': {'class': 'form-control '}})  }}</td>
+            <td><strong> <span style="color:red" id="misscin">*Format n'est pas valide ! </span></strong></td>
+        </tr>
+        <tr>
+            <td>{{ form_label(edit_form.image)  }}</td>
+            <td>{{ form_widget(edit_form.image,{ 'attr': {'class': 'form-control '}})  }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(edit_form.nom)  }}</td>
+            <td>{{ form_widget(edit_form.nom,{ 'attr': {'class': 'form-control'}})  }}</td>
+            <td><strong> <span style="color:red" id="missnom">*Format n'est pas valide ! </span></strong></td>
+
+        </tr>
+        <tr>
+            <td>{{ form_label(edit_form.prenom)  }}</td>
+            <td>{{ form_widget(edit_form.prenom,{ 'attr': {'class': 'form-control '}})  }}</td>
+            <td><strong> <span style="color: red" id="missprenom">*Format n'est pas valide ! </span></strong></td>
+        </tr>
+        <tr>
+            <td>{{ form_label(edit_form.adresse)  }}</td>
+            <td>{{ form_widget(edit_form.adresse,{ 'attr': {'class': 'form-control '}})  }}</td>
+            <td><strong> <span style="color: red" id="missadresse">*Format n'est pas valide ! </span></strong></td>
+        </tr>
+        <tr>
+            <td>{{ form_label(edit_form.tel)  }}</td>
+            <td>{{ form_widget(edit_form.tel,{ 'attr': {'class': 'form-control '}})  }}</td>
+            <td><strong> <span style="color: red" id="misstel">*Format n'est pas valide ! </span></strong></td>
+        </tr>
+        <tr>
+            <td>{{ form_label(edit_form.salaire)  }}</td>
+            <td>{{ form_widget(edit_form.salaire,{ 'attr': {'class': 'form-control '}})  }}</td>
+            <td><strong> <span style="color: red" id="misssalaire">*Format n'est pas valide ! </span></strong></td>
+
+        </tr>
+        <tr>
+            <td>{{ form_label(edit_form.roles)  }}</td>
+            <td>{{ form_widget(edit_form.roles,{ 'attr': {'class': 'form-control '}})  }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(edit_form.email)  }}</td>
+            <td>{{ form_widget(edit_form.email,{ 'attr': {'class': 'form-control '}})  }}</td>
+            <td><strong> <span style="color: red" id="missemail">*Format n'est pas valide ! </span></strong></td>
+        </tr>
+        <tr>
+            <td>{{ form_label(edit_form.username)  }}</td>
+            <td>{{ form_widget(edit_form.username,{ 'attr': {'class': 'form-control '}})  }}</td>
+            <td><strong> <span style="color:red" id="missuser">*Format n'est pas valide ! </span></strong></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>{{ form_widget(edit_form.plainPassword,{ 'attr': {'class': 'form-control '}})  }}</td>
+            <td><strong> <span style="color:red" id="missmdp">*Mot de pass n'est pas valide ! </span></strong></td>
+            <td><strong> <span style="color: orange" id="missmdp1">*Mot de pass faible ! </span></strong></td>
+            <td><strong> <span style="color: green" id="missmdp2">*Mot de pass fort ! </span></strong></td>
+        </tr>
+        <tr>
+            <td>Valider si vous n'etes pas un robot</td>
+            <td>{{ form_widget(edit_form.captcha,{ 'attr': {'class': 'form-control '}})  }} {{ form_errors(edit_form.captcha) }}</td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td><input type="submit" id="bouton" value="Ajouter" class="btn btn-success"/></td>
+        </tr>
+        {{ form_end(edit_form)  }}
+    </table>
+
+
+    <ul>
+        <li>
+            <a class="fa fa-undo" href="{{ path('employee_index') }}">Back to the list</a>
+        </li>
+
+    </ul>
+{% endblock %}
+
+    {% block js2 %}
+        <script>
+            $(document).ready(function () {
+                $('#misscin').hide();
+                $('#backbundle_employee_cin').keyup(function () {
+
+
+                    $.ajax({
+
+                        success: function () {
+                            var re = /^[0-1][0-9]{7}$/i;
+                            var x = $('#backbundle_employee_cin').val();
+                            if (re.test(x)) {
+
+                                $('#bouton').prop('disabled', false);
+                                $('#misscin').hide();
+                                $('#backbundle_employee_cin').css('border',"2px  solid #29FF2B");
+
+                            } else {
+
+                                $('#misscin').show();
+                                $('#backbundle_employee_cin').css('border',"2px solid #db4848");
+
+
+
+                                $('#bouton').prop('disabled', true);
+                            }
+                        }
+                    });
+
+
+                });
+
+
+                $('#missnom').hide();
+                $('#backbundle_employee_nom').keyup(function () {
+
+
+                    $.ajax({
+
+                        success: function () {
+                            var re = /^[A-Za-z]{4,}$/;
+                            var x = $('#backbundle_employee_nom').val();
+                            if (re.test(x)) {
+
+                                $('#bouton').prop('disabled', false);
+                                $('#missnom').hide();
+                                $('#backbundle_employee_nom').css('border',"2px  solid #29FF2B");
+
+                            } else {
+
+                                $('#missnom').show();
+                                $('#backbundle_employee_nom').css('border',"2px solid #db4848");
+                                //alert('ce champs ne peut pas contenir des nombres');
+
+
+                                $('#bouton').prop('disabled', true);
+                            }
+                        }
+                    });
+
+
+                });
+
+
+                $('#missprenom').hide();
+                $('#backbundle_employee_prenom').keyup(function () {
+
+
+                    $.ajax({
+
+                        success: function () {
+                            var re = /^[A-Za-z]{4,}$/;
+                            var x = $('#backbundle_employee_prenom').val();
+                            if (re.test(x)) {
+
+                                $('#bouton').prop('disabled', false);
+                                $('#missprenom').hide();
+                                $('#backbundle_employee_prenom').css('border',"2px  solid #29FF2B");
+
+                            } else {
+
+                                $('#missprenom').show();
+                                $('#backbundle_employee_prenom').css('border',"2px solid #db4848");
+                                //alert('ce champs ne peut pas contenir des nombres');
+
+
+                                $('#bouton').prop('disabled', true);
+                            }
+                        }
+                    });
+
+
+                });
+                $('#missuser').hide();
+                $('#backbundle_employee_username').keyup(function () {
+
+
+                    $.ajax({
+
+                        success: function () {
+                            var re = /^[A-Za-z0-9]{4,}$/;
+                            var x = $('#backbundle_employee_username').val();
+                            if (re.test(x)) {
+
+                                $('#bouton').prop('disabled', false);
+                                $('#missuser').hide();
+                                $('#backbundle_employee_username').css('border',"2px  solid #29FF2B");
+
+                            } else {
+
+                                $('#missuser').show();
+                                $('#backbundle_employee_username').css('border',"2px solid #db4848");
+                                //alert('ce champs ne peut pas contenir des nombres');
+
+
+                                $('#bouton').prop('disabled', true);
+
+                            }
+                        }
+                    });
+
+
+                });
+
+                $('#missadresse').hide();
+                $('#backbundle_employee_adresse').keyup(function () {
+
+
+                    $.ajax({
+
+                        success: function () {
+                            var re = /^[a-zA-z0-9._%+ \t]{10,}$/;
+                            var x = $('#backbundle_employee_adresse').val();
+                            if (re.test(x)) {
+
+                                $('#bouton').prop('disabled', false);
+                                $('#missadresse').hide();
+                                $('#backbundle_employee_adresse').css('border',"2px  solid #29FF2B");
+
+                            } else {
+
+                                $('#missadresse').show();
+                                $('#backbundle_employee_adresse').css('border',"2px solid #db4848");
+                                //alert('ce champs ne peut pas contenir des nombres');
+
+
+                                $('#bouton').prop('disabled', true);
+                            }
+                        }
+                    });
+
+
+                });
+
+
+                $('#misstel').hide();
+                $('#backbundle_employee_tel').keyup(function () {
+
+
+                    $.ajax({
+
+                        success: function () {
+                            var re = /^[2-4-5-7-9][0-9]{7}$/i;
+                            var x = $('#backbundle_employee_tel').val();
+                            if (re.test(x)) {
+
+                                $('#bouton').prop('disabled', false);
+                                $('#misstel').hide();
+                                $('#backbundle_employee_tel').css('border',"2px  solid #29FF2B");
+
+                            } else {
+
+                                $('#misstel').show();
+                                $('#backbundle_employee_tel').css('border',"2px solid #db4848");
+                                //alert('ce champs ne peut pas contenir des nombres');
+
+
+                                $('#bouton').prop('disabled', true);
+                            }
+                        }
+                    });
+
+
+                });
+                $('#misssalaire').hide();
+                $('#backbundle_employee_salaire').keyup(function () {
+
+
+                    $.ajax({
+
+                        success: function () {
+                            var re = /^[0-9]{3,4}$/i;
+                            var x = $('#backbundle_employee_salaire').val();
+                            if (re.test(x)) {
+
+                                $('#bouton').prop('disabled', false);
+                                $('#misssalaire').hide();
+                                $('#backbundle_employee_salaire').css('border',"2px  solid #29FF2B");
+
+                            } else {
+
+                                $('#misssalaire').show();
+                                $('#backbundle_employee_salaire').css('border',"2px solid #db4848");
+                                //alert('ce champs ne peut pas contenir des nombres');
+
+
+                                $('#bouton').prop('disabled', true);
+                            }
+                        }
+                    });
+
+
+                });
+                $('#missemail').hide();
+                $('#backbundle_employee_email').keyup(function () {
+
+
+                    $.ajax({
+
+                        success: function () {
+                            var re = /^[a-zA-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$/i;
+                            var x = $('#backbundle_employee_email').val();
+                            if (re.test(x)) {
+
+                                $('#bouton').prop('disabled', false);
+                                $('#missemail').hide();
+                                $('#backbundle_employee_email').css('border',"2px  solid #29FF2B");
+
+                            } else {
+
+                                $('#missemail').show();
+                                $('#backbundle_employee_email').css('border',"2px solid #db4848");
+                                //alert('ce champs ne peut pas contenir des nombres');
+
+
+                                $('#bouton').prop('disabled', true);
+                            }
+                        }
+                    });
+
+
+                });
+
+
+                $('#missmdp').hide();
+                $('#missmdp1').hide();
+                $('#missmdp2').hide();
+
+                $('#backbundle_employee_plainPassword_first').keyup(function () {
+
+
+                    var re = /^[a-zA-z0-9._%+-]{4,}$/i;
+                    var x = $('#backbundle_employee_plainPassword_first').val();
+                    if (re.test(x)) {
+                        if (x.length<=7 && x.length>=5){
+                            $('#bouton').prop('disabled', false);
+                            $('#missmdp').hide();
+                            $('#missmdp2').hide();
+                            $('#missmdp1').show();
+                            $('#backbundle_employee_plainPassword_first').css('border',"2px  solid #ffa200");
+                        }
+                        else if (x.length >8){
+                            $('#bouton').prop('disabled', false);
+                            $('#missmdp1').hide();
+                            $('#missmdp').hide();
+                            $('#missmdp2').show();
+                            $('#backbundle_employee_plainPassword_first').css('border',"2px  solid #29FF2B");
+                        }
+                    } else {
+
+                        $('#missmdp').show();
+                        $('#missmdp2').hide();
+                        $('#missmdp1').hide();
+                        $('#backbundle_employee_plainPassword_first').css('border',"2px solid #db4848");
+
+
+
+                        $('#bouton').prop('disabled', true);
+                    }
+
+
+
+
+                });
+
+                $('#backbundle_employee_plainPassword_second').keyup(function () {
+
+
+
+                    var y=$('#backbundle_employee_plainPassword_first').val();
+                    var x = $('#backbundle_employee_plainPassword_second').val();
+                    if (x==y) {
+
+                        $('#bouton').prop('disabled', false);
+
+                        $('#backbundle_employee_plainPassword_second').css('border',"2px  solid #29FF2B");
+
+                    } else {
+
+
+                        $('#backbundle_employee_plainPassword_second').css('border',"2px solid #db4848");
+                        //alert('ce champs ne peut pas contenir des nombres');
+
+
+                        $('#bouton').prop('disabled', true);
+                    }
+
+
+                });
+
+            })
+        </script>
+
+    {% endblock %}

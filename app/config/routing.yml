@@ -1,0 +1,37 @@
+front_reclamation:
+    resource: "@FrontBundle/Controller/reclamationController.php"
+    type:     annotation
+
+back_conge:
+    resource: "@BackBundle/Controller/congeController.php"
+    type:     annotation
+
+back_employee:
+    resource: "@BackBundle/Controller/employeeController.php"
+    type:     annotation
+
+back:
+    resource: "@BackBundle/Resources/config/routing.yml"
+    prefix:   /ba
+
+front:
+    resource: "@FrontBundle/Resources/config/routing.yml"
+    prefix:   /fr
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+gregwar_captcha_routing:
+    resource: "@GregwarCaptchaBundle/Resources/config/routing/routing.yml"
+    prefix: /_gcb
+discutea_forum:
+    resource: "@DForumBundle/Resources/config/routing.yml"
+    prefix: /forum
+back_bon_reduction:
+    resource: "@BackBundle/Controller/BonReductionController.php"
+    type:     annotation
+
+ancarebeca_fullcalendar:
+    resource: "@FullCalendarBundle/Resources/config/routing.yml"

@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+        <h2>Reclamation</h2>
+        <p class="mb-20">Veuillez remplir tous les champs
+            <span class="required">*</span>
+        </p>
+        {{ form_start(form) }}
+
+        <div class="row">
+            <div class="col-md-4">
+                <p class="form-row">
+                    {{ form_label(form.type)  }}<span class="required">*</span>
+                    {{ form_widget(form.type)  }}
+                </p>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <p style="border: 2px" class="form-row">
+                    {{ form_label(form.message)  }}<span class="required">*</span>
+                    {{ form_widget(form.message)  }}
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <p class="form-row">
+                    <input type="submit" class="btn-success" style="color: #0c0c0c" value="Réclamer" />
+                </p>
+            </div>
+        </div>
+
+        {{ form_end(form) }}
+
+
+
+
+
+
+    <ul>
+        <li>
+            <a href="{{ path('reclamation_index') }}">Back to the list</a>
+        </li>
+    </ul>
+    <br><br> <br><br> <br><br>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Reclamation</h1>
+
+    <table class="table">
+        <tbody>
+
+        <tr>
+            <th>Type</th>
+            <td>{{ reclamation.type }}</td>
+
+        <tr>
+            <th>Message</th>
+            <td style="color: #005cbf">{{ reclamation.message }}</td>
+        </tr>
+        <tr>
+            <th>Reponse</th>
+            <td style="color:green">{{ reclamation.reponse }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('reclamation_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('reclamation_edit', { 'id': reclamation.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input cols="5" type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+    <br><br><br><br><br><br><br><br>
+{% endblock %}

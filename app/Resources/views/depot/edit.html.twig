@@ -1,0 +1,98 @@
+{% extends 'base2.html.twig' %}
+
+
+{% block body %}
+    <h1>Depot edit</h1>
+    <div align="right">
+        <a href="{{ path('depot_index') }}" class="fas fa-backward"></a>
+
+    </div>
+    <table class="table">
+        {{ form_start(edit_form) }}
+
+        <tr>
+            <td>{{ form_label(edit_form.nom) }}</td>
+            <td>{{ form_widget(edit_form.nom,{'attr':{'class':'form-control','id':'vnom'}}) }}
+                {{ form_errors(edit_form.nom) }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(edit_form.addresse) }}</td>
+            <td>{{ form_widget(edit_form.addresse,{'attr':{'class':'form-control'}}) }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(edit_form.capacite) }}</td>
+            <td>{{ form_widget(edit_form.capacite,{'attr':{'class':'form-control'}}) }}
+                {{ form_errors(edit_form.capacite) }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(edit_form.disponibilite) }}</td>
+            <td>{{ form_widget(edit_form.disponibilite,{'attr':{'class':'custom-control custom-checkbox mr-sm-2'}}) }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(edit_form.representant) }}</td>
+            <td>{{ form_widget(edit_form.representant,{'attr':{'class':'form-control','id':'exampleFormControlSelect1'}}) }}</td>
+        </tr>
+        <tr>
+            <td> <input type="submit" value="Modifier" class="btn btn-primary"/></td>
+            {{ form_end(edit_form) }}
+            {{ form_start(delete_form) }}
+            <td><input type="submit" value="Supprimer" class="btn btn-primary"/></td>
+            {{ form_end(delete_form) }}
+
+
+        </tr>
+
+
+    </table>
+{% endblock %}
+
+{#<button href="" class="fas fa-wrench" data-toggle="modal" data-target="#dataModal{{ depot.id }}" ></button>
+<div class="modal fade" id="dataModal{{ depot.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Depot edit</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" >
+
+                {{ form_start(edit_form) }}
+
+                <div class="form-group">
+                    {{ form_label(edit_form.nom) }}
+                    {{ form_widget(edit_form.nom,{'attr':{'class':'form-control'}}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(edit_form.addresse) }}
+                    {{ form_widget(edit_form.addresse,{'attr':{'class':'form-control'}}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(edit_form.capacite) }}
+                    {{ form_widget(edit_form.capacite,{'attr':{'class':'form-control'}}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(edit_form.disponibilite) }}
+                    {{ form_widget(edit_form.disponibilite,{'attr':{'class':'custom-control custom-checkbox mr-sm-2'}}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(edit_form.representant) }}
+                    {{ form_widget(edit_form.representant,{'attr':{'class':'form-control','id':'exampleFormControlSelect1'}}) }}
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                <input type="submit" value="Modifier" class="btn btn-primary"/>
+
+            </div>
+            {{ form_rest(edit_form) }}
+            {{ form_end(edit_form) }}
+        </div>
+
+    </div>
+
+</div>
+    #}
+

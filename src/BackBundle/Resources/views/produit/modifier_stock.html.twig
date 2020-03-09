@@ -1,0 +1,95 @@
+{% extends 'base2.html.twig' %}
+{% block js2 %}
+    <script>
+        $(document).ready(function () {
+            $("#quatite").hide();
+            $("#seuil").hide();
+            $('#form_quantite').keyup(function () {
+
+
+                $.ajax({
+
+                    success: function () {
+                        var re =  /^[0-9]+$/;
+                        var x = $('#form_quantite').val();
+                        var y = $('#form_seuil').val();
+                        if (re.test(x) && x>y) {
+
+                            $('#form_modifier').prop('disabled', false);
+                            $('#form_quantite').css('border',"1px  black");
+                            $("#quatite").hide();
+
+                        } else {
+
+                            $("#quatite").show();
+                            //alert('ce champs ne peut pas contenir des nombres');
+                            $('#form_modifier').prop('disabled', true);
+                            $('#form_quantite').css('border',"1px solid #db4848");
+                        }
+                    }
+                });
+
+
+            });
+
+            $('#form_seuil').keyup(function () {
+
+
+                $.ajax({
+
+                    success: function () {
+                        var re =  /^[0-9]+$/;
+                        var x = $('#form_seuil').val();
+                        var y = $('#form_quantite').val();
+                        if (re.test(x) && x<y) {
+
+                            $('#form_modifier').prop('disabled', false);
+                            $('#form_seuil').css('border',"1px  black");
+                            $("#seuil").hide();
+
+                        } else {
+
+                            $("#seuil").show();
+                            //alert('ce champs ne peut pas contenir des nombres');
+                            $('#form_modifier').prop('disabled', true);
+                            $('#form_seuil').css('border',"1px solid #db4848");
+                        }
+                    }
+                });
+
+
+            });
+        })
+    </script>
+{% endblock %}
+{% block body %}
+    <br>
+    <h2><strong>Modifier un stock :</strong></h2>
+    <br>
+    <table class="table table-striped">
+        {{ form_start(form) }}
+        <tr>
+            <td>{{ form_label(form.produit)  }}</td>
+            <td>{{ form_widget(form.produit,{ 'attr': {'class': 'form-control '}})  }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.quantite)  }}</td>
+            <td>{{ form_widget(form.quantite,{ 'attr': {'class': 'form-control '}})  }}</td>
+            <td><span class="text-danger" id="quatite"> *cet input n'est pas valide</span></td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.seuil)  }}</td>
+            <td>{{ form_widget(form.seuil,{ 'attr': {'class': 'form-control '}})  }}</td>
+            <td><span class="text-danger" id="seuil"> *cet input n'est pas valide</span></td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.depot)  }}</td>
+            <td>{{ form_widget(form.depot,{ 'attr': {'class': 'form-control '}})  }}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>{{ form_widget(form.modifier,{ 'attr': {'class': 'btn btn-success '}})  }}</td>
+        </tr>
+        {{ form_end(form)  }}
+    </table>
+{% endblock %}

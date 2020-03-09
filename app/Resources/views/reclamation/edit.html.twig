@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Reclamation edit</h1>
+
+    {{ form_start(edit_form) }}
+
+    <div class="row">
+        <div class="col-md-4">
+            <p class="form-row">
+                {{ form_label(edit_form.type)  }}<span class="required">*</span>
+                {{ form_widget(edit_form.type)  }}
+            </p>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <p style="border: 2px" class="form-row">
+                {{ form_label(edit_form.message)  }}<span class="required">*</span>
+                {{ form_widget(edit_form.message)  }}
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <p class="form-row">
+                <input type="submit" class="btn-success" style="color: #0c0c0c" value="Modifier" />
+            </p>
+        </div>
+    </div>
+
+    {{ form_end(edit_form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('reclamation_index') }}">Back to the list</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+    <br><br><br><br><br><br>
+{% endblock %}

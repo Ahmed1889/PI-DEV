@@ -1,0 +1,70 @@
+{% extends 'base2.html.twig' %}
+
+{% block body %}
+<div class="page-wrapper">
+    <!-- ============================================================== -->
+    <!-- Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <div class="page-breadcrumb">
+        <div class="row">
+            <div class="col-12 d-flex no-block align-items-center">
+                <h4 class="">Profil</h4>
+
+            </div>
+        </div>
+    </div>
+    <h1></h1>
+
+    <table class="table" style="">
+        <tbody>
+            <tr>
+                <th>Photo de Profil</th>
+                <td><img style="height: 50px;width: 50px" src="{{ asset('photos/') }}{{ employee.image }}"></td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ employee.id }}</td>
+            </tr>
+            <tr>
+                <th>Cin</th>
+                <td>{{ employee.cin }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ employee.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ employee.prenom }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ employee.adresse }}</td>
+            </tr>
+            <tr>
+                <th>Tel</th>
+                <td>{{ employee.tel }}</td>
+            </tr>
+            <tr>
+                <th>Salaire</th>
+                <td>{{ employee.salaire }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+
+        <li>
+            <a class="fa fa-wrench" href="{{ path('employee_edit', { 'id': employee.id }) }}"></a>
+        </li>
+        <li>
+            <td><a style="color: red" class="confirmModal" href="{{ path ('delete',{'id':employee.id}) }}">Supprimer</a></td>
+        </li>
+    </ul>
+    <div id="dialog-confirm" title="Confirmation de la suppression" style="display:none;">
+        <p>
+            <span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>
+            Etes-vous sûr de vouloir supprimer cet Employé?
+        </p>
+    </div>
+{% endblock %}

@@ -1,0 +1,29 @@
+
+
+{% extends 'base2.html.twig' %}
+
+{% block bodyBack %}
+    <table class="table table-striped">
+        {{ form_start(form) }}
+        <tr>
+            <td>{{ form_label(form.nom)  }}</td>
+            <td>{{ form_widget(form.nom,{ 'attr': {'class': 'form-control '}})  }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.matricule)  }}</td>
+            <td>{{ form_widget(form.matricule,{ 'attr': {'class': 'form-control'}})  }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.typeVehicule)  }}</td>
+            <td>{{ form_widget(form.typeVehicule,{ 'attr': {'class': 'form-control '}})  }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.ajouter)  }}</td>
+            <td>  {{ form_widget(form.ajouter,{ 'attr': {'class': 'btn btn-success '}})  }}</td>
+        </tr>
+        {{ form_end(form)  }}
+    </table>
+
+{%  endblock %}
+
+{%  endblock %}

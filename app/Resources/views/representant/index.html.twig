@@ -1,0 +1,110 @@
+{% extends 'base2.html.twig' %}
+
+{% block body %}
+    {#//zero_config#}
+    <h1>Representants list</h1>
+    <input type="text" id="recherche">
+
+    <table class="table table-striped table-bordered dataTable"  id="zero_config">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Email</th>
+                <th>Telephone</th>
+                <th>Addresse</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for representant in representants %}
+            <tr>
+
+                <td>{{ representant.nom }}</td>
+                <td>{{ representant.prenom }}</td>
+                <td>{{ representant.email }}</td>
+                <td>{{ representant.telephone }}</td>
+                <td>{{ representant.addresse }}</td>
+                <td>
+                    <ul>
+
+                            <a href="{{ path('representant_show', { 'id': representant.id })}}" class="fas fa-eye"></a>
+
+                            <a href="{{ path('representant_edit', { 'id': representant.id }) }}" class="fas fa-wrench"></a>
+
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {#
+
+    <ul>
+        <li>
+            <a href="{{ path('representant_new') }}">Create a new representant</a>
+        </li>
+    </ul>
+    #}
+    <script src="{{ asset('jquery-3.4.1.min.js') }}"></script>
+    <script language = "javascript">
+
+        $(document).ready(function(){
+
+            $("#recherche").on("keyup",function(event){
+
+                $r=$("#recherche").val();
+                $.ajax({
+                    url:        "{{ path('filter')}}",
+                    type:       'POST',
+                    dataType:   'json',
+                    data:{'nom':$r},
+                    async:      true,
+
+                    success: function(data) {
+                        console.log(data);
+
+                        var table = $('#zero_config');
+                        table.html('');
+                        var table_head = $('<tr>');
+
+                        table_head.append($('<th>').text('Nom'))
+                        table_head.append($('<th>').text('Prenom'))
+                        table_head.append($('<th>').text('Email'))
+                        table_head.append($('<th>').text('Addresse'))
+                        table_head.append($('<th>').text('Action'))
+                        table.append(table_head);
+
+                        /*
+                        var e=$('<tr>' +
+                            '<th>Nom</th>' +
+                            '<th>Prenom</th>' +
+                            '<th>Email</th>' +
+                            '<th>Addresse</th>' +
+                            '<th>Addresse</th>' +
+                            '</tr>');
+                           */
+
+                        for(var x in data){
+                            var tr = $('<tr>');
+
+                            tr.append($('<td>').text(data[x].nom));
+                            tr.append($('<td>').text(data[x].prenom));
+                            tr.append($('<td>').text(data[x].email));
+                            tr.append($('<td>').text(data[x].addresse));
+                            tr.append($('<td><a id="show" class="fas fa-eye" href="'+data[x].id+'/show"></a><a id="edit" class="fas fa-wrench" href="'+data[x].id +'/edit"></a>'));
+                            table.append(tr);
+                        };
+
+
+                    },
+                    error : function(xhr, textStatus, errorThrown) {
+                        alert('Ajax request failed.');
+                    }
+                });
+
+            })
+        });
+
+    </script>
+{% endblock %}

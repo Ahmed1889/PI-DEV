@@ -1,0 +1,53 @@
+{% extends 'base2.html.twig' %}
+
+{% block body %}
+    <h1>Representant edit</h1>
+    <div align="right">
+        <a href="{{ path('representant_index') }}" class="fas fa-backward"></a>
+
+    </div>
+
+<table class="table">
+    {{ form_start(edit_form) }}
+
+    <tr>
+        <td>{{ form_label(edit_form.nom) }}</td>
+        <td>{{ form_widget(edit_form.nom,{'attr':{'class':'form-control'}}) }}</td>
+    </tr>
+    <tr>
+        <td>{{ form_label(edit_form.prenom) }}</td>
+        <td>{{ form_widget(edit_form.prenom,{'attr':{'class':'form-control'}}) }}</td>
+    </tr>
+    <tr>
+        <td>{{ form_label(edit_form.email) }}</td>
+        <td>{{ form_widget(edit_form.email,{'attr':{'class':'form-control'}}) }}
+            {{ form_errors(edit_form.email) }}</td>
+    </tr>
+    <tr>
+        <td>{{ form_label(edit_form.telephone) }}</td>
+        <td>{{ form_widget(edit_form.telephone,{'attr':{'class':'form-control'}}) }}</td>
+    </tr>
+    <tr>
+        <td>{{ form_label(edit_form.addresse) }}</td>
+        <td>{{ form_widget(edit_form.addresse,{'attr':{'id':'exampleFormControlSelect1','class':'form-control'}}) }}</td>
+    </tr>
+    <tr>
+        <td>{{ form_label(edit_form.fournisseurs) }}</td>
+        <td>{{ form_widget(edit_form.fournisseurs,{'attr':{'id':'exampleFormControlSelect1','class':'form-control'}}) }}</td>
+    </tr>
+    <tr>
+        <td>{{ form_label(edit_form.depots) }}</td>
+        <td>{{ form_widget(edit_form.depots,{'attr':{'class':'form-control','id':'exampleFormControlSelect1'}}) }}</td>
+    </tr>
+    <tr>
+        <td> <input type="submit" value="Modifier" class="btn btn-primary"/></td>
+        {{ form_end(edit_form) }}
+        {{ form_start(delete_form) }}
+        <td><input type="submit" value="Supprimer" class="btn btn-primary"/></td>
+        {{ form_end(delete_form) }}
+
+
+    </tr>
+
+</table>
+{% endblock %}
