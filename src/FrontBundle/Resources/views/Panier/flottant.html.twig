@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+
+{% block cyka %}
+
+    <li class="cart-link lh-50">
+        <a href="#" class="pl-20">
+            <i class="zmdi zmdi-shopping-cart"></i>
+            <span>2</span>
+        </a>
+        <div class="mini-cart-inner header-top-down p-20">
+            <ul class="cart-list">
+                <li class="p-10 mb-15">
+                    <a href="#" class="product-image">
+                        <img src="{{ asset('freak/') }}images/shop/cart/1.jpg" alt="">
+                    </a>
+                    <div class="product-details ml-10">
+                        <a href="#" class="remove">
+                            <i class="zmdi zmdi-close"></i>
+                        </a>
+                        <a href="#" class="product-name mb-10">Men’s Black T..</a>
+                        <span class="selected-color">Color:  Black</span>
+                        <span class="selected-size">$80.00</span>
+                    </div>
+                </li>
+                <li class="p-10 mb-15">
+                    <a href="#" class="product-image">
+                        <img src="{{ asset('freak/') }}images/shop/cart/2.jpg" alt="">
+                    </a>
+                    <div class="product-details ml-10">
+                        <a href="#" class="remove">
+                            <i class="zmdi zmdi-close"></i>
+                        </a>
+                        <a href="#" class="product-name mb-10">Men’s Black T..</a>
+                        <span class="selected-color">Color:  white</span>
+                        <span class="selected-size">$65.00</span>
+                    </div>
+                </li>
+                <li class="p-10 mb-15">
+                    <a href="#" class="product-image">
+                        <img src="{{ asset('freak/') }}images/shop/cart/3.jpg" alt="">
+                    </a>
+                    <div class="product-details ml-10">
+                        <a href="#" class="remove">
+                            <i class="zmdi zmdi-close"></i>
+                        </a>
+                        <a href="#" class="product-name mb-10">Men’s Black T..</a>
+                        <span class="selected-color">Color:  Red</span>
+                        <span class="selected-size">$100.00</span>
+                    </div>
+                </li>
+            </ul>
+            <div class="border-bottom"></div>
+            <div class="cart-footer text-center">
+                <p class="total mtb-15">
+                    Subtotal:
+                    <span class="ml-35">$190.98</span>
+                </p>
+                <p class="buttons m-0">
+                    <a href="#" class="button extra-small">
+                        <span>Checkout</span>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </li>
+
+{% endblock %}

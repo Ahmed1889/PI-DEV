@@ -1,0 +1,50 @@
+{% extends 'base2.html.twig' %}
+
+{% block body %}
+    <h1>Representant creation</h1>
+   <div align="right">
+            <a href="{{ path('representant_index') }}" class="fas fa-backward"> </a>
+   </div>
+
+    <table class="table">
+    {{ form_start(form) }}
+        <tr>
+            <td>{{ form_label(form.nom) }}</td>
+            <td>{{ form_widget(form.nom,{'attr':{'class':'form-control'}}) }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.prenom) }}</td>
+            <td>{{ form_widget(form.prenom,{'attr':{'class':'form-control'}}) }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.email) }}</td>
+            <td>{{ form_widget(form.email,{'attr':{'class':'form-control'}}) }}
+                {{ form_errors(form.email) }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.telephone) }}</td>
+            <td>{{ form_widget(form.telephone,{'attr':{'class':'form-control'}}) }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.addresse) }}</td>
+            <td>{{ form_widget(form.addresse,{'attr':{'id':'exampleFormControlSelect1','class':'form-control'}}) }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.depots) }}</td>
+            <td>{{ form_widget(form.depots,{'attr':{'class':'form-control','id':'exampleFormControlSelect1'}}) }}
+
+
+                </td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.fournisseurs) }}</td>
+            <td>{{ form_widget(form.fournisseurs,{'attr':{'id':'exampleFormControlSelect1','class':'form-control'}}) }}</td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Ajouter" class="btn btn-primary" /></td>
+
+        </tr>
+    {{ form_end(form) }}
+    </table>
+
+{% endblock %}

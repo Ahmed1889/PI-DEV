@@ -1,0 +1,73 @@
+{% extends 'base2.html.twig' %}
+
+{% block body %}
+<div>
+    <!-- ============================================================== -->
+    <!-- Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <div class="page-breadcrumb">
+        <div class="row">
+            <div class="col-12 d-flex no-block align-items-center">
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <table id="zero_config" class="table table-striped table-bordered dataTable" role="grid" aria-describedby="zero_config_info">
+        <thead>
+            <tr style="background-color: #80bdff" >
+                <th>ID</th>
+                <td>Nom</td>
+                <th>Date Debut</th>
+                <th>Date Fin</th>
+                <th>Type</th>
+                <th>Etat</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for conge in conges %}
+            <tr>
+
+                <td><a href="{{ path('conge_show', { 'id': conge.id }) }}">{{ conge.id }}</a></td>
+                <td><img style="height: 80px;width: 80px" src="{{ asset('photos/') }}{{ conge.idEmployee.image }}"></td>
+                <td>{% if conge.dateDebut %}{{ conge.dateDebut|date }}{% endif %}</td>
+                <td>{% if conge.dateFin %}{{ conge.dateFin|date}}{% endif %}</td>
+                <td>{{ conge.type }}</td>
+                {% if conge.etat == "Refusé" %}
+                    <td><span class="badge badge-pill badge-danger">{{ conge.etat }}</span></td>
+                {% endif %}
+                {% if conge.etat == "Accepté" %}
+                    <td><span class="badge badge-pill badge-success">{{ conge.etat }}</span></td>
+                {% endif %}
+                {% if conge.etat == "En Cours" %}
+                    <td><span class="badge badge-pill badge-warning">{{ conge.etat }}</span></td>
+                {% endif %}
+
+                <td>
+                    <ul>
+
+                            <a class="fas fa-eye" href="{{ path('conge_show', { 'id': conge.id }) }}"></a>
+
+
+                            <a class="fas fa-wrench" href="{{ path('conge_edit', { 'id': conge.id }) }}"></a>
+
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+
+            <a class="fas fa-plus-square" href="{{ path('conge_new') }}">  Demander Un Congé</a><br>
+
+
+
+
+    </ul>
+    {% endblock %}

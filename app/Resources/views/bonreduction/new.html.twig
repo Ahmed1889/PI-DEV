@@ -1,0 +1,21 @@
+
+{% extends 'base2.html.twig' %}
+{% block body %}
+    <br>
+    <h2><strong>Ajouter un Bon De Redcution :</strong></h2>
+    <br>
+    <table class="table table-striped">
+        {{ form_start(form) }}
+        <tr>
+           <td>{{ form_label(form.numero, 'Numéro : ') }}</td>
+            <td>{{ form_widget(form.numero)  }}  </td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.taux, 'Pourcentage de reduction : ') }}</td>
+            <td>{{ form_widget(form.taux)  }}  </td>
+        </tr>
+
+    </table>
+    <input type="submit" value="créer" class="btn btn-info" align="center"/>
+    {{ form_end(form)}}
+{% endblock %}

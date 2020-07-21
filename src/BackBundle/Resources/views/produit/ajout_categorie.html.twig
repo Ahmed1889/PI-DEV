@@ -1,0 +1,56 @@
+{% extends 'base2.html.twig' %}
+{% block js2 %}
+    <script>
+        $(document).ready(function () {
+
+
+            $("#1").hide();
+            $('#backbundle_categorie_libelleC').keyup(function () {
+
+
+                $.ajax({
+
+                    success: function () {
+                        var re = /^[A-Za-z]+$/;
+                        var x = $('#backbundle_categorie_libelleC').val();
+                        if (re.test(x)) {
+
+                            $('#backbundle_categorie_Submit').prop('disabled', false);
+                            $('#backbundle_categorie_libelleC').css('border',"1px  black");
+                            $("#1").hide();
+
+                        } else {
+
+                            $("#1").show();
+                            //alert('ce champs ne peut pas contenir des nombres');
+                            $('#backbundle_categorie_Submit').prop('disabled', true);
+                            $('#backbundle_categorie_libelleC').css('border',"1px solid #db4848");
+                        }
+                    }
+                });
+
+
+            });
+        })
+    </script>
+{% endblock %}
+{% block body %}
+    <br>
+    <h2><strong>Ajouter une categorie :</strong></h2>
+    <br>
+    <table class="table table-striped">
+        {{ form_start(form) }}
+        <tr>
+            <td>{{ form_label(form.libelleC)  }}</td>
+            <td>{{ form_widget(form.libelleC,{ 'attr': {'class': 'form-control '}})  }}</td>
+            <td>{{ form_errors(form.libelleC) }}</td>
+            <td><span class="text-danger" id="1"> *cet input n'est pas valide</span></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>{{ form_widget(form.Submit,{ 'attr': {'class': 'btn btn-success '}})  }}</td>
+        </tr>
+        {{ form_end(form)  }}
+    </table>
+
+{% endblock %}

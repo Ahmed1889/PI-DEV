@@ -1,0 +1,40 @@
+{% extends 'base2.html.twig' %}
+
+{% block bodyBack %}
+    <h1> creation Historique</h1>
+<table class="table table-striped">
+    {{ form_start(form) }}
+       <tr>
+       <td>Quantite</td>
+           <td>{{ form_widget(form.quantite)  }}</td>
+       </tr>
+    <tr>
+        <td>Date</td>
+        <td>{{ form_widget(form.date)  }}</td>
+    </tr>
+    <tr>
+        <td>Fournisseur</td>
+        <td>{{ form_widget(form.idf)  }}</td>
+    </tr>
+    <tr>
+        <td>Produit</td>
+        <td>{{ form_widget(form.idp)  }}</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><input type="submit" value="Creer"class="btn btn-info" /></td>
+
+    </tr>
+
+
+    {{ form_end(form) }}
+
+</table>
+
+    <ul>
+        <li>
+            <a href="{{ path('historique_index') }}">Retour liste </a>
+        </li>
+    </ul>
+
+{% endblock %}

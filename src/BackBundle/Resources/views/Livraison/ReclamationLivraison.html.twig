@@ -1,0 +1,39 @@
+{% extends 'base2.html.twig' %}
+
+{% block bodyBack %}
+
+    <h2> Liste des Livraisons Réclamées</h2>
+
+    <table class="table table-striped table-bordered dataTable"  role="grid" aria-describedby="zero_config_info" id="zero_config" border="1">
+        <tr>
+            <th> Numero de Commande </th>
+            <th> Livreur</th>
+            <th> Date Commande</th>
+            <th> Action</th>
+            <th></th>
+        </tr>
+
+        {%  for t in pl %}
+            <tr>
+                <th> {{ t.Commande.id }}</th>
+{% if t.employe.avert>0 %}
+                <th style="color: red"> {{ t.employe.nom }}</th>
+                {% else %}
+                    <th> {{ t.employe.nom }}</th>
+                    {% endif %}
+                <th> {{ t.dateLivraison| date('Y/m/d') }}</th>
+                <th> <a class="confirmModal" href="{{ path('Avertir',{'id':t.employe.id}) }}" >
+                        Avertir</a></th>
+
+            </tr>
+        {% endfor %}
+    </table>
+    <div id="dialog-confirm" title="Sanctionner ce Livreur" style="display:none;">
+        <p>
+            <span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>
+            Etes-vous sûr de vouloir sanctionner ce livreur ?
+        </p>
+
+    </div>
+{%  endblock %}
+

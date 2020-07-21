@@ -1,0 +1,48 @@
+{% extends 'base2.html.twig' %}
+
+{% block body %}
+
+    <h1>Depot creation</h1>
+    <div align="right">
+                <a href="{{ path('depot_index') }}" class="fas fa-backward"></a>
+    </div>
+
+    <table class="table">
+
+    {{ form_start(form ) }}
+        <tr>
+            <td>
+                {{ form_label(form.nom) }}
+            </td>
+            <td>
+                {{ form_widget(form.nom,{'attr':{'class':'form-control','id':'vnom'}}) }}
+                {{ form_errors(form.nom) }}
+            </td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.addresse) }}</td>
+            <td>{{ form_widget(form.addresse,{'attr':{'class':'form-control'}}) }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.capacite) }}</td>
+            <td>{{ form_widget(form.capacite,{'attr':{'class':'form-control'}}) }}
+                {{ form_errors(form.capacite) }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.disponibilite) }}</td>
+            <td>{{ form_widget(form.disponibilite,{'attr':{'class':'custom-control custom-checkbox mr-sm-2'}}) }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.representant) }}</td>
+            <td>{{ form_widget(form.representant,{'attr':{'class':'form-control','id':'exampleFormControlSelect1'}}) }}</td>
+        </tr>
+        <tr>
+            <td> <input type="submit" value="Ajouter" class="btn btn-primary" /></td>
+
+
+        </tr>
+    {{ form_end(form) }}
+    </table>
+
+
+{% endblock %}

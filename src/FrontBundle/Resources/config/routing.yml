@@ -1,0 +1,61 @@
+front_homepage:
+    path:     /
+    defaults: { _controller: FrontBundle:Default:index }
+
+discutea_forum:
+    resource: "@DForumBundle/Resources/config/routing.yml"
+    prefix:   /forum
+traiterr:
+    path:     /traiterr
+    defaults: { _controller: FrontBundle:reclamation:TraiterReclamation}
+repondre:
+    path:     /repondre/{id}
+    defaults: { _controller: FrontBundle:reclamation:Repondre}
+afficher_produitF:
+    path:     /afficher_produitF
+    defaults: { _controller: FrontBundle:Produit:AfficheF }
+details_produitF:
+    path:     /details_produitF
+    defaults: { _controller: FrontBundle:Produit:Details }
+like_produit:
+    path:     /like_produit{id}
+    defaults: { _controller: FrontBundle:Produit:like }
+dislike_produit:
+    path:     /dislike_produit{id}
+    defaults: { _controller: FrontBundle:Produit:dislike }
+rating:
+    path:     /rating
+    defaults: { _controller: FrontBundle:Produit:Rating}
+ajouter_pr_pan:
+    path:     /ajouter_pr_pan
+    defaults: { _controller: FrontBundle:Panier:Ajouterproduitaupanier }
+checkout:
+    path:     /checkout
+    defaults: { _controller: FrontBundle:Panier:Checkout }
+cart:
+    path:     /cart
+    defaults: { _controller: FrontBundle:Panier:ShowCart }
+produitupdate:
+    path:     /produitupdate
+    defaults: { _controller: FrontBundle:Panier:ProduitUpdate }
+supprimer:
+    path:     /supprimer
+    defaults: { _controller: FrontBundle:Panier:supprimer }
+increment:
+    path:     /increment
+    defaults: { _controller: FrontBundle:Panier:IncrimentQte }
+decrement:
+    path:     /decrement
+    defaults: { _controller: FrontBundle:Panier:DecrimentQte }
+payment:
+    path:     /payment
+    defaults: { _controller: FrontBundle:Panier:Paiment }
+payer:
+    path:     /payer
+    defaults: { _controller: FrontBundle:Panier:Payer }
+verifycoupon:
+    path:     /verifycoupon
+    defaults: { _controller: FrontBundle:Panier:verifyCoupon }
+SMS:
+    path:     /SMS
+    defaults: { _controller: FrontBundle:Panier:SMS }

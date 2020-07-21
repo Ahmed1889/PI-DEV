@@ -1,0 +1,44 @@
+{% extends 'base2.html.twig' %}
+
+{% block bodyBack %}
+    <h2> Liste des  Vehicules disponibles</h2>
+
+    <table class="table table-striped table-bordered dataTable"  role="grid" aria-describedby="zero_config_info" id="zero_config" border="1">
+        <tr>
+            <th> Nom </th>
+            <th>Matricule</th>
+            <th> Type Vehicule </th>
+            <th> Disponible </th>
+            <th></th>
+
+        </tr>
+
+        {%  for t in vehicules %}
+
+            <tr>
+                <th> {{ t.nom }}</th>
+                <th> {{ t.matricule }}</th>
+
+                <th> {{ t.typeVehicule.libelle }}</th>
+                {%  if t.disponibilite == 1 %}
+                    <th>  disponible </th>
+                    <th> <a href="{{ path('TomberPanne',
+                            {'id':t.id}) }}">
+                             Tomber Panne</a></th>
+                {%  else %}
+                    <th> Non  disponible </th>
+                    <th> <a href="{{ path('Reparer',
+                            {'id':t.id}) }}">
+                            Réparer</a></th>
+                {% endif %}
+
+
+            </tr>
+
+        {% endfor %}
+    </table>
+
+
+
+
+{%  endblock  %}

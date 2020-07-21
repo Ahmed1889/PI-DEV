@@ -1,0 +1,28 @@
+commandef_index:
+    path:     /index
+    defaults: { _controller: "BackBundle:Commandef:index" }
+    methods:  GET
+
+commandef_show:
+    path:     /{id}/show
+    defaults: { _controller: "BackBundle:Commandef:show" }
+    methods:  GET
+
+commandef_new:
+    path:     /new
+    defaults: { _controller: "BackBundle:Commandef:new" }
+    methods:  [GET, POST]
+
+commandef_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "BackBundle:Commandef:edit" }
+    methods:  [GET, POST]
+
+commandef_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "BackBundle:Commandef:delete" }
+    methods:  DELETE
+
+commandef_accept:
+    path:     /{id}/accept
+    defaults: { _controller: "BackBundle:Commandef:accept" }

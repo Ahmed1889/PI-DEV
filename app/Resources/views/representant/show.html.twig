@@ -1,0 +1,45 @@
+{% extends 'base2.html.twig' %}
+
+{% block body %}
+    <h1>Representant</h1>
+    <div align="right">
+        <a href="{{ path('representant_index') }}" class="fas fa-backward"></a>
+    </div>
+
+    <table class="table table-striped table-bordered dataTable" id="zero_config">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ representant.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ representant.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ representant.prenom }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ representant.email }}</td>
+            </tr>
+            <tr>
+                <th>Telephone</th>
+                <td>{{ representant.telephone }}</td>
+            </tr>
+            <tr>
+                <th>Addresse</th>
+                <td>{{ representant.addresse }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+            <div align="right">
+            <a href="{{ path('representant_edit', { 'id': representant.id }) }}" class="fas fa-wrench">Modifier</a>
+            </div>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Supprimer" class="btn btn-primary">
+            {{ form_end(delete_form) }}
+
+{% endblock %}

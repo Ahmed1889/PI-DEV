@@ -1,0 +1,58 @@
+{% extends 'base2.html.twig' %}
+
+{% block bodyBack %}
+    <h1>Creation Fournisseur</h1>
+
+
+<table class="table table-striped">
+    {{ form_start(form,{"attr":{"class":"form-horizontal"}}) }}
+
+
+
+<tr><td>Nom</td>
+    <td>  {{ form_widget(form.nomf,{"attr":{"placeholder":"Nom Du Fournisseur"}})  }}</td>
+</tr>
+    <tr><td>Telephone</td>
+        <td>  {{ form_widget(form.telf)  }}</td>
+    </tr>
+<tr><td>E-mail</td>
+    <td>   {{ form_widget(form.emailf) }}</td>
+</tr>
+    <tr><td>Site Web</td>
+        <td>   {{ form_widget(form.sitewebf)  }}</td>
+    </tr>
+    <tr><td>Categorie</td>
+        <td>   {{ form_widget(form.categorief)  }}</td>
+    </tr>
+
+
+
+
+
+
+</table>
+
+
+
+
+        {{ form_widget(form) }}
+            <input type="submit" value="Créer" class="btn btn-info" />
+
+
+
+
+    {{ form_end(form) }}
+
+
+
+    </div>
+</form>
+    </div>
+    <div id="dialog-confirm" title="Confirmation de la suppression" style="display:none;">
+        <p>
+            <span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>
+            Etes-vous sûr de vouloir supprimer ce vehicule ?
+        </p>
+    </div>
+
+{% endblock %}

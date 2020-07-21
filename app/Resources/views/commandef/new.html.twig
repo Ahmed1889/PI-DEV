@@ -1,0 +1,34 @@
+{% extends 'base2.html.twig' %}
+
+{% block bodyBack %}
+    <h1> Passer Commande</h1>
+    <table class="table table-striped">
+
+        <tr> {{ form_start(form) }}
+            <td>Quantite</td>
+            <td>{{ form_widget(form.quantite,{"attr":{"class":"form-control"}})  }}</td>
+        </tr>
+
+        <tr>
+            <td>Fournisseur</td>
+            <td>{{ form_widget(form.idcf,{"attr":{"class":"form-control"}})  }}</td>
+        </tr>
+        <tr>
+            <td>Produit</td>
+            <td>{{ form_widget(form.idcp,{"attr":{"class":"form-control"}})  }}</td>
+        </tr>
+        <tr>
+
+            <td></td>
+            <td><input type="submit" value="Créer"class="btn btn-info btn-block " /></td>
+            {{ form_end(form) }}
+        </tr>
+
+
+
+
+    </table>
+
+
+
+{% endblock %}

@@ -1,0 +1,242 @@
+{% extends 'base2.html.twig' %}
+{% block bodyBack %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+</head>
+<body>
+<div class="row">
+    <div class="col-md-3">
+        <div class="card m-t-0">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="box bg-success text-center">
+                        <h1 class="font-light text-white"><i class="mdi mdi-chart-areaspline"></i></h1>
+                        <h6 class="text-white">Commande En cours</h6>
+                    </div>
+                </div>
+                <div class="col-md-6 border-left text-center p-t-10">
+                    <h1 class="mb-0 font-weight-bold">{{ e }}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card m-t-0">
+            <div class="row">
+                <div  class="col-md-6">
+                    <div class="box bg-danger text-center">
+                        <h1 class="font-light text-white"><i class="mdi mdi-chart-areaspline"></i></h1>
+                        <h6 class="text-white">Commande Livré</h6>
+                    </div>
+                </div>
+                <div class="col-md-6 border-left text-center p-t-10">
+                    <h1 class="mb-0 font-weight-bold">{{ l }}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card m-t-0">
+            <div class="row">
+                <div  class="col-md-6">
+                    <div class="box bg-warning text-center">
+                        <h1 class="font-light text-white"><i class="mdi mdi-chart-areaspline"></i></h1>
+                        <h6 class="text-white">Prix d'achat Total</h6>
+                    </div>
+                </div>
+                <div class="col-md-6 border-left text-center p-t-10">
+                    <h1 class="mb-0 font-weight-bold">{{ total }} DT</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<div class="form-group row">
+    <label class="col-md-3 m-t-15">Selectionner Critere</label>
+    <div class="col-md-9">
+        <select id="char" class="select2 form-control custom-select" style="width: 100%; height:36px;">
+
+            <optgroup label="Critere de Statistique">
+            <option value="Categorie">Categorie</option>
+            <option value="Nombre de Commande">Nombre de Commande</option>
+            </optgroup>
+
+
+        </select>
+    </div>
+
+
+</div>
+
+<table>
+    <tr>
+
+
+
+
+        <td valign="top">
+            <div  height="800" class="card">
+                <div class="card-body">
+                    <h4 class="card-title m-b-0">Activité Recente</h4>
+                </div>
+                <ul class="list-style-none">
+                    {% for ac in ac %}
+                    <li class="card-body border-top">
+                        <a href="#" class="m-b-0 p-0">
+                            <div class="d-flex no-block">
+                                <i class="fa fa-user w-30px m-t-5"></i>
+                                <div>{% if ac.etat=="Livré" %}
+                                    <span class="font-bold"> une Livraison de {{ ac.idcf.nomf }} est Reçu  </span>
+                                    <span>
+                                        il ya {% set difference = date(ac.date).diff(date(dat)) %}
+                                        {{ difference|date("%d") }} jours
+                                    </span>
+                                  {% else %}
+                                      <span class="font-bold"> la Commande Numero {{ac.id  }} de  produit {{ ac.idcp.libelleP }} est Envoyé a  {{ ac.idcf.nomf }}  </span>
+                                      <span>
+                                           il ya {% set difference = date(ac.date).diff(date(dat)) %}
+                                          {{ difference|date("%d") }} jours
+
+                                      </span>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+
+
+
+        </td>
+
+        <td></td>
+        <td>
+<table>  <tr>
+        <td>
+            <div  id="aa"  >
+            </div>
+        </td>
+        <td valign="top">
+            <div id="bb">
+
+            </div>
+
+        </td>
+            </div>
+       </tr>
+</table>
+
+        </td>
+    </tr>
+</table>
+
+
+</body>
+</html>
+{% endblock %}
+{% block js2 %}
+    <script language = "javascript">
+      $(document).ready(function(){
+            $("#char").change(function() {
+              $r=  $(this).find("option:selected").text();
+                $.ajax({
+                    url: 'historique/statrecherche',
+                    type: 'GET',
+                    dataType: 'json',
+                    data: {'critere': $r},
+                    async: true,
+                    success: function(data) {
+
+                        google.charts.load('current', {packages: ['corechart']});
+                        google.charts.setOnLoadCallback(drawChart);
+                        google.charts.setOnLoadCallback(drawCharth());
+
+                        function drawCharth() {
+
+                            var datastat = new google.visualization.arrayToDataTable([
+                                [' ','Premioum', 'Gold','Silver'],
+                                [' ',data[0].Premium,data[0].Gold,data[0].Silver],
+
+
+                            ]);
+
+
+
+                            var options = {
+                                'title': 'Fournisseur Par Categorie',
+                                'width': 800,
+                                'height': 700,
+
+
+                                animation:{
+                                    duration: 1000,
+                                    startup: true,
+                                }
+                            };
+
+                            var ch = new google.visualization.ColumnChart(document.getElementById('aa'));
+
+                            ch.draw(datastat, options);
+                            $('#bb').hide();
+
+
+
+                        }
+                        function drawChart() {
+
+
+                             datastat = new google.visualization.arrayToDataTable(data);
+
+                            var options = {
+                                'title': 'Fournisseur et Commande',
+                                'width': 800,
+                                'height': 700,
+                                colors: ['#2ecc71'],
+                                animation:{
+                                    duration: 1000,
+                                    startup: true,
+                                }
+                            };
+
+                            var ch = new google.visualization.ColumnChart(document.getElementById('aa'));
+
+                            ch.draw(datastat, options);
+
+
+
+
+
+
+                        }
+
+
+
+
+
+
+                    },
+                    error : function(xhr, textStatus, errorThrown) {
+                        alert('Ajax request failed.');
+                    }
+                });
+
+            })
+        });
+
+
+
+
+
+</script>
+{%  endblock js2 %}

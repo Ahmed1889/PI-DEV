@@ -1,0 +1,62 @@
+{% extends 'base2.html.twig' %}
+
+{% block body %}
+<div>
+    <!-- ============================================================== -->
+    <!-- Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <div class="page-breadcrumb">
+        <div class="row">
+            <div class="col-12 d-flex no-block align-items-center">
+
+
+            </div>
+        </div>
+    </div>
+
+    <table class="table table-striped">
+        {{ form_start(form) }}
+        <tr>
+            <td>{{ form_label(form.dateDebut)  }}</td>
+            <td>{{ form_widget(form.dateDebut,{ 'attr': {'class': 'form-control '}})  }}{{ form_errors(form.dateDebut) }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.dateFin)  }}</td>
+            <td>{{ form_widget(form.dateFin,{ 'attr': {'class': 'form-control  '}})  }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.type)  }}</td>
+            <td>{{ form_widget(form.type,{ 'attr': {'class': 'form-control '}})  }}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Demander" class="btn btn-success" /></td>
+        </tr>
+        {{ form_end(form)  }}
+    </table>
+
+
+
+    <ul>
+        <li>
+            <a href="{{ path('conge_index') }}">Back to the list</a>
+        </li>
+    </ul>
+</div>
+{% endblock %}
+{% block js2 %}
+    <script>
+        $(document).ready(function () {
+
+
+            $('#backbundle_conge_dateDebut_month').val(new Date().getMonth()+1);
+            $('#backbundle_conge_dateDebut_year').val(new Date().getFullYear());
+            $('#backbundle_conge_dateDebut_day').val(new Date().getDate()+1);
+            $('#backbundle_conge_dateFin_month').val(new Date().getMonth()+1);
+            $('#backbundle_conge_dateFin_year').val(new Date().getFullYear());
+            $('#backbundle_conge_dateFin_day').val(new Date().getDate()+2);
+        })
+
+     //document.getElementById('backbundle_conge_dateDebut_month')=new Date();
+        </script>
+    {% endblock %}

@@ -1,0 +1,107 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <section id="page-content" class="page-wrapper" style="    height: 800px;">
+        {% if cmd|length > 0 %}
+            <br>
+            <h1>Liste des commandes</h1>
+            <br>
+            <table class="table table-striped table-bordered dataTable"  role="grid" aria-describedby="zero_config_info" id="zero_config" border="1">
+                <tr>
+                    <th> Numero commande </th>
+                    <th>Date commande</th>
+                    <th> Prix total </th>
+
+                    <th colspan="2"> Action</th>
+
+                </tr>
+
+                {%  for c in cmd %}
+                    <tr>
+                        <th>{{ c.id }} </th>
+                        <th>{{ c.date| date('Y/m/d') }}  </th>
+                        <th>{{ c.prixT  }} </th>
+
+
+                        <th><a class="fas fa-images" href="{{ path('suivi',{'idcmd':c.id}) }}">  </a></th>
+                        <th><a href="#" class="fas fa-list-ol" id="{{ c.id }}">  </a></th>
+                    </tr>
+
+
+                {% endfor %}
+            </table>
+            <br>
+            <br>
+            <br><br>
+            <div id="dcache">
+                <h1>Liste des produits sélectionnés</h1>
+                <table class="table table-striped table-bordered dataTable"  role="grid" aria-describedby="zero_config_info" id="zero_config" border="1">
+                    <tr>
+                        <th> code produit</th>
+                        <th> nom produit</th>
+                        <th> prix produit</th>
+                    </tr>
+                    <tbody id="tabProduit">
+
+                    </tbody>
+                </table>
+            </div>
+        {% else %}
+            <h1 style="color: green">  Vous n'avez rien commandé</h1>
+        {% endif %}
+    </section>
+{% endblock %}
+
+
+{%  block js %}
+
+    <script >
+
+        $(document).ready(function() {
+            $("#dcache").hide();
+            $("a").on("click", function (event) {
+                $("#tabProduit").html("");
+                var ax= $(this).attr("id");
+                if(ax !=undefined) {
+
+                    $.ajax({
+                        url: 'DetailsProduits',
+                        type: 'POST',
+                        dataType: 'json',
+                        data: {'id': ax},
+                        async: true,
+                        success: function (data) {
+                            $("#dcache").show();
+                            for(var i=0;i<data.length;i++){
+                                var a = data[i].id;
+                                var b = data[i].libelle;
+                                var c = data[i].prix;
+
+
+                                $("#tabProduit").append('<tr> <th>'+ a+' </th> <th>'+ b+' </th> <th>'+ c+' </th> </tr> ');
+
+                            }
+                        },
+                        error: function (xhr, textStatus, errorThrown) {
+                            alert('Ajax request failed.');
+                        }
+
+
+                    });
+                }
+            });
+
+
+
+
+
+        });
+
+
+    </script>
+
+{% endblock  %}
+
+
+

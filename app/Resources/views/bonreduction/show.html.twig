@@ -1,0 +1,34 @@
+{% extends 'base2.html.twig' %}
+{% block body %}
+    <h1>Bon de reduction</h1>
+
+    <table class=" table table-striped">
+        <tbody>
+            <tr>
+                <th>Numero :</th>
+                <td>{{ bonReduction.numero }}</td>
+            </tr>
+            <tr>
+                <th>Taux de Reduction :</th>
+                <td>{{ bonReduction.taux }} %</td>
+            </tr>
+            <tr>
+                <th>Validité :</th>
+                {% if bonReduction.isvalid  %}
+                <td style="color: green">Encore disponible</td>
+                {% else %}
+                <td style="color: red">Expiré</td>
+                {% endif %}
+            </tr>
+        </tbody>
+    </table>
+
+
+            <a href="{{ path('bonreduction_index') }}"><input type="button" value="Back to the list" class="btn btn-outline-success" width="70" /></a>
+            <a href="{{ path('bonreduction_edit', { 'id': bonReduction.id }) }}"><input type="button" value="Edit" class="btn btn-info" width="35px" /></a>
+
+
+            {{ form_start(delete_form) }}
+            {{ form_end(delete_form) }}
+
+{% endblock %}
